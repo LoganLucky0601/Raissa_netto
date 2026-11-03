@@ -2,6 +2,8 @@
   const url = "https://rktomfeerscfgrlpwwke.supabase.co";
   const chave = "sb_publishable_eH1ZfBkzd8zGwMmg1wHPlQ_bOn8oaVF";
   const login = document.querySelector("#login");
+  const acesso = document.querySelector("#acesso");
+  const redefinir = document.querySelector("#redefinir");
   const painel = document.querySelector("#painel");
   const formulario = document.querySelector("#registro");
   const lista = document.querySelector("#registros");
@@ -20,6 +22,7 @@
       sair();
       throw new Error("Sessão expirada. Entre novamente.");
     }
+    if (resposta.status === 400 && caminho.startsWith("/auth/v1/token")) throw new Error("Confira o e-mail e a senha ou use Esqueci minha senha.");
     if (!resposta.ok) throw new Error("Não foi possível concluir a operação. Confira os dados e tente novamente.");
     return resposta.json();
   }
@@ -47,6 +50,8 @@
     token = "";
     lista.replaceChildren();
     painel.hidden = true;
+    acesso.hidden = false;
+    redefinir.hidden = true;
     login.hidden = false;
     novo();
   }
@@ -100,6 +105,7 @@
         await atualizar();
         login.hidden = true;
         painel.hidden = false;
+        acesso.hidden = true;
         return "Sessão iniciada.";
       } catch (erro) {
         sair();
@@ -107,6 +113,37 @@
       } finally {
         login.reset();
       }
+    });
+  };
+
+  const email = login.elements.namedItem("email");
+  document.querySelector("#recuperar").onclick = () => {
+    if (!email.reportValidity()) return;
+    executar(async () => {
+      const destino = window.location.origin + window.location.pathname;
+      await requisicao("/auth/v1/recover?redirect_to=" + encodeURIComponent(destino), "POST", { email: email.value.trim() });
+      return "Confira sua caixa de entrada e o spam para redefinir a senha.";
+    });
+  };
+
+  const retorno = new URLSearchParams(window.location.hash.slice(1));
+  if (retorno.get("type") === "recovery" && retorno.has("access_token")) {
+    token = retorno.get("access_token");
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+    login.hidden = true;
+    redefinir.hidden = false;
+    status.textContent = "Defina sua nova senha.";
+  }
+
+  redefinir.onsubmit = (evento) => {
+    evento.preventDefault();
+    executar(async () => {
+      const dados = new FormData(redefinir);
+      if (dados.get("senha") !== dados.get("confirmacao")) throw new Error("As senhas precisam ser iguais.");
+      await requisicao("/auth/v1/user", "PUT", { password: dados.get("senha") });
+      redefinir.reset();
+      sair();
+      return "Senha atualizada. Entre com a nova senha.";
     });
   };
 
