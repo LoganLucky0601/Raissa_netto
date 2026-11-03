@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Editar trajetória | Raissa Netto</title>
+<link rel="stylesheet" href="css/style.css">
+<style>main{padding-block:2rem} form,label{display:grid;gap:.5rem} form{max-width:36rem;margin-block:1rem} form[hidden],section[hidden]{display:none} input,select,textarea,button{font:inherit;padding:.45rem} ul li{margin-block:.5rem} button{cursor:pointer}</style>
+<script defer src="js/admin-trajetoria.js"></script>
+<main class="container">
+<a href="index.html#trajetoria">← Voltar ao portfólio</a>
+<h1>Editar trajetória</h1>
+<p id="status" role="status"></p>
+<form id="login">
+<label>E-mail <input name="email" type="email" autocomplete="username" required></label>
+<label>Senha <input name="password" type="password" autocomplete="current-password" required></label>
+<button>Entrar</button>
+</form>
+<section id="painel" hidden>
+<button id="sair" type="button">Sair</button>
+<h2>Registros</h2>
+<ul id="registros"></ul>
+<h2 id="modo">Novo registro</h2>
+<form id="registro">
+<label>Tipo <select name="tipo"><option value="formacao">Formação</option><option value="trabalho">Trabalho</option></select></label>
+<label>Título <input name="titulo" required></label>
+<label>Instituição ou empresa <input name="local" required></label>
+<label>Início <input name="inicio" type="date" required></label>
+<label>Fim (vazio se em andamento) <input name="fim" type="date"></label>
+<label>Nível <input name="nivel"></label>
+<label>Carga horária <input name="horas" type="number" min="1"></label>
+<label>Modalidade <select name="modalidade"><option value="">Selecione</option><option>Formal (CLT)</option><option>Informal</option><option>PJ</option><option>Autônomo e Freelancer</option><option>Trabalho Temporário</option><option>Estágio</option><option>Voluntário</option></select></label>
+<label>Responsabilidades (uma por linha) <textarea name="responsabilidades"></textarea></label>
+<label>Publicado <input name="publicado" type="checkbox"></label>
+<button>Salvar</button>
+<button id="novo" type="button">Limpar formulário</button>
+</form>
+</section>
+</main></html>
