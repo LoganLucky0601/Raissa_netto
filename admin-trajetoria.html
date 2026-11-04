@@ -13,6 +13,7 @@
 .editor small{color:var(--muted)}
 #painel .btn-outline{background:transparent}
 @media(max-width:720px){.categorias,.editor form{grid-template-columns:1fr}}
+.acesso .mostrar-senha{display:flex;align-items:center;gap:.5rem}.acesso .mostrar-senha input{width:auto;accent-color:var(--accent)}
 </style>
 <script defer src="js/admin-trajetoria.js"></script>
 <main class="container">
@@ -23,9 +24,10 @@
 <p class="section-kicker">PORTFÓLIO RAISSA NETTO</p>
 <h2>Acesso administrativo</h2>
 <p class="acesso-intro">Entre para gerenciar sua trajetória profissional e educacional.</p>
-<form id="login">
+<form id="login" onreset="this.elements.namedItem('password').type = 'password'">
 <label>E-mail <input name="email" type="email" autocomplete="username" required></label>
 <label>Senha <input name="password" type="password" autocomplete="current-password" required></label>
+<label class="mostrar-senha"><input type="checkbox" onclick="this.form.elements.namedItem('password').type = this.checked ? 'text' : 'password'"> Mostrar senha</label>
 <button class="btn btn-primary">Entrar</button>
 <button class="recuperar" id="recuperar" type="button">Esqueci minha senha</button>
 </form>
