@@ -1,8 +1,8 @@
 #projetos .projects-carousel {
-    --card-width: 68%;
+    --card-width: 38%;
     display: flex;
     overflow-x: auto;
-    gap: 1rem;
+    gap: .65rem;
     padding: .75rem calc((100% - var(--card-width)) / 2) 1rem;
     scroll-snap-type: x mandatory;
     scrollbar-color: var(--border) transparent;
@@ -11,7 +11,31 @@
 .projects-carousel .project-card {
     flex: 0 0 100%;
     scroll-snap-align: center;
+    display: grid;
+    align-items: end;
+    min-height: 19rem;
+    position: relative;
+    isolation: isolate;
+    border-radius: .65rem;
 }
+
+.projects-carousel .project-card img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    z-index: -2;
+}
+
+.projects-carousel .project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, transparent 5%, rgba(11,13,18,.84) 55%, #0b0d12 100%);
+}
+
+.projects-carousel .project-body { gap: .45rem; padding: 1rem; }
+.projects-carousel .project-link { padding-top: .4rem; }
 
 .projects-carousel .project-card:hover { transform: none; }
 .projects-carousel .project-card.is-current { border-color: var(--accent); }
@@ -29,6 +53,10 @@
 .projects-controls button:disabled { opacity: .4; cursor: default; }
 .projects-position { min-width: 4rem; text-align: center; color: var(--muted); }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+    #projetos .projects-carousel { --card-width: 55%; }
+}
+
+@media (max-width: 600px) {
     #projetos .projects-carousel { --card-width: 88%; }
 }
