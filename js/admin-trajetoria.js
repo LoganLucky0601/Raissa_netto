@@ -126,6 +126,13 @@
     });
   };
 
+  document.querySelector("#entrar-google").onclick = () => {
+    if (ocupado) return;
+    const destino = window.location.origin + window.location.pathname;
+    const parametros = new URLSearchParams({ provider: "google", redirect_to: destino });
+    window.location.assign(url + "/auth/v1/authorize?" + parametros);
+  };
+
   const retorno = new URLSearchParams(window.location.hash.slice(1));
   if (retorno.get("type") === "recovery" && retorno.has("access_token")) {
     token = retorno.get("access_token");
@@ -133,6 +140,30 @@
     login.hidden = true;
     redefinir.hidden = false;
     status.textContent = "Defina sua nova senha.";
+  }
+
+  if (retorno.get("type") !== "recovery" && retorno.has("access_token")) {
+    token = retorno.get("access_token");
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+    executar(async () => {
+      try {
+        const usuario = await requisicao("/auth/v1/user");
+        if (usuario.app_metadata?.portfolio_admin !== true) {
+          throw new Error("Use a conta Google autorizada para acessar o painel.");
+        }
+        await atualizar();
+        login.hidden = true;
+        painel.hidden = false;
+        acesso.hidden = true;
+        return "Sessão iniciada com Google.";
+      } catch (erro) {
+        sair();
+        throw erro;
+      }
+    });
+  } else if (retorno.has("error")) {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+    status.textContent = "O acesso não foi concluído. Tente entrar novamente.";
   }
 
   redefinir.onsubmit = (evento) => {
