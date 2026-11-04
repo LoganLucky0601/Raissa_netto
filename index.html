@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projetos-carrossel.css">
+  <script defer src="js/projetos-carrossel.js"></script>
   <link rel="stylesheet" href="css/trajetoria.css">
   <script defer src="js/linha-do-tempo.js"></script>
 </head>
@@ -92,12 +94,16 @@
 
     <section id="projetos" class="section projects-section" aria-labelledby="titulo-projetos">
       <div class="container"><p class="section-kicker">PORTFÓLIO</p><div class="section-heading"><h2 id="titulo-projetos">Projetos em <span>destaque</span></h2></p></div>
-        <!-- Grid organiza os quatro projetos em duas colunas. -->
-        <div class="projects-grid">
+        <div class="projects-grid projects-carousel" tabindex="0" role="region" aria-label="Carrossel de projetos">
           <article class="project-card"><img src="img/projeto-1.jpg" alt="Prévia de portfólio pessoal em tema escuro com menu, apresentação e botão de projetos" width="960" height="600" loading="lazy"><div class="project-body"><p class="project-category">HTML · CSS · RESPONSIVIDADE</p><h3>Portfólio pessoal</h3><p>Site de apresentação profissional com seções, menu âncora, Grid e Flexbox.</p><a href="https://github.com/LoganLucky0601/Portifolio_pessoal" target="_blank" rel="noopener noreferrer" class="project-link">Ver repositório <span aria-hidden="true">↗</span></a></div></article>
           <article class="project-card"><img src="img/projeto-2.jpg" alt="Prévia de organizador de tarefas com menu lateral e colunas de atividades" width="960" height="600" loading="lazy"><div class="project-body"><p class="project-category">PROPOSTA ACADÊMICA</p><h3>Organizador de tarefas</h3><p>Conceito de aplicação para organizar atividades por prioridade e acompanhar pendências.</p><a href="mailto:seuemail@exemplo.com?subject=Projeto%20Organizador%20de%20Tarefas" class="project-link">Solicitar informações <span aria-hidden="true">↗</span></a></div></article>
           <article class="project-card"><img src="img/projeto-3.jpg" alt="Prévia de aplicativo de clima com temperatura, sol e previsão para quatro dias" width="960" height="600" loading="lazy"><div class="project-body"><p class="project-category">PROPOSTA ACADÊMICA</p><h3>Interface de clima</h3><p>Estudo de cards de previsão do tempo, hierarquia visual e adaptação para telas menores.</p><a href="mailto:seuemail@exemplo.com?subject=Projeto%20Interface%20de%20Clima" class="project-link">Solicitar informações <span aria-hidden="true">↗</span></a></div></article>
           <article class="project-card"><img src="img/projeto-4.jpg" alt="Prévia de catálogo digital com quatro cards de produtos em uma grade" width="960" height="600" loading="lazy"><div class="project-body"><p class="project-category">PROPOSTA ACADÊMICA</p><h3>Catálogo digital</h3><p>Layout de vitrine com cards, filtros visuais e organização de produtos usando CSS Grid.</p><a href="mailto:seuemail@exemplo.com?subject=Projeto%20Cat%C3%A1logo%20Digital" class="project-link">Solicitar informações <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+        <div class="projects-controls" hidden>
+          <button class="btn btn-outline" type="button" data-step="-1" aria-label="Projeto anterior">←</button>
+          <span class="projects-position" role="status"></span>
+          <button class="btn btn-outline" type="button" data-step="1" aria-label="Próximo projeto">→</button>
         </div>
       </div>
     </section>
