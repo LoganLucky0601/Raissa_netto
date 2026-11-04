@@ -3,14 +3,14 @@
     display: flex;
     overflow-x: auto;
     gap: .65rem;
-    padding: .75rem calc((100% - var(--card-width)) / 2) 1rem;
+    padding: .75rem 0 1rem;
     scroll-snap-type: x mandatory;
     scrollbar-color: var(--border) transparent;
 }
 
 .projects-carousel .project-card {
-    flex: 0 0 100%;
-    scroll-snap-align: center;
+    flex: 0 0 var(--card-width);
+    scroll-snap-align: start;
     display: grid;
     align-items: end;
     min-height: 19rem;

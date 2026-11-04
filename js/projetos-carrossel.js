@@ -14,7 +14,7 @@
     function distancia(projeto) {
         const quadro = carrossel.getBoundingClientRect();
         const cartao = projeto.getBoundingClientRect();
-        return cartao.left + cartao.width / 2 - quadro.left - quadro.width / 2;
+        return cartao.left - quadro.left;
     }
 
     function atualizar() {
@@ -22,9 +22,9 @@
             Math.abs(distancia(projeto)) < Math.abs(distancia(projetos[maisProximo]))
                 ? indice : maisProximo, 0);
         projetos.forEach((projeto, indice) => projeto.classList.toggle("is-current", indice === atual));
-        anterior.disabled = atual === 0;
-        proximo.disabled = atual === projetos.length - 1;
-        const texto = (atual + 1) + " de " + projetos.length;
+        anterior.disabled = carrossel.scrollLeft <= 1;
+        proximo.disabled = carrossel.scrollLeft >= carrossel.scrollWidth - carrossel.clientWidth - 1;
+        const texto = (proximo.disabled ? projetos.length : atual + 1) + " de " + projetos.length;
         if (posicao.textContent !== texto) posicao.textContent = texto;
     }
 
