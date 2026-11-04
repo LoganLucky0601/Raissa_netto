@@ -6,7 +6,35 @@
   const redefinir = document.querySelector("#redefinir");
   const painel = document.querySelector("#painel");
   const formulario = document.querySelector("#registro");
-  const lista = document.querySelector("#registros");
+  const listas = {
+    formacao: document.querySelector("#formacao"),
+    trabalho: document.querySelector("#trabalho")
+  };
+  const tipo = formulario.elements.namedItem("tipo");
+  const horas = formulario.elements.namedItem("horas");
+  const camposPorTipo = formulario.querySelectorAll("[data-tipo]");
+
+  function atualizarDuracao() {
+    const carga = horas.valueAsNumber;
+    document.querySelector("#duracao").textContent =
+      !(carga > 0) ? "" : carga <= 40 ? "Curta duração" :
+      carga <= 200 ? "Média duração" : carga <= 800 ? "Longa duração" : "Acima de 800 h";
+  }
+
+  function atualizarCampos() {
+    const formacao = tipo.value === "formacao";
+    document.querySelector("#rotulo-titulo").textContent = formacao ? "Nome do curso" : "Cargo ou função";
+    document.querySelector("#rotulo-local").textContent = formacao ? "Nome da instituição" : "Nome da empresa";
+    for (const campo of camposPorTipo) {
+      campo.hidden = campo.dataset.tipo !== tipo.value;
+      campo.querySelector("input, select, textarea").disabled = campo.hidden;
+    }
+    atualizarDuracao();
+  }
+
+  tipo.addEventListener("change", atualizarCampos);
+  horas.addEventListener("input", atualizarDuracao);
+  atualizarCampos();
   const status = document.querySelector("#status");
   const modo = document.querySelector("#modo");
   let token = "";
@@ -44,11 +72,12 @@
     editando = null;
     formulario.reset();
     modo.textContent = "Novo registro";
+    atualizarCampos();
   }
 
   function sair() {
     token = "";
-    lista.replaceChildren();
+    Object.values(listas).forEach(lista => lista.replaceChildren());
     painel.hidden = true;
     acesso.hidden = false;
     redefinir.hidden = true;
@@ -59,7 +88,7 @@
   const tabela = "/rest/v1/trajetoria";
   async function atualizar() {
     const registros = await requisicao(tabela + "?select=*&order=inicio.desc,id.asc");
-    lista.replaceChildren();
+    Object.values(listas).forEach(lista => lista.replaceChildren());
     for (const registro of registros) {
       const item = document.createElement("li");
       item.textContent = registro.titulo + (registro.publicado ? " · Publicado " : " · Rascunho ");
@@ -69,12 +98,13 @@
         if (ocupado) return;
         editando = registro.id;
         modo.textContent = "Editar registro";
-        for (const campo of Object.keys({"tipo":"<select name=\"tipo\"><option value=\"formacao\">Formação</option><option value=\"trabalho\">Trabalho</option></select>","titulo":"<input name=\"titulo\" required>","local":"<input name=\"local\" required>","inicio":"<input name=\"inicio\" type=\"date\" required>","fim":"<input name=\"fim\" type=\"date\">","nivel":"<input name=\"nivel\">","horas":"<input name=\"horas\" type=\"number\" min=\"1\">","modalidade":"<select name=\"modalidade\"><option value=\"\">Selecione</option><option>Formal (CLT)</option><option>Informal</option><option>PJ</option><option>Autônomo e Freelancer</option><option>Trabalho Temporário</option><option>Estágio</option><option>Voluntário</option></select>","responsabilidades":"<textarea name=\"responsabilidades\"></textarea>","publicado":"<input name=\"publicado\" type=\"checkbox\">"})) {
+        for (const campo of ["tipo","titulo","local","inicio","fim","nivel","horas","modalidade","responsabilidades","publicado"]) {
           const controle = formulario.elements.namedItem(campo);
           if (campo === "publicado") controle.checked = registro.publicado;
           else if (campo === "responsabilidades") controle.value = registro.responsabilidades.join("\n");
           else controle.value = registro[campo] ?? "";
         }
+        atualizarCampos();
         formulario.elements.namedItem("titulo").focus();
       };
       const remover = document.createElement("button");
@@ -90,7 +120,7 @@
         });
       };
       item.append(editar, " ", remover);
-      lista.append(item);
+      listas[registro.tipo].append(item);
     }
   }
 
@@ -126,13 +156,6 @@
     });
   };
 
-  document.querySelector("#entrar-google").onclick = () => {
-    if (ocupado) return;
-    const destino = window.location.origin + window.location.pathname;
-    const parametros = new URLSearchParams({ provider: "google", redirect_to: destino });
-    window.location.assign(url + "/auth/v1/authorize?" + parametros);
-  };
-
   const retorno = new URLSearchParams(window.location.hash.slice(1));
   if (retorno.get("type") === "recovery" && retorno.has("access_token")) {
     token = retorno.get("access_token");
@@ -142,26 +165,7 @@
     status.textContent = "Defina sua nova senha.";
   }
 
-  if (retorno.get("type") !== "recovery" && retorno.has("access_token")) {
-    token = retorno.get("access_token");
-    history.replaceState(null, "", window.location.pathname + window.location.search);
-    executar(async () => {
-      try {
-        const usuario = await requisicao("/auth/v1/user");
-        if (usuario.app_metadata?.portfolio_admin !== true) {
-          throw new Error("Use a conta Google autorizada para acessar o painel.");
-        }
-        await atualizar();
-        login.hidden = true;
-        painel.hidden = false;
-        acesso.hidden = true;
-        return "Sessão iniciada com Google.";
-      } catch (erro) {
-        sair();
-        throw erro;
-      }
-    });
-  } else if (retorno.has("error")) {
+  if (retorno.has("error")) {
     history.replaceState(null, "", window.location.pathname + window.location.search);
     status.textContent = "O acesso não foi concluído. Tente entrar novamente.";
   }
