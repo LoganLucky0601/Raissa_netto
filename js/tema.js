@@ -3,56 +3,57 @@
    Os seletores abaixo conectam os controles aos elementos do HTML.
 */
 /* Alternância entre tema escuro e claro, com preferência salva no navegador. */
-(() => {
-  const botao = document.querySelector("#theme-toggle");
-  if (!botao) return;
+(() => { // Executa esta parte da expressão ou da ação iniciada neste bloco.
+  const botao = document.querySelector("#theme-toggle"); // Guarda botao para esta interação.
+  if (!botao) return; // Verifica esta condição antes de continuar.
 
-  const raiz = document.documentElement;
-  const chave = "portfolio-tema";
+  const raiz = document.documentElement; // Guarda raiz para esta interação.
+  const chave = "portfolio-tema"; // Guarda chave para esta interação.
 
   // Função lerPreferencia: executa esta etapa da interação.
 
-  function lerPreferencia() {
-    try {
-      return localStorage.getItem(chave);
-    } catch (erro) {
-      return null;
-    }
-  }
+  function lerPreferencia() { // Inicia esta função reutilizável.
+    try { // Executa esta parte da expressão ou da ação iniciada neste bloco.
+      return localStorage.getItem(chave); // Encerra esta etapa e devolve o resultado indicado.
+    } catch (erro) { // Encerra o bloco ou a função acima.
+      return null; // Encerra esta etapa e devolve o resultado indicado.
+    } // Encerra o bloco ou a função acima.
+  } // Encerra o bloco ou a função acima.
 
   // Função salvarPreferencia: executa esta etapa da interação.
 
-  function salvarPreferencia(tema) {
-    try {
-      localStorage.setItem(chave, tema);
-    } catch (erro) {
+  function salvarPreferencia(tema) { // Inicia esta função reutilizável.
+    try { // Executa esta parte da expressão ou da ação iniciada neste bloco.
+      localStorage.setItem(chave, tema); // Executa esta parte da expressão ou da ação iniciada neste bloco.
+    } catch (erro) { // Encerra o bloco ou a função acima.
       // O botão continua funcionando mesmo sem armazenamento.
-    }
-  }
+    } // Encerra o bloco ou a função acima.
+  } // Encerra o bloco ou a função acima.
 
   // Função aplicarTema: executa esta etapa da interação.
 
-  function aplicarTema(tema) {
-    const claro = tema === "light";
-    raiz.dataset.theme = claro ? "light" : "dark";
-    botao.setAttribute("aria-pressed", String(claro));
-    botao.setAttribute("aria-label", claro ? "Ativar modo escuro" : "Ativar modo claro");
-    botao.title = claro ? "Ativar modo escuro" : "Ativar modo claro";
+  function aplicarTema(tema) { // Inicia esta função reutilizável.
+    const claro = tema === "light"; // Guarda claro para esta interação.
+    raiz.dataset.theme = claro ? "light" : "dark"; // Executa esta parte da expressão ou da ação iniciada neste bloco.
+    botao.setAttribute("aria-pressed", String(claro)); // Executa esta parte da expressão ou da ação iniciada neste bloco.
+    botao.setAttribute("aria-label", claro ? "Ativar modo escuro" : "Ativar modo claro"); // Executa esta parte da expressão ou da ação iniciada neste bloco.
+    botao.title = claro ? "Ativar modo escuro" : "Ativar modo claro"; // Executa esta parte da expressão ou da ação iniciada neste bloco.
 
-    const texto = botao.querySelector(".theme-label");
-    if (texto) texto.textContent = claro ? "Escuro" : "Claro";
+    const texto = botao.querySelector(".theme-label"); // Guarda texto para esta interação.
+    if (texto) texto.textContent = claro ? "Escuro" : "Claro"; // Verifica esta condição antes de continuar.
 
-    const cor = document.querySelector('meta[name="theme-color"]');
-    if (cor) cor.content = claro ? "#f6f7fa" : "#0b0d12";
-  }
+    const cor = document.querySelector('meta[name="theme-color"]'); // Guarda cor para esta interação.
+    if (cor) cor.content = claro ? "#f6f7fa" : "#0b0d12"; // Verifica esta condição antes de continuar.
+  } // Encerra o bloco ou a função acima.
 
-  aplicarTema(lerPreferencia() === "light" ? "light" : "dark");
+  aplicarTema(lerPreferencia() === "light" ? "light" : "dark"); // Executa esta parte da expressão ou da ação iniciada neste bloco.
 
   // Responde ao evento deste controle.
 
-  botao.addEventListener("click", () => {
-    const novoTema = raiz.dataset.theme === "light" ? "dark" : "light";
-    aplicarTema(novoTema);
-    salvarPreferencia(novoTema);
-  });
-})();
+  botao.addEventListener("click", () => { // Associa a ação ao evento deste elemento.
+    const novoTema = raiz.dataset.theme === "light" ? "dark" : "light"; // Guarda novoTema para esta interação.
+    aplicarTema(novoTema); // Executa esta parte da expressão ou da ação iniciada neste bloco.
+    salvarPreferencia(novoTema); // Executa esta parte da expressão ou da ação iniciada neste bloco.
+  }); // Encerra o bloco ou a função acima.
+})(); // Encerra o bloco ou a função acima.
+
