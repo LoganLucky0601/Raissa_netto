@@ -1,32 +1,32 @@
 /* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
 html[data-theme="light"] {
-  --cor-01: #f6f7fa; /* Cor utilizada pelo tema. */
-  --cor-02: #ffffff; /* Cor utilizada pelo tema. */
-  --cor-03: #edf0f5; /* Cor utilizada pelo tema. */
-  --cor-04: #c8ced9; /* Cor utilizada pelo tema. */
-  --cor-05: #1b1d20; /* Cor utilizada pelo tema. */
-  --cor-06: #30343a; /* Cor utilizada pelo tema. */
-  --cor-07: #873093; /* Cor utilizada pelo tema. */
-  --cor-08: #9f3eac; /* Cor utilizada pelo tema. */
-  --cor-09: #8e97a8; /* Cor utilizada pelo tema. */
-  --cor-10: #fff; /* Cor utilizada pelo tema. */
-  --cor-11: #6b2476; /* Cor utilizada pelo tema. */
-  --cor-12: rgba(255, 255, 255, 0.94); /* Cor utilizada pelo tema. */
-  --cor-13: #dfe4ee; /* Cor utilizada pelo tema. */
-  --cor-14: #eddbf0; /* Cor utilizada pelo tema. */
-  --cor-15: #cdb0d4; /* Cor utilizada pelo tema. */
-  --cor-16: #302334; /* Cor utilizada pelo tema. */
-  --cor-17: #dec3e5; /* Cor utilizada pelo tema. */
-  --cor-18: rgba(230, 118, 34, 0.1); /* Cor utilizada pelo tema. */
-  --cor-19: transparent; /* Cor utilizada pelo tema. */
-  --cor-20: #a8abaf; /* Cor utilizada pelo tema. */
-  --cor-21: #eca5f5; /* Cor utilizada pelo tema. */
-  --cor-22: #e0e4eb; /* Cor utilizada pelo tema. */
-  --cor-23: #a040ae; /* Cor utilizada pelo tema. */
-  --cor-24: #aab1be; /* Cor utilizada pelo tema. */
-  --cor-25: rgba(255, 255, 255, 0.84); /* Cor utilizada pelo tema. */
-  --cor-26: #c5ccd7; /* Cor utilizada pelo tema. */
-  --cor-27: rgba(30, 45, 70, 0.09); /* Cor utilizada pelo tema. */
+  --cor-01: #f6f7fa;  /* fundo principal da página; degradê do fundo de seção Contato. */
+  --cor-02: #ffffff;  /* fundo dos cartões. */
+  --cor-03: #edf0f5;  /* fundo secundário. */
+  --cor-04: #c8ced9;  /* bordas padrão. */
+  --cor-05: #1b1d20;  /* texto principal. */
+  --cor-06: #30343a;  /* texto secundário e descrições. */
+  --cor-07: #873093;  /* cor de destaque rosa; fundo de botão principal. */
+  --cor-08: #9f3eac;  /* destaque alternativo. */
+  --cor-09: #8e97a8;  /* borda de botão com contorno. */
+  --cor-10: #fff;  /* texto de botão principal; texto de cartão de projeto. */
+  --cor-11: #6b2476;  /* fundo de botão principal em destaque ou interação. */
+  --cor-12: rgba(255, 255, 255, 0.94);  /* fundo de cabeçalho. */
+  --cor-13: #dfe4ee;  /* fundo de seção Sobre mim. */
+  --cor-14: #eddbf0;  /* fundo de ícone do hobby. */
+  --cor-15: #cdb0d4;  /* borda de ícone do hobby. */
+  --cor-16: #302334;  /* texto de ícone do hobby. */
+  --cor-17: #dec3e5;  /* fundo de ícone do hobby em destaque ou interação. */
+  --cor-18: rgba(230, 118, 34, 0.1);  /* degradê do fundo de seção Instantes congelados. */
+  --cor-19: transparent;  /* degradê do fundo de seção Instantes congelados; barra de rolagem de carrossel de projetos. */
+  --cor-20: #a8abaf;  /* fundo de seção de projetos. */
+  --cor-21: #eca5f5;  /* texto de categoria do projeto. */
+  --cor-22: #e0e4eb;  /* texto de categoria do projeto. */
+  --cor-23: #a040ae;  /* borda de cartão de projeto em destaque ou interação. */
+  --cor-24: #aab1be;  /* barra de rolagem de carrossel de projetos. */
+  --cor-25: rgba(255, 255, 255, 0.84);  /* fundo de cartão de formação ou experiência. */
+  --cor-26: #c5ccd7;  /* borda de cartão de formação ou experiência. */
+  --cor-27: rgba(30, 45, 70, 0.09);  /* sombra externa de cartão de formação ou experiência. */
   --cor-28: #f9e9fc /* Cor utilizada pelo tema. */;
 } /* Estilos de html[data-theme="light"] */
 html[data-theme="light"] {
@@ -160,3 +160,4 @@ html[data-theme="light"] .footer-inner a:hover {
 html[data-theme="light"] .site-footer {
   border-top-color: var(--border); /* Configura border-top-color com o valor var(--border). */
 }
+
