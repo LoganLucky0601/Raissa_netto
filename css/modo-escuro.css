@@ -1,5 +1,6 @@
 /* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
 :root {
+  --skill-glow: #ffa354; /* Cor do brilho da borda e do ícone dos cartões de habilidades ao passar o mouse. */
   --cor-01: #0b0d12;  /* fundo principal da página; degradê do fundo de cartão de projeto. */
   --cor-02: #141820;  /* fundo dos cartões. */
   --cor-03: #191e27;  /* fundo secundário. */
@@ -111,7 +112,7 @@
   border-block: 1px solid var(--cor-21); /* Configura border-block com o valor 1px solid #20242d. */
 } /* Estilos de .skill-card */
 .skill-card {
-  --skill-glow: 255, 163, 84; /* Configura --skill-glow com o valor 255, 163, 84. */
+
   border: 1px solid var(--cor-22); /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.2). */
   background: var(--cor-23); /* Define o fundo com o valor rgba(35, 40, 49, 0.62). */
   box-shadow: 12px 17px 51px var(--cor-24); /* Configura box-shadow com o valor 12px 17px 51px rgba(0, 0, 0, 0.22). */
@@ -120,10 +121,10 @@
   background: conic-gradient(
     from var(--skill-angle, 0deg),
     var(--cor-10) 0%,
-    rgba(var(--skill-glow), 0.12) 18%,
-    rgba(var(--skill-glow), 0.95) 40%,
+    color-mix(in srgb, var(--skill-glow) 12%, transparent) 18%,
+    color-mix(in srgb, var(--skill-glow) 95%, transparent) 40%,
     var(--cor-25) 48%,
-    rgba(var(--skill-glow), 0.95) 55%,
+    color-mix(in srgb, var(--skill-glow) 95%, transparent) 55%,
     var(--cor-10) 78%
   ); /* Configura -webkit-mask com o valor linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0). */
@@ -135,7 +136,7 @@
 .skill-card.is-selected {
   box-shadow:
     12px 17px 51px var(--cor-26),
-    0 0 22px rgba(var(--skill-glow), 0.24);
+    0 0 22px color-mix(in srgb, var(--skill-glow) 24%, transparent);
 } /* Estilos de .skill-icon */
 .skill-icon {
   border: 1px solid var(--cor-27); /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.23). */

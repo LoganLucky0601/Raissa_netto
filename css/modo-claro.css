@@ -1,5 +1,6 @@
 /* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
 html[data-theme="light"] {
+  --skill-glow: #ffa354; /* Cor do brilho da borda e do ícone dos cartões de habilidades ao passar o mouse. */
   --cor-01: #f6f7fa;  /* fundo principal da página; degradê do fundo de seção Contato. */
   --cor-02: #ffffff;  /* fundo dos cartões. */
   --cor-03: #edf0f5;  /* fundo secundário. */
