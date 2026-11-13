@@ -6,7 +6,7 @@
   --projeto-degrade-topo: #0b0d1200; /* Início transparente para mostrar a imagem. */
   --projeto-degrade-meio: #0b0d12d6; /* Escurecimento atrás da descrição do projeto. */
   --projeto-degrade-base: #0b0d12; /* Fundo escuro atrás do link do projeto. */
-  --projetos-barra: #ce7ece; /* Cor do puxador da barra de rolagem dos projetos. */
+  --projetos-barra: #c987c9; /* Cor do puxador da barra de rolagem dos projetos. */
   --projetos-trilho: #242832; /* Cor do trilho da barra de rolagem dos projetos. */
   /* Habilidades — degradê da borda animada, independente do brilho. */
   --habilidade-degrade-inicio: #ce7ece1f; /* Cor suave no início da borda animada. */
