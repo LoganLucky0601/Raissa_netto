@@ -1,0 +1,270 @@
+/* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
+:root {
+  --cor-01: #0b0d12; /* Cor utilizada pelo tema. */
+  --cor-02: #141820; /* Cor utilizada pelo tema. */
+  --cor-03: #191e27; /* Cor utilizada pelo tema. */
+  --cor-04: #30343d; /* Cor utilizada pelo tema. */
+  --cor-05: #f5f5f6; /* Cor utilizada pelo tema. */
+  --cor-06: #a4a9b4; /* Cor utilizada pelo tema. */
+  --cor-07: #eca5f5; /* Cor utilizada pelo tema. */
+  --cor-08: #d559ee; /* Cor utilizada pelo tema. */
+  --cor-09: #111; /* Cor utilizada pelo tema. */
+  --cor-10: transparent; /* Cor utilizada pelo tema. */
+  --cor-11: #16110e; /* Cor utilizada pelo tema. */
+  --cor-12: #525762; /* Cor utilizada pelo tema. */
+  --cor-13: rgba(11, 13, 18, 0.94); /* Cor utilizada pelo tema. */
+  --cor-14: #242832; /* Cor utilizada pelo tema. */
+  --cor-15: #e9ebed; /* Cor utilizada pelo tema. */
+  --cor-16: #c1c5cb; /* Cor utilizada pelo tema. */
+  --cor-17: rgba(228, 109, 13, 0.34); /* Cor utilizada pelo tema. */
+  --cor-18: rgba(236, 165, 245, 0.582); /* Cor utilizada pelo tema. */
+  --cor-19: #b2b3b8; /* Cor utilizada pelo tema. */
+  --cor-20: #11151c; /* Cor utilizada pelo tema. */
+  --cor-21: #20242d; /* Cor utilizada pelo tema. */
+  --cor-22: rgba(255, 255, 255, 0.2); /* Cor utilizada pelo tema. */
+  --cor-23: rgba(35, 40, 49, 0.62); /* Cor utilizada pelo tema. */
+  --cor-24: rgba(0, 0, 0, 0.22); /* Cor utilizada pelo tema. */
+  --cor-25: #fff; /* Cor utilizada pelo tema. */
+  --cor-26: rgba(59, 42, 3, 0.479); /* Cor utilizada pelo tema. */
+  --cor-27: rgba(255, 255, 255, 0.23); /* Cor utilizada pelo tema. */
+  --cor-28: #6b6054; /* Cor utilizada pelo tema. */
+  --cor-29: rgba(255, 255, 255, 0.15); /* Cor utilizada pelo tema. */
+  --cor-30: rgba(0, 0, 0, 0.16); /* Cor utilizada pelo tema. */
+  --cor-31: #fdc64e; /* Cor utilizada pelo tema. */
+  --cor-32: rgba(236, 165, 245, 0.11); /* Cor utilizada pelo tema. */
+  --cor-33: rgba(236, 165, 245, 0.22); /* Cor utilizada pelo tema. */
+  --cor-34: #30333d; /* Cor utilizada pelo tema. */
+  --cor-35: #181c25; /* Cor utilizada pelo tema. */
+  --cor-36: #453122; /* Cor utilizada pelo tema. */
+  --cor-37: rgba(0, 0, 0, 0.34); /* Cor utilizada pelo tema. */
+  --cor-38: rgba(255, 255, 255, 0.35); /* Cor utilizada pelo tema. */
+  --cor-39: rgba(255, 255, 255, 0.07); /* Cor utilizada pelo tema. */
+  --cor-40: #ded6d0; /* Cor utilizada pelo tema. */
+  --cor-41: #0009; /* Cor utilizada pelo tema. */
+  --cor-42: rgba(4, 5, 9, 0.83); /* Cor utilizada pelo tema. */
+  --cor-43: #11151b; /* Cor utilizada pelo tema. */
+  --cor-44: rgba(0, 0, 0, 0.4); /* Cor utilizada pelo tema. */
+  --cor-45: #10131a; /* Cor utilizada pelo tema. */
+  --cor-46: rgba(11, 13, 18, 0.84); /* Cor utilizada pelo tema. */
+  --cor-47: #251d1a; /* Cor utilizada pelo tema. */
+  --cor-48: #0d1016; /* Cor utilizada pelo tema. */
+  --cor-49: #25252b; /* Cor utilizada pelo tema. */
+  --cor-50: #ba9b83; /* Cor utilizada pelo tema. */
+  --cor-51: #c8cbd2 /* Cor utilizada pelo tema. */;
+} /* Estilos de :root */
+:root {
+  --bg: var(--cor-01); /* Configura --bg com o valor #0b0d12. */
+  --surface: var(--cor-02); /* Configura --surface com o valor #141820. */
+  --surface-2: var(--cor-03); /* Configura --surface-2 com o valor #191e27. */
+  --border: var(--cor-04); /* Configura --border com o valor #30343d. */
+  --text: var(--cor-05); /* Configura --text com o valor #f5f5f6. */
+  --muted: var(--cor-06); /* Configura --muted com o valor #a4a9b4. */
+  --accent: var(--cor-07); /* Configura --accent com o valor #eca5f5. */
+  --accent-light: var(--cor-08) /* Configura --accent-light com o valor #d559ee. */;
+} /* Estilos de .pular */
+.pular {
+  color: var(--cor-09); /* Define a cor do texto com o valor #111. */
+} /* Estilos de .btn */
+.btn {
+  border: 1px solid var(--cor-10); /* Define a borda com o valor 1px solid transparent. */
+} /* Estilos de .btn-primary */
+.btn-primary {
+  color: var(--cor-11); /* Define a cor do texto com o valor #16110e. */
+} /* Estilos de .btn-outline */
+.btn-outline {
+  border-color: var(--cor-12); /* Configura border-color com o valor #525762. */
+}
+@keyframes skill-border-glow {
+  /* Estilos de to */
+  to {
+    --skill-angle: 360deg /* Configura --skill-angle com o valor 360deg. */;
+  }
+} /* Estilos de .site-header */
+.site-header {
+  background: var(--cor-13); /* Define o fundo com o valor rgba(11, 13, 18, 0.94). */
+  border-bottom: 1px solid var(--cor-14); /* Configura border-bottom com o valor 1px solid #242832. */
+} /* Estilos de .theme-toggle */
+.theme-toggle {
+  background: var(--cor-10); /* Define o fundo com o valor transparent. */
+} /* Estilos de .hero-subtitle strong */
+.hero-subtitle strong {
+  color: var(--cor-15); /* Define a cor do texto com o valor #e9ebed. */
+} /* Estilos de .hero-tags span */
+.hero-tags span {
+  color: var(--cor-16); /* Define a cor do texto com o valor #c1c5cb. */
+} /* Estilos de .portrait-glow */
+.portrait-glow {
+  background: radial-gradient(
+    circle,
+    var(--cor-17),
+    var(--cor-10) 72%
+  ); /* Define o fundo com o valor radial-gradient(circle, rgba(228, 109, 13, 0.34), transparent 72%). */
+} /* Estilos de .hero-portrait img */
+.hero-portrait img {
+  box-shadow: 0 1px 30px var(--cor-18); /* Configura box-shadow com o valor 0 1px 30px rgba(236, 165, 245, 0.582). */
+} /* Estilos de .portrait-caption */
+.portrait-caption {
+  color: var(--cor-19); /* Define a cor do texto com o valor #b2b3b8. */
+} /* Estilos de .about-section */
+.about-section {
+  background: var(--cor-20); /* Define o fundo com o valor #11151c. */
+  border-block: 1px solid var(--cor-21); /* Configura border-block com o valor 1px solid #20242d. */
+} /* Estilos de .skill-card */
+.skill-card {
+  --skill-glow: 255, 163, 84; /* Configura --skill-glow com o valor 255, 163, 84. */
+  border: 1px solid var(--cor-22); /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.2). */
+  background: var(--cor-23); /* Define o fundo com o valor rgba(35, 40, 49, 0.62). */
+  box-shadow: 12px 17px 51px var(--cor-24); /* Configura box-shadow com o valor 12px 17px 51px rgba(0, 0, 0, 0.22). */
+} /* Estilos de .skill-card::before */
+.skill-card::before {
+  background: conic-gradient(
+    from var(--skill-angle, 0deg),
+    var(--cor-10) 0%,
+    rgba(var(--skill-glow), 0.12) 18%,
+    rgba(var(--skill-glow), 0.95) 40%,
+    var(--cor-25) 48%,
+    rgba(var(--skill-glow), 0.95) 55%,
+    var(--cor-10) 78%
+  ); /* Configura -webkit-mask com o valor linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0). */
+} /* Estilos de .skill-card:hover,
+.skill-card:focus-visible,
+.skill-card.is-selected */
+.skill-card:hover,
+.skill-card:focus-visible,
+.skill-card.is-selected {
+  box-shadow:
+    12px 17px 51px var(--cor-26),
+    0 0 22px rgba(var(--skill-glow), 0.24);
+} /* Estilos de .skill-icon */
+.skill-icon {
+  border: 1px solid var(--cor-27); /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.23). */
+  background: var(--cor-28); /* Define o fundo com o valor #6b6054. */
+  color: var(--cor-25); /* Define a cor do texto com o valor #fff. */
+  box-shadow:
+    inset 0 1px 0 var(--cor-29),
+    0 5px 14px var(--cor-30);
+} /* Estilos de .skill-card:hover .skill-icon,
+.skill-card:focus-visible .skill-icon,
+.skill-card.is-selected .skill-icon */
+.skill-card:hover .skill-icon,
+.skill-card:focus-visible .skill-icon,
+.skill-card.is-selected .skill-icon {
+  background: var(--cor-31); /* Define o fundo com o valor #fdc64e. */
+} /* Estilos de .memories-section */
+.memories-section {
+  background:
+    radial-gradient(circle at 88% 8%, var(--cor-32), var(--cor-10) 36%), var(--bg); /* Define o fundo com o valor radial-gradient(circle at 88% 8%, rgba(236, 165, 245, 0.11), transparent 36%), var(--bg). */
+} /* Estilos de .memory-card:hover,
+.memory-card:focus-within */
+.memory-card:hover,
+.memory-card:focus-within {
+  box-shadow: 0 0 22px var(--cor-33); /* Configura box-shadow com o valor 0 0 22px rgba(236, 165, 245, 0.22). */
+} /* Estilos de .memory-open */
+.memory-open {
+  background: var(--cor-10); /* Define o fundo com o valor transparent. */
+} /* Estilos de .memory-media */
+.memory-media {
+  background: linear-gradient(
+    140deg,
+    var(--cor-34),
+    var(--cor-35) 55%,
+    var(--cor-36)
+  ); /* Define o fundo com o valor linear-gradient(140deg, #30333d, #181c25 55%, #453122). */
+  color: var(--cor-25); /* Define a cor do texto com o valor #fff. */
+} /* Estilos de .memory-media::after */
+.memory-media::after {
+  background: linear-gradient(
+    0deg,
+    var(--cor-37),
+    var(--cor-10) 35%
+  ); /* Define o fundo com o valor linear-gradient(0deg, rgba(0, 0, 0, 0.34), transparent 35%). */
+} /* Estilos de .memory-placeholder-symbol */
+.memory-placeholder-symbol {
+  border: 1px solid var(--cor-38); /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.35). */
+  background: var(--cor-39); /* Define o fundo com o valor rgba(255, 255, 255, 0.07). */
+} /* Estilos de .memory-placeholder-label */
+.memory-placeholder-label {
+  color: var(--cor-40); /* Define a cor do texto com o valor #ded6d0. */
+} /* Estilos de .memory-modal */
+.memory-modal {
+  box-shadow: 0 25px 90px var(--cor-41); /* Configura box-shadow com o valor 0 25px 90px #0009. */
+} /* Estilos de .memory-modal::backdrop */
+.memory-modal::backdrop {
+  background: var(--cor-42); /* Define o fundo com o valor rgba(4, 5, 9, 0.83). */
+} /* Estilos de .memory-modal .memory-media */
+.memory-modal .memory-media {
+  background: var(--cor-43); /* Define o fundo com o valor #11151b. */
+} /* Estilos de .memory-modal-close */
+.memory-modal-close {
+  box-shadow: 0 3px 16px var(--cor-44); /* Configura box-shadow com o valor 0 3px 16px rgba(0, 0, 0, 0.4). */
+} /* Estilos de .projects-section */
+.projects-section {
+  background: var(--cor-45); /* Define o fundo com o valor #10131a. */
+} /* Estilos de #projetos .projects-carousel */
+#projetos .projects-carousel {
+  --card-width: 38%; /* Configura --card-width com o valor 38%. */
+  scrollbar-color: var(--border) var(--cor-10); /* Configura scrollbar-color com o valor var(--border) transparent. */
+} /* Estilos de .projects-carousel .project-card::before */
+.projects-carousel .project-card::before {
+  background: linear-gradient(
+    180deg,
+    var(--cor-10) 5%,
+    var(--cor-46) 55%,
+    var(--cor-01) 100%
+  ); /* Define o fundo com o valor linear-gradient(180deg, transparent 5%, rgba(11, 13, 18, 0.84) 55%, #0b0d12 100%). */
+} /* Estilos de .projects-controls button */
+.projects-controls button {
+  background: var(--cor-10); /* Define o fundo com o valor transparent. */
+}
+@media (max-width: 900px) {
+  /* Estilos de #projetos .projects-carousel */
+  #projetos .projects-carousel {
+    --card-width: 55% /* Configura --card-width com o valor 55%. */;
+  }
+}
+@media (max-width: 600px) {
+  /* Estilos de #projetos .projects-carousel */
+  #projetos .projects-carousel {
+    --card-width: 88% /* Configura --card-width com o valor 88%. */;
+  }
+} /* Estilos de .journey-carousel */
+.journey-carousel {
+  --card-width: 38%; /* Configura --card-width com o valor 38%. */
+  scrollbar-color: var(--border) var(--cor-10); /* Configura scrollbar-color com o valor var(--border) transparent. */
+} /* Estilos de .journey-card */
+.journey-card {
+  background: var(--cor-23);
+  border: 1px solid var(--cor-22); /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.2). */
+} /* Estilos de .journey-controls button */
+.journey-controls button {
+  background: var(--cor-10); /* Define o fundo com o valor transparent. */
+}
+@media (max-width: 900px) {
+  /* Estilos de .journey-carousel */
+  .journey-carousel {
+    --card-width: 55% /* Configura --card-width com o valor 55%. */;
+  }
+}
+@media (max-width: 600px) {
+  /* Estilos de .journey-carousel */
+  .journey-carousel {
+    --card-width: 88% /* Configura --card-width com o valor 88%. */;
+  }
+} /* Estilos de .contact-section */
+.contact-section {
+  background: radial-gradient(
+    ellipse at center top,
+    var(--cor-47),
+    var(--cor-48) 65%
+  ); /* Define o fundo com o valor radial-gradient(ellipse at center top, #251d1a, #0d1016 65%). */
+  border-top: 1px solid var(--cor-49); /* Configura border-top com o valor 1px solid #25252b. */
+} /* Estilos de .contact-content .contact-hint */
+.contact-content .contact-hint {
+  color: var(--cor-50); /* Define a cor do texto com o valor #ba9b83. */
+} /* Estilos de .menu a,
+.footer-inner a */
+.menu a,
+.footer-inner a {
+  color: var(--cor-51); /* Define a cor do texto com o valor #c8cbd2. */
+}

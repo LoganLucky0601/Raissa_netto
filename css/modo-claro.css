@@ -1,0 +1,162 @@
+/* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
+html[data-theme="light"] {
+  --cor-01: #f6f7fa; /* Cor utilizada pelo tema. */
+  --cor-02: #ffffff; /* Cor utilizada pelo tema. */
+  --cor-03: #edf0f5; /* Cor utilizada pelo tema. */
+  --cor-04: #c8ced9; /* Cor utilizada pelo tema. */
+  --cor-05: #1b1d20; /* Cor utilizada pelo tema. */
+  --cor-06: #30343a; /* Cor utilizada pelo tema. */
+  --cor-07: #873093; /* Cor utilizada pelo tema. */
+  --cor-08: #9f3eac; /* Cor utilizada pelo tema. */
+  --cor-09: #8e97a8; /* Cor utilizada pelo tema. */
+  --cor-10: #fff; /* Cor utilizada pelo tema. */
+  --cor-11: #6b2476; /* Cor utilizada pelo tema. */
+  --cor-12: rgba(255, 255, 255, 0.94); /* Cor utilizada pelo tema. */
+  --cor-13: #dfe4ee; /* Cor utilizada pelo tema. */
+  --cor-14: #eddbf0; /* Cor utilizada pelo tema. */
+  --cor-15: #cdb0d4; /* Cor utilizada pelo tema. */
+  --cor-16: #302334; /* Cor utilizada pelo tema. */
+  --cor-17: #dec3e5; /* Cor utilizada pelo tema. */
+  --cor-18: rgba(230, 118, 34, 0.1); /* Cor utilizada pelo tema. */
+  --cor-19: transparent; /* Cor utilizada pelo tema. */
+  --cor-20: #a8abaf; /* Cor utilizada pelo tema. */
+  --cor-21: #eca5f5; /* Cor utilizada pelo tema. */
+  --cor-22: #e0e4eb; /* Cor utilizada pelo tema. */
+  --cor-23: #a040ae; /* Cor utilizada pelo tema. */
+  --cor-24: #aab1be; /* Cor utilizada pelo tema. */
+  --cor-25: rgba(255, 255, 255, 0.84); /* Cor utilizada pelo tema. */
+  --cor-26: #c5ccd7; /* Cor utilizada pelo tema. */
+  --cor-27: rgba(30, 45, 70, 0.09); /* Cor utilizada pelo tema. */
+  --cor-28: #f9e9fc /* Cor utilizada pelo tema. */;
+} /* Estilos de html[data-theme="light"] */
+html[data-theme="light"] {
+  color-scheme: light; /* Configura color-scheme com o valor light. */
+  --bg: var(--cor-01); /* Configura --bg com o valor #f6f7fa. */
+  --surface: var(--cor-02); /* Configura --surface com o valor #ffffff. */
+  --surface-2: var(--cor-03); /* Configura --surface-2 com o valor #edf0f5. */
+  --border: var(--cor-04); /* Configura --border com o valor #c8ced9. */
+  --text: var(--cor-05); /* Configura --text com o valor #1b1d20. */
+  --muted: var(--cor-06); /* Configura --muted com o valor #30343a. */
+  --accent: var(--cor-07); /* Configura --accent com o valor #873093. */
+  --accent-light: var(--cor-08) /* Configura --accent-light com o valor #9f3eac. */;
+} /* Estilos de html[data-theme="light"] .btn-outline */
+html[data-theme="light"] .btn-outline {
+  border-color: var(--cor-09); /* Configura border-color com o valor #8e97a8. */
+  color: var(--text); /* Define a cor do texto com o valor var(--text). */
+} /* Estilos de html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .pular */
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .pular {
+  background: var(--cor-07); /* Define o fundo com o valor #873093. */
+  color: var(--cor-10); /* Define a cor do texto com o valor #fff. */
+} /* Estilos de html[data-theme="light"] .btn-primary:hover */
+html[data-theme="light"] .btn-primary:hover {
+  background: var(--cor-11); /* Define o fundo com o valor #6b2476. */
+} /* Estilos de html[data-theme="light"] .theme-icon-light */
+html[data-theme="light"] .theme-icon-light {
+  display: none; /* Define o modelo de distribuição dos elementos com o valor none. */
+} /* Estilos de html[data-theme="light"] .theme-icon-dark */
+html[data-theme="light"] .theme-icon-dark {
+  display: inline; /* Define o modelo de distribuição dos elementos com o valor inline. */
+} /* Estilos de html[data-theme="light"] .site-header */
+html[data-theme="light"] .site-header {
+  background: var(--cor-12); /* Define o fundo com o valor rgba(255, 255, 255, 0.94). */
+  border-bottom-color: var(--border); /* Configura border-bottom-color com o valor var(--border). */
+} /* Estilos de html[data-theme="light"] .hero-subtitle strong */
+html[data-theme="light"] .hero-subtitle strong {
+  color: var(--text); /* Define a cor do texto com o valor var(--text). */
+} /* Estilos de html[data-theme="light"] .hero-tags span,
+html[data-theme="light"] .portrait-caption,
+html[data-theme="light"] .section-heading p */
+html[data-theme="light"] .hero-tags span,
+html[data-theme="light"] .portrait-caption,
+html[data-theme="light"] .section-heading p {
+  color: var(--muted); /* Define a cor do texto com o valor var(--muted). */
+} /* Estilos de html[data-theme="light"] .about-section */
+html[data-theme="light"] .about-section {
+  background: var(--cor-13); /* Define o fundo com o valor #dfe4ee. */
+  border-block-color: var(--border); /* Configura border-block-color com o valor var(--border). */
+} /* Estilos de html[data-theme="light"] .skill-icon */
+html[data-theme="light"] .skill-icon {
+  background: var(--cor-14); /* Define o fundo com o valor #eddbf0. */
+  border-color: var(--cor-15); /* Configura border-color com o valor #cdb0d4. */
+  color: var(--cor-16); /* Define a cor do texto com o valor #302334. */
+} /* Estilos de html[data-theme="light"] .skill-icon img */
+html[data-theme="light"] .skill-icon img {
+  filter: none; /* Configura filter com o valor none. */
+} /* Estilos de html[data-theme="light"] .skill-card:hover .skill-icon,
+html[data-theme="light"] .skill-card:focus-visible .skill-icon,
+html[data-theme="light"] .skill-card.is-selected .skill-icon */
+html[data-theme="light"] .skill-card:hover .skill-icon,
+html[data-theme="light"] .skill-card:focus-visible .skill-icon,
+html[data-theme="light"] .skill-card.is-selected .skill-icon {
+  background: var(--cor-17); /* Define o fundo com o valor #dec3e5. */
+} /* Estilos de html[data-theme="light"] .memories-section */
+html[data-theme="light"] .memories-section {
+  background:
+    radial-gradient(circle at 88% 8%, var(--cor-18), var(--cor-19) 35%), var(--bg); /* Define o fundo com o valor radial-gradient(circle at 88% 8%, rgba(230, 118, 34, 0.1), transparent 35%), var(--bg). */
+} /* Estilos de html[data-theme="light"] .projects-section */
+html[data-theme="light"] .projects-section {
+  background: var(--cor-20); /* Define o fundo com o valor #a8abaf. */
+} /* Estilos de html[data-theme="light"] .project-card */
+html[data-theme="light"] .project-card {
+  background: var(--surface); /* Define o fundo com o valor var(--surface). */
+  border-color: var(--border); /* Configura border-color com o valor var(--border). */
+} /* Estilos de html[data-theme="light"] .projects-carousel .project-card */
+html[data-theme="light"] .projects-carousel .project-card {
+  color: var(--cor-10); /* Define a cor do texto com o valor #fff. */
+} /* Estilos de html[data-theme="light"] .projects-carousel .project-card .project-category,
+html[data-theme="light"] .projects-carousel .project-card .project-link */
+html[data-theme="light"] .projects-carousel .project-card .project-category,
+html[data-theme="light"] .projects-carousel .project-card .project-link {
+  color: var(--cor-21); /* Define a cor do texto com o valor #eca5f5. */
+} /* Estilos de html[data-theme="light"] .projects-carousel .project-card .project-body > p:not(.project-category) */
+html[data-theme="light"] .projects-carousel .project-card .project-body > p:not(.project-category) {
+  color: var(--cor-22); /* Define a cor do texto com o valor #e0e4eb. */
+} /* Estilos de html[data-theme="light"] .projects-carousel .project-card.is-current */
+html[data-theme="light"] .projects-carousel .project-card.is-current {
+  border-color: var(--cor-23); /* Configura border-color com o valor #a040ae. */
+} /* Estilos de html[data-theme="light"] .journey-carousel,
+html[data-theme="light"] .projects-carousel */
+html[data-theme="light"] .journey-carousel,
+html[data-theme="light"] .projects-carousel {
+  scrollbar-color: var(--cor-24) var(--cor-19); /* Configura scrollbar-color com o valor #aab1be transparent. */
+} /* Estilos de html[data-theme="light"] .skill-card,
+html[data-theme="light"] .journey-card */
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .journey-card {
+  background: var(--cor-25); /* Define o fundo com o valor rgba(255, 255, 255, 0.84). */
+  border-color: var(--cor-26); /* Configura border-color com o valor #c5ccd7. */
+  box-shadow: 8px 14px 28px var(--cor-27); /* Configura box-shadow com o valor 8px 14px 28px rgba(30, 45, 70, 0.09). */
+} /* Estilos de html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .journey-card.is-current */
+html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .journey-card.is-current {
+  border-color: var(--accent); /* Configura border-color com o valor var(--accent). */
+} /* Estilos de html[data-theme="light"] .journey-card .journey-note,
+html[data-theme="light"] .journey-label */
+html[data-theme="light"] .journey-card .journey-note,
+html[data-theme="light"] .journey-label {
+  color: var(--accent); /* Define a cor do texto com o valor var(--accent). */
+} /* Estilos de html[data-theme="light"] .contact-section */
+html[data-theme="light"] .contact-section {
+  background: radial-gradient(
+    ellipse at center top,
+    var(--cor-28),
+    var(--cor-01) 68%
+  ); /* Define o fundo com o valor radial-gradient(ellipse at center top, #f9e9fc, #f6f7fa 68%). */
+  border-top-color: var(--border); /* Configura border-top-color com o valor var(--border). */
+} /* Estilos de html[data-theme="light"] .menu a,
+html[data-theme="light"] .footer-inner a */
+html[data-theme="light"] .menu a,
+html[data-theme="light"] .footer-inner a {
+  color: var(--text); /* Define a cor do texto com o valor var(--text). */
+} /* Estilos de html[data-theme="light"] .menu a:hover,
+html[data-theme="light"] .footer-inner a:hover */
+html[data-theme="light"] .menu a:hover,
+html[data-theme="light"] .footer-inner a:hover {
+  color: var(--accent); /* Define a cor do texto com o valor var(--accent). */
+} /* Estilos de html[data-theme="light"] .site-footer */
+html[data-theme="light"] .site-footer {
+  border-top-color: var(--border); /* Configura border-top-color com o valor var(--border). */
+}
