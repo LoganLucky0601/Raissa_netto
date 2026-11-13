@@ -1,6 +1,6 @@
 /* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
 :root {
-  --skill-glow: #ffa354; /* Cor do brilho da borda e do ícone dos cartões de habilidades ao passar o mouse. */
+  --skill-glow: #ce7ece; /* Cor do brilho da borda e do ícone dos cartões de habilidades ao passar o mouse. */
   --cor-01: #0b0d12;  /* fundo principal da página; degradê do fundo de cartão de projeto. */
   --cor-02: #141820;  /* fundo dos cartões. */
   --cor-03: #191e27;  /* fundo secundário. */
@@ -26,17 +26,17 @@
   --cor-23: rgba(35, 40, 49, 0.62);  /* fundo de cartão de hobby; fundo de cartão de formação ou experiência. */
   --cor-24: rgba(0, 0, 0, 0.22);  /* sombra externa de cartão de hobby. */
   --cor-25: #fff;  /* degradê do fundo de cartão de hobby; texto de ícone do hobby; texto de área da fotografia. */
-  --cor-26: rgba(59, 42, 3, 0.479);  /* sombra externa de cartão de hobby em destaque ou interação. */
+  --cor-26: rgba(190, 141, 218, 0.37);  /* sombra externa de cartão de hobby em destaque ou interação. */
   --cor-27: rgba(255, 255, 255, 0.23);  /* borda de ícone do hobby. */
-  --cor-28: #6b6054;  /* fundo de ícone do hobby. */
-  --cor-29: rgba(255, 255, 255, 0.15);  /* sombra externa de ícone do hobby. */
+  --cor-28: #413a34;  /* fundo de ícone do hobby. */
+  --cor-29: rgba(127, 110, 131, 0.596);  /* sombra externa de ícone do hobby. */
   --cor-30: rgba(0, 0, 0, 0.16);  /* sombra externa de ícone do hobby. */
-  --cor-31: #fdc64e;  /* fundo de ícone do hobby em destaque ou interação. */
+  --cor-31: #caa5d8;  /* fundo de ícone do hobby em destaque ou interação. */
   --cor-32: rgba(236, 165, 245, 0.11);  /* degradê do fundo de seção Instantes congelados. */
   --cor-33: rgba(236, 165, 245, 0.22);  /* sombra externa de cartão de fotografia em destaque ou interação. */
   --cor-34: #30333d;  /* degradê do fundo de área da fotografia. */
   --cor-35: #181c25;  /* degradê do fundo de área da fotografia. */
-  --cor-36: #453122;  /* degradê do fundo de área da fotografia. */
+  --cor-36: #835b9b;  /* degradê do fundo de área da fotografia. */
   --cor-37: rgba(0, 0, 0, 0.34);  /* degradê do fundo de área da fotografia. */
   --cor-38: rgba(255, 255, 255, 0.35);  /* borda de espaço reservado da fotografia. */
   --cor-39: rgba(255, 255, 255, 0.07);  /* fundo de espaço reservado da fotografia. */
@@ -47,7 +47,7 @@
   --cor-44: rgba(0, 0, 0, 0.4);  /* sombra externa de janela da fotografia ampliada. */
   --cor-45: #10131a;  /* fundo de seção de projetos. */
   --cor-46: rgba(11, 13, 18, 0.84);  /* degradê do fundo de cartão de projeto. */
-  --cor-47: #251d1a;  /* degradê do fundo de seção Contato. */
+  --cor-47: #ba84d338;  /* degradê do fundo de seção Contato. */
   --cor-48: #0d1016;  /* degradê do fundo de seção Contato. */
   --cor-49: #25252b;  /* Borda superior da seção Contato. */
   --cor-50: #ba9b83;  /* Texto de orientação na seção Contato. */
