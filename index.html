@@ -12,13 +12,13 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/projetos-carrossel.css">
   <script defer src="js/projetos-carrossel.js"></script>
-  <link rel="stylesheet" href="css/trajetoria.css">
-  <script defer src="js/linha-do-tempo.js"></script>
   <link rel="stylesheet" href="css/tema.css">
   <script defer src="js/tema.js"></script>
   <script defer src="js/formacao-carrossel.js"></script>
   <script defer src="js/voltar-topo.js"></script>
   <script defer src="js/skills-interactions.js"></script>
+  <link rel="stylesheet" href="css/galeria.css">
+  <script defer src="js/galeria.js"></script>
 </head>
 <body>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -70,18 +70,7 @@
 
         <!-- Seção Linha do tempo -->
 
-    <section id="trajetoria" class="section" aria-labelledby="titulo-trajetoria">
-      <div class="container">
-        <p class="section-kicker">LINHA DO TEMPO</p>
-        <div class="section-heading">
-          <h2 id="titulo-trajetoria">Trajetória <span>educacional e profissional</span></h2>
-        </div>
-        <p class="trajetoria-vazia">Carregando trajetória…</p>
-        <ol class="trajetoria-lista" aria-label="Registros do mais recente ao mais antigo"></ol>
-      </div>
-    </section>
-
-    <!-- Seção hobbys -->
+<!-- Seção hobbys -->
 
     <section id="habilidades" class="section" aria-labelledby="titulo-habilidades">
       <div class="container"><p class="section-kicker">O QUE GOSTO DE FAZER</p><div class="section-heading"><h2 id="titulo-habilidades">Meus <span>hobbys</span></h2><p></p></div>
@@ -95,6 +84,77 @@
         </div>
       </div>
     </section>
+
+<!-- Instantes congelados: galeria fotográfica em formato de carrossel. -->
+    <section id="instantes-congelados" class="section memories-section" aria-labelledby="titulo-instantes">
+      <div class="container">
+        <p class="section-kicker">REGISTROS DA MINHA TRAJETÓRIA</p>
+        <div class="section-heading"><h2 id="titulo-instantes">Instantes <span>congelados.</span></h2></div>
+        <div class="memories-top">
+          <p class="memories-intro">Pequenos fragmentos de tempo congelados.</p>
+          <span id="memories-count" class="memories-counter" aria-live="polite">01 / 03</span>
+        </div>
+        <div class="memories-viewport">
+          <div id="memories-track" class="memories-track" aria-label="Fotografias e memórias" tabindex="0">
+            <!-- Fotografia 1: edite o caminho, o título e os textos diretamente aqui. -->
+            <!-- Adicione a foto em img/instante-1.jpg e personalize os textos abaixo. -->
+<article class="memory-card">
+<button class="memory-open" type="button" aria-label="Ampliar registro 1">
+<div class="memory-media">
+<img src="img/instante-1.jpg" alt="Fotografia a adicionar ao registro 1" loading="lazy">
+<span class="memory-placeholder-symbol" aria-hidden="true">▧</span>
+<span class="memory-placeholder-label">Fotografia 1</span>
+</div>
+<div class="memory-body"><p class="memory-category">ESPAÇO PARA UMA RECORDAÇÃO</p><h3>Instante 01</h3><p class="memory-description">Um espaço para registrar momentos especiais.</p></div>
+</button>
+<p class="memory-detail" hidden>Personalize a fotografia e a legenda deste registro no HTML.</p>
+</article>
+<!-- Adicione a foto em img/instante-2.jpg e personalize os textos abaixo. -->
+<article class="memory-card">
+<button class="memory-open" type="button" aria-label="Ampliar registro 2">
+<div class="memory-media">
+<img src="img/instante-2.jpg" alt="Fotografia a adicionar ao registro 2" loading="lazy">
+<span class="memory-placeholder-symbol" aria-hidden="true">▧</span>
+<span class="memory-placeholder-label">Fotografia 2</span>
+</div>
+<div class="memory-body"><p class="memory-category">ESPAÇO PARA UMA RECORDAÇÃO</p><h3>Instante 02</h3><p class="memory-description">Um espaço para registrar momentos especiais.</p></div>
+</button>
+<p class="memory-detail" hidden>Personalize a fotografia e a legenda deste registro no HTML.</p>
+</article>
+<!-- Adicione a foto em img/instante-3.jpg e personalize os textos abaixo. -->
+<article class="memory-card">
+<button class="memory-open" type="button" aria-label="Ampliar registro 3">
+<div class="memory-media">
+<img src="img/instante-3.jpg" alt="Fotografia a adicionar ao registro 3" loading="lazy">
+<span class="memory-placeholder-symbol" aria-hidden="true">▧</span>
+<span class="memory-placeholder-label">Fotografia 3</span>
+</div>
+<div class="memory-body"><p class="memory-category">ESPAÇO PARA UMA RECORDAÇÃO</p><h3>Instante 03</h3><p class="memory-description">Um espaço para registrar momentos especiais.</p></div>
+</button>
+<p class="memory-detail" hidden>Personalize a fotografia e a legenda deste registro no HTML.</p>
+</article>
+          </div>
+        </div>
+        <div class="memories-controls">
+          <div id="memories-dots" class="memories-dots" aria-label="Navegar entre os registros"></div>
+          <div class="memories-buttons">
+            <button type="button" id="memories-prev" class="memories-button" aria-label="Fotografia anterior">‹</button>
+            <button type="button" id="memories-next" class="memories-button" aria-label="Próxima fotografia">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <dialog id="memory-modal" class="memory-modal" aria-labelledby="memory-modal-title">
+      <button type="button" class="memory-modal-close" aria-label="Fechar fotografia ampliada">×</button>
+      <div class="memory-modal-inner">
+        <div class="memory-media memory-modal-media"></div>
+        <div class="memory-modal-text">
+          <p class="memory-category memory-modal-category"></p>
+          <h3 id="memory-modal-title" class="memory-modal-title"></h3>
+          <p class="memory-modal-description"></p>
+        </div>
+      </div>
+    </dialog>
 
     <!-- Seção projetos -->
 
@@ -165,6 +225,7 @@
 <div class="journey-group">
 <h3 id="grupo-jornada-1">Experiência profissional</h3>
 <div class="journey-carousel" tabindex="0" role="region" aria-labelledby="grupo-jornada-1">
+<article class="journey-card"><span class="journey-label">EXPERIÊNCIA PROFISSIONAL</span><h4>Professora de Redação</h4><p>Autônoma</p><p class="journey-note">03/11/2026 — Em andamento</p></article>
 <article class="journey-card"><span class="journey-label">EXPERIÊNCIA PROFISSIONAL</span>
             <h4>Soluções de Crédito & Negócios</h4>
             <p>Consultoria negócios focada em consórcios, estruturação de crédito, estratégias de expansão de parcerias e soluções corporativas no setor financeiro.</p>
@@ -187,6 +248,6 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Raissa netto. Todos os direitos reservados.</p><nav aria-label="Links rápidos do rodapé"><a href="admin-trajetoria.html">Área administrativa</a><a href="#projetos">Projetos</a><a href="#">Contato</a></nav></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Raissa netto. Todos os direitos reservados.</p><nav aria-label="Links rápidos do rodapé"><a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#">Contato</a></nav></div></footer>
 </body>
 </html>
