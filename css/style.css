@@ -1,382 +1,935 @@
-/* 1. Cores e configurações gerais */
+/* ============================================================
+0. BASE — cores, normalização e elementos compartilhados
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de :root */
 :root {
+  /* Variável reutilizada pelas regras do portfólio. */
   --bg: #0b0d12;
+  /* Variável reutilizada pelas regras do portfólio. */
   --surface: #141820;
+  /* Variável reutilizada pelas regras do portfólio. */
   --surface-2: #191e27;
+  /* Variável reutilizada pelas regras do portfólio. */
   --border: #30343d;
+  /* Variável reutilizada pelas regras do portfólio. */
   --text: #f5f5f6;
+  /* Variável reutilizada pelas regras do portfólio. */
   --muted: #a4a9b4;
+  /* Variável reutilizada pelas regras do portfólio. */
   --accent: #eca5f5;
+  /* Variável reutilizada pelas regras do portfólio. */
   --accent-light: #d559ee;
+  /* Variável reutilizada pelas regras do portfólio. */
   --font: "Poppins", Arial, sans-serif;
 }
-
+/* Regras de * */
 * {
+  /* Define o espaço externo. */
   margin: 0;
+  /* Define o espaço interno. */
   padding: 0;
+  /* Configura a propriedade box-sizing deste elemento. */
   box-sizing: border-box;
 }
-
+/* Regras de html */
 html {
+  /* Configura a propriedade scroll-behavior deste elemento. */
   scroll-behavior: smooth;
+  /* Configura a propriedade scroll-padding-top deste elemento. */
   scroll-padding-top: 105px;
 }
-
+/* Regras de body */
 body {
+  /* Configura a propriedade font-family deste elemento. */
   font-family: var(--font);
+  /* Define o fundo deste elemento. */
   background: var(--bg);
+  /* Define a cor do texto. */
   color: var(--text);
+  /* Configura a propriedade line-height deste elemento. */
   line-height: 1.65;
 }
-
+/* Regras de a */
 a {
+  /* Define a cor do texto. */
   color: inherit;
+  /* Configura a propriedade text-decoration deste elemento. */
   text-decoration: none;
 }
-
+/* Regras de img */
 img {
+  /* Define como os elementos são distribuídos. */
   display: block;
+  /* Configura a propriedade max-width deste elemento. */
   max-width: 100%;
 }
-
+/* Regras de ul */
 ul {
+  /* Configura a propriedade list-style deste elemento. */
   list-style: none;
 }
-
+/* Regras de .container */
 .container {
+  /* Define a largura. */
   width: min(1140px, 90%);
+  /* Configura a propriedade margin-inline deste elemento. */
   margin-inline: auto;
 }
-
+/* Regras de .pular */
 .pular {
+  /* Define o tipo de posicionamento. */
   position: absolute;
+  /* Configura a propriedade top deste elemento. */
   top: -100px;
+  /* Configura a propriedade left deste elemento. */
   left: 12px;
+  /* Controla a sobreposição. */
   z-index: 20;
+  /* Define o fundo deste elemento. */
   background: var(--accent);
+  /* Define a cor do texto. */
   color: #111;
+  /* Define o espaço interno. */
   padding: 10px;
+  /* Arredonda os cantos. */
   border-radius: 8px;
 }
-
+/* Regras de .pular:focus */
 .pular:focus {
+  /* Configura a propriedade top deste elemento. */
   top: 12px;
 }
-
-/* 2. Menu: Flexbox deixa os links lado a lado */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(11, 13, 18, 0.94);
-  border-bottom: 1px solid #242832;
-  backdrop-filter: blur(12px);
-}
-
-.header-inner {
-  min-height: 86px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 26px;
-}
-
-.logo {
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  font-size: 1.65rem;
-}
-
-.logo span {
-  color: var(--accent);
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 27px;
-  flex-wrap: wrap;
-}
-
-.menu a,
-.footer-inner a {
-  font-size: 0.86rem;
-  color: #c8cbd2;
-  transition: color 0.2s;
-}
-
-.menu a:hover,
-.footer-inner a:hover {
-  color: var(--accent);
-}
-
+/* Regras de .btn */
 .btn {
+  /* Define como os elementos são distribuídos. */
   display: inline-flex;
+  /* Configura a propriedade justify-content deste elemento. */
   justify-content: center;
+  /* Configura a propriedade align-items deste elemento. */
   align-items: center;
+  /* Define a distância entre os elementos. */
   gap: 12px;
+  /* Define a borda. */
   border: 1px solid transparent;
+  /* Arredonda os cantos. */
   border-radius: 9px;
+  /* Define o espaço interno. */
   padding: 13px 21px;
+  /* Configura a propriedade font deste elemento. */
   font: 600 0.88rem var(--font);
+  /* Define a transição visual. */
   transition:
     transform 0.2s,
     background 0.2s,
     border-color 0.2s;
+  /* Configura a propriedade white-space deste elemento. */
   white-space: nowrap;
 }
-
+/* Regras de .btn:hover */
 .btn:hover {
+  /* Aplica a transformação visual. */
   transform: translateY(-3px);
 }
-
+/* Regras de .btn-primary */
 .btn-primary {
+  /* Define o fundo deste elemento. */
   background: var(--accent);
+  /* Define a cor do texto. */
   color: #16110e;
 }
-
+/* Regras de .btn-primary:hover */
 .btn-primary:hover {
+  /* Define o fundo deste elemento. */
   background: var(--accent-light);
 }
-
+/* Regras de .btn-outline */
 .btn-outline {
+  /* Configura a propriedade border-color deste elemento. */
   border-color: #525762;
+  /* Define a cor do texto. */
   color: var(--text);
 }
-
+/* Regras de .btn-outline:hover */
 .btn-outline:hover {
+  /* Configura a propriedade border-color deste elemento. */
   border-color: var(--accent);
 }
-
-/* 3. Apresentação: Grid organiza texto e imagem */
-.hero {
-  min-height: 610px;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  grid-template-areas: "intro portrait";
-  gap: 54px;
-  align-items: center;
-  padding-block: 80px 86px;
-}
-
-.hero-content {
-  grid-area: intro;
-}
-
-.hero-portrait {
-  grid-area: portrait;
-  min-width: 0;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  isolation: isolate;
-}
-
-.eyebrow,
-.section-kicker {
-  color: var(--accent);
-  font-size: 0.76rem;
-  letter-spacing: 0.17em;
-  font-weight: 700;
-  margin-bottom: 23px;
-}
-
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
-}
-
+/* Regras de h1 */
 h1 {
+  /* Define o tamanho do texto. */
   font-size: clamp(2.8rem, 5.2vw, 4.65rem);
+  /* Configura a propriedade letter-spacing deste elemento. */
   letter-spacing: -0.055em;
+  /* Configura a propriedade line-height deste elemento. */
   line-height: 1.16;
+  /* Configura a propriedade max-width deste elemento. */
   max-width: 650px;
 }
-
+/* Regras de h1 span,
+h2 span */
 h1 span,
 h2 span {
+  /* Define a cor do texto. */
   color: var(--accent);
 }
-
-.hero-subtitle {
-  color: var(--muted);
-  font-size: 1.02rem;
-  margin-top: 25px;
-  max-width: 560px;
-}
-
-.hero-subtitle strong {
-  color: #e9ebed;
-  font-weight: 600;
-}
-
-.hero-actions,
-.hero-tags {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.hero-actions {
-  margin-top: 33px;
-}
-
-.hero-tags {
-  margin-top: 45px;
-  gap: 10px;
-}
-
-.hero-tags span {
-  font-size: 0.73rem;
-  color: #c1c5cb;
-  border: 1px solid var(--border);
-  padding: 8px 13px;
-  border-radius: 100px;
-}
-
-.portrait-glow {
-  position: absolute;
-  inset: 12%;
-  background: radial-gradient(
-    circle,
-    rgba(228, 109, 13, 0.34),
-    transparent 72%
-  );
-  filter: blur(18px);
-  z-index: -1;
-}
-
-/* Foto de perfil: corte circular sem deformar a imagem. */
-.hero-portrait img {
-  width: min(440px, 100%);
-  aspect-ratio: 1;
-  height: auto;
-  object-fit: cover;
-  object-position: center 35%;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  box-shadow: 0 1px 30px rgba(236, 165, 245, 0.582);
-}
-
-.portrait-caption {
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  color: #b2b3b8;
-}
-
-.portrait-caption span {
-  color: var(--accent);
-}
-
-/* 4. Seções e Sobre mim */
+/* Regras de .section */
 .section {
+  /* Configura a propriedade padding-block deste elemento. */
   padding-block: 95px;
+  /* Configura a propriedade scroll-margin-top deste elemento. */
   scroll-margin-top: 94px;
 }
-
+/* Regras de .section-kicker */
 .section-kicker {
+  /* Configura a propriedade margin-bottom deste elemento. */
   margin-bottom: 16px;
 }
-
+/* Regras de h2 */
 h2 {
+  /* Define o tamanho do texto. */
   font-size: clamp(2rem, 3.7vw, 3rem);
+  /* Configura a propriedade letter-spacing deste elemento. */
   letter-spacing: -0.045em;
+  /* Configura a propriedade line-height deste elemento. */
   line-height: 1.22;
 }
-
+/* Regras de h3 */
 h3 {
+  /* Define o tamanho do texto. */
   font-size: 1.14rem;
+  /* Configura a propriedade line-height deste elemento. */
   line-height: 1.35;
 }
-
+/* Regras de .section-heading */
 .section-heading {
+  /* Define como os elementos são distribuídos. */
   display: flex;
+  /* Configura a propriedade justify-content deste elemento. */
   justify-content: space-between;
+  /* Configura a propriedade align-items deste elemento. */
   align-items: end;
+  /* Define a distância entre os elementos. */
   gap: 24px;
+  /* Configura a propriedade margin-bottom deste elemento. */
   margin-bottom: 34px;
 }
-
+/* Regras de .section-heading p */
 .section-heading p {
+  /* Configura a propriedade max-width deste elemento. */
   max-width: 370px;
+  /* Define a cor do texto. */
   color: var(--muted);
+  /* Define o tamanho do texto. */
   font-size: 0.9rem;
 }
-
-.about-section {
-  background: #11151c;
-  border-block: 1px solid #20242d;
-}
-
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 72px;
-  align-items: start;
-}
-
-.about-copy p {
-  color: var(--muted);
-  margin-bottom: 16px;
-}
-
+/* Regras de .text-link */
 .text-link {
+  /* Define como os elementos são distribuídos. */
   display: inline-flex;
+  /* Define a distância entre os elementos. */
   gap: 12px;
+  /* Define a cor do texto. */
   color: var(--accent);
+  /* Configura a propriedade font-weight deste elemento. */
   font-weight: 600;
+  /* Configura a propriedade margin-top deste elemento. */
   margin-top: 12px;
 }
-
-/* 5. Habilidades: cartões com efeito de vidro e realce luminoso */
-.skills-grid {
+/* Regras de to — skill-border-glow */
+@keyframes skill-border-glow {
+  to {
+    /* Variável reutilizada pelas regras do portfólio. */
+    --skill-angle: 360deg;
+  }
+}
+/* Regras de html — (max-width: 680px) */
+@media (max-width: 680px) {
+  html {
+    /* Configura a propriedade scroll-padding-top deste elemento. */
+    scroll-padding-top: 140px;
+  }
+}
+/* Regras de .container — (max-width: 680px) */
+@media (max-width: 680px) {
+  .container {
+    /* Define a largura. */
+    width: min(100% - 36px, 1140px);
+  }
+}
+/* Regras de .section — (max-width: 680px) */
+@media (max-width: 680px) {
+  .section {
+    /* Configura a propriedade padding-block deste elemento. */
+    padding-block: 66px;
+  }
+}
+/* Regras de .section-heading — (max-width: 680px) */
+@media (max-width: 680px) {
+  .section-heading {
+    /* Configura a propriedade flex-direction deste elemento. */
+    flex-direction: column;
+    /* Configura a propriedade align-items deste elemento. */
+    align-items: start;
+  }
+}
+/* Regras de html — (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    /* Configura a propriedade scroll-behavior deste elemento. */
+    scroll-behavior: auto;
+  }
+}
+/* Regras de *,
+  *::before,
+  *::after — (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    /* Configura a propriedade animation-duration deste elemento. */
+    animation-duration: 0.01ms !important;
+    /* Configura a propriedade transition-duration deste elemento. */
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Regras de html[data-theme="light"] */
+html[data-theme="light"] {
+  /* Configura a propriedade color-scheme deste elemento. */
+  color-scheme: light;
+  /* Variável reutilizada pelas regras do portfólio. */
+  --bg: #f6f7fa;
+  /* Variável reutilizada pelas regras do portfólio. */
+  --surface: #ffffff;
+  /* Variável reutilizada pelas regras do portfólio. */
+  --surface-2: #edf0f5;
+  /* Variável reutilizada pelas regras do portfólio. */
+  --border: #c8ced9;
+  /* Variável reutilizada pelas regras do portfólio. */
+  --text: #1b1d20;
+  /* Variável reutilizada pelas regras do portfólio. */
+  --muted: #30343a;
+  /* Variável reutilizada pelas regras do portfólio. */
+  --accent: #873093;
+  /* Variável reutilizada pelas regras do portfólio. */
+  --accent-light: #9f3eac;
+}
+/* Regras de html[data-theme="light"] .btn-outline */
+html[data-theme="light"] .btn-outline {
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: #8e97a8;
+  /* Define a cor do texto. */
+  color: var(--text);
+}
+/* Regras de html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .pular */
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .pular {
+  /* Define o fundo deste elemento. */
+  background: #873093;
+  /* Define a cor do texto. */
+  color: #fff;
+}
+/* Regras de html[data-theme="light"] .btn-primary:hover */
+html[data-theme="light"] .btn-primary:hover {
+  /* Define o fundo deste elemento. */
+  background: #6b2476;
+}
+/* ============================================================
+1. CABEÇALHO — menu, logo e seletor de tema
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .site-header */
+.site-header {
+  /* Define o tipo de posicionamento. */
+  position: sticky;
+  /* Configura a propriedade top deste elemento. */
+  top: 0;
+  /* Controla a sobreposição. */
+  z-index: 10;
+  /* Define o fundo deste elemento. */
+  background: rgba(11, 13, 18, 0.94);
+  /* Configura a propriedade border-bottom deste elemento. */
+  border-bottom: 1px solid #242832;
+  /* Configura a propriedade backdrop-filter deste elemento. */
+  backdrop-filter: blur(12px);
+}
+/* Regras de .header-inner */
+.header-inner {
+  /* Configura a propriedade min-height deste elemento. */
+  min-height: 86px;
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: space-between;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Define a distância entre os elementos. */
+  gap: 26px;
+}
+/* Regras de .logo */
+.logo {
+  /* Configura a propriedade font-weight deste elemento. */
+  font-weight: 800;
+  /* Configura a propriedade letter-spacing deste elemento. */
+  letter-spacing: 0.05em;
+  /* Define o tamanho do texto. */
+  font-size: 1.65rem;
+}
+/* Regras de .logo span */
+.logo span {
+  /* Define a cor do texto. */
+  color: var(--accent);
+}
+/* Regras de .menu */
+.menu {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: center;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Define a distância entre os elementos. */
+  gap: 27px;
+  /* Configura a propriedade flex-wrap deste elemento. */
+  flex-wrap: wrap;
+}
+/* Regras de .header-inner — (max-width: 980px) */
+@media (max-width: 980px) {
+  .header-inner {
+    /* Configura a propriedade flex-direction deste elemento. */
+    flex-direction: column;
+    /* Configura a propriedade padding-block deste elemento. */
+    padding-block: 20px;
+  }
+}
+/* Regras de .header-cta — (max-width: 980px) */
+@media (max-width: 980px) {
+  .header-cta {
+    /* Define como os elementos são distribuídos. */
+    display: none;
+  }
+}
+/* Regras de .header-inner — (max-width: 680px) */
+@media (max-width: 680px) {
+  .header-inner {
+    /* Define a distância entre os elementos. */
+    gap: 10px;
+  }
+}
+/* Regras de .menu — (max-width: 680px) */
+@media (max-width: 680px) {
+  .menu {
+    /* Define a distância entre os elementos. */
+    gap: 10px 17px;
+  }
+}
+/* Regras de .menu a — (max-width: 680px) */
+@media (max-width: 680px) {
+  .menu a {
+    /* Define o tamanho do texto. */
+    font-size: 0.78rem;
+  }
+}
+/* Regras de .menu — (max-width: 380px) */
+@media (max-width: 380px) {
+  .menu {
+    /* Define a distância entre os elementos. */
+    gap: 7px 11px;
+  }
+}
+/* Regras de .menu a — (max-width: 380px) */
+@media (max-width: 380px) {
+  .menu a {
+    /* Define o tamanho do texto. */
+    font-size: 0.72rem;
+  }
+}
+/* Regras de .theme-toggle */
+.theme-toggle {
+  /* Define como os elementos são distribuídos. */
+  display: inline-flex;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: center;
+  /* Define a distância entre os elementos. */
+  gap: 7px;
+  /* Configura a propriedade min-height deste elemento. */
+  min-height: 36px;
+  /* Define o espaço interno. */
+  padding: 6px 11px;
+  /* Define a borda. */
+  border: 1px solid var(--border);
+  /* Arredonda os cantos. */
+  border-radius: 9px;
+  /* Define o fundo deste elemento. */
+  background: transparent;
+  /* Define a cor do texto. */
+  color: var(--text);
+  /* Configura a propriedade font deste elemento. */
+  font: 600 0.78rem var(--font);
+  /* Configura a propriedade cursor deste elemento. */
+  cursor: pointer;
+  /* Configura a propriedade white-space deste elemento. */
+  white-space: nowrap;
+  /* Define a transição visual. */
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+/* Regras de .theme-toggle:hover,
+.theme-toggle:focus-visible */
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: var(--accent);
+}
+/* Regras de .theme-toggle:focus-visible */
+.theme-toggle:focus-visible {
+  /* Configura a propriedade outline deste elemento. */
+  outline: 2px solid var(--accent);
+  /* Configura a propriedade outline-offset deste elemento. */
+  outline-offset: 3px;
+}
+/* Regras de .theme-icon-light */
+.theme-icon-light {
+  /* Define como os elementos são distribuídos. */
+  display: inline;
+}
+/* Regras de .theme-icon-dark */
+.theme-icon-dark {
+  /* Define como os elementos são distribuídos. */
+  display: none;
+}
+/* Regras de html[data-theme="light"] .theme-icon-light */
+html[data-theme="light"] .theme-icon-light {
+  /* Define como os elementos são distribuídos. */
+  display: none;
+}
+/* Regras de html[data-theme="light"] .theme-icon-dark */
+html[data-theme="light"] .theme-icon-dark {
+  /* Define como os elementos são distribuídos. */
+  display: inline;
+}
+/* Regras de html[data-theme="light"] .site-header */
+html[data-theme="light"] .site-header {
+  /* Define o fundo deste elemento. */
+  background: rgba(255, 255, 255, 0.94);
+  /* Configura a propriedade border-bottom-color deste elemento. */
+  border-bottom-color: var(--border);
+}
+/* Regras de .theme-toggle — (max-width: 680px) */
+@media (max-width: 680px) {
+  .theme-toggle {
+    /* Configura a propriedade min-height deste elemento. */
+    min-height: 34px;
+    /* Define o espaço interno. */
+    padding: 5px 9px;
+    /* Define o tamanho do texto. */
+    font-size: 0.74rem;
+  }
+}
+/* ============================================================
+2. APRESENTAÇÃO — texto inicial, ações e retrato
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .hero */
+.hero {
+  /* Configura a propriedade min-height deste elemento. */
+  min-height: 610px;
+  /* Define como os elementos são distribuídos. */
   display: grid;
+  /* Define as colunas da grade. */
+  grid-template-columns: 1.15fr 0.85fr;
+  /* Configura a propriedade grid-template-areas deste elemento. */
+  grid-template-areas: "intro portrait";
+  /* Define a distância entre os elementos. */
+  gap: 54px;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Configura a propriedade padding-block deste elemento. */
+  padding-block: 80px 86px;
+}
+/* Regras de .hero-content */
+.hero-content {
+  /* Configura a propriedade grid-area deste elemento. */
+  grid-area: intro;
+}
+/* Regras de .hero-portrait */
+.hero-portrait {
+  /* Configura a propriedade grid-area deste elemento. */
+  grid-area: portrait;
+  /* Configura a propriedade min-width deste elemento. */
+  min-width: 0;
+  /* Define o tipo de posicionamento. */
+  position: relative;
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade flex-direction deste elemento. */
+  flex-direction: column;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: center;
+  /* Configura a propriedade isolation deste elemento. */
+  isolation: isolate;
+}
+/* Regras de .eyebrow,
+.section-kicker */
+.eyebrow,
+.section-kicker {
+  /* Define a cor do texto. */
+  color: var(--accent);
+  /* Define o tamanho do texto. */
+  font-size: 0.76rem;
+  /* Configura a propriedade letter-spacing deste elemento. */
+  letter-spacing: 0.17em;
+  /* Configura a propriedade font-weight deste elemento. */
+  font-weight: 700;
+  /* Configura a propriedade margin-bottom deste elemento. */
+  margin-bottom: 23px;
+}
+/* Regras de .eyebrow */
+.eyebrow {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Define a distância entre os elementos. */
+  gap: 10px;
+}
+/* Regras de .status-dot */
+.status-dot {
+  /* Define a largura. */
+  width: 8px;
+  /* Define a altura. */
+  height: 8px;
+  /* Define o fundo deste elemento. */
+  background: var(--accent);
+  /* Arredonda os cantos. */
+  border-radius: 50%;
+}
+/* Regras de .hero-subtitle */
+.hero-subtitle {
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Define o tamanho do texto. */
+  font-size: 1.02rem;
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 25px;
+  /* Configura a propriedade max-width deste elemento. */
+  max-width: 560px;
+}
+/* Regras de .hero-subtitle strong */
+.hero-subtitle strong {
+  /* Define a cor do texto. */
+  color: #e9ebed;
+  /* Configura a propriedade font-weight deste elemento. */
+  font-weight: 600;
+}
+/* Regras de .hero-actions,
+.hero-tags */
+.hero-actions,
+.hero-tags {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Define a distância entre os elementos. */
+  gap: 14px;
+  /* Configura a propriedade flex-wrap deste elemento. */
+  flex-wrap: wrap;
+}
+/* Regras de .hero-actions */
+.hero-actions {
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 33px;
+}
+/* Regras de .hero-tags */
+.hero-tags {
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 45px;
+  /* Define a distância entre os elementos. */
+  gap: 10px;
+}
+/* Regras de .hero-tags span */
+.hero-tags span {
+  /* Define o tamanho do texto. */
+  font-size: 0.73rem;
+  /* Define a cor do texto. */
+  color: #c1c5cb;
+  /* Define a borda. */
+  border: 1px solid var(--border);
+  /* Define o espaço interno. */
+  padding: 8px 13px;
+  /* Arredonda os cantos. */
+  border-radius: 100px;
+}
+/* Regras de .portrait-glow */
+.portrait-glow {
+  /* Define o tipo de posicionamento. */
+  position: absolute;
+  /* Configura a propriedade inset deste elemento. */
+  inset: 12%;
+  /* Define o fundo deste elemento. */
+  background: radial-gradient(circle, rgba(228, 109, 13, 0.34), transparent 72%);
+  /* Configura a propriedade filter deste elemento. */
+  filter: blur(18px);
+  /* Controla a sobreposição. */
+  z-index: -1;
+}
+/* Regras de .hero-portrait img */
+.hero-portrait img {
+  /* Define a largura. */
+  width: min(440px, 100%);
+  /* Configura a propriedade aspect-ratio deste elemento. */
+  aspect-ratio: 1;
+  /* Define a altura. */
+  height: auto;
+  /* Configura a propriedade object-fit deste elemento. */
+  object-fit: cover;
+  /* Configura a propriedade object-position deste elemento. */
+  object-position: center 35%;
+  /* Arredonda os cantos. */
+  border-radius: 50%;
+  /* Define a borda. */
+  border: 2px solid var(--accent);
+  /* Configura a propriedade box-shadow deste elemento. */
+  box-shadow: 0 1px 30px rgba(236, 165, 245, 0.582);
+}
+/* Regras de .portrait-caption */
+.portrait-caption {
+  /* Define o tamanho do texto. */
+  font-size: 0.7rem;
+  /* Configura a propriedade letter-spacing deste elemento. */
+  letter-spacing: 0.18em;
+  /* Define a cor do texto. */
+  color: #b2b3b8;
+}
+/* Regras de .portrait-caption span */
+.portrait-caption span {
+  /* Define a cor do texto. */
+  color: var(--accent);
+}
+/* Regras de .hero — (max-width: 980px) */
+@media (max-width: 980px) {
+  .hero {
+    /* Define as colunas da grade. */
+    grid-template-columns: 1fr 1fr;
+    /* Define a distância entre os elementos. */
+    gap: 24px;
+    /* Configura a propriedade min-height deste elemento. */
+    min-height: 520px;
+  }
+}
+/* Regras de .hero — (max-width: 680px) */
+@media (max-width: 680px) {
+  .hero {
+    /* Define as colunas da grade. */
+    grid-template-columns: 1fr;
+    /* Configura a propriedade grid-template-areas deste elemento. */
+    grid-template-areas: "portrait" "intro";
+    /* Configura a propriedade padding-block deste elemento. */
+    padding-block: 32px 67px;
+    /* Define a distância entre os elementos. */
+    gap: 26px;
+    /* Configura a propriedade text-align deste elemento. */
+    text-align: center;
+  }
+}
+/* Regras de .hero-portrait img — (max-width: 680px) */
+@media (max-width: 680px) {
+  .hero-portrait img {
+    /* Configura a propriedade max-width deste elemento. */
+    max-width: 300px;
+  }
+}
+/* Regras de .hero-content .eyebrow,
+  .hero-actions,
+  .hero-tags — (max-width: 680px) */
+@media (max-width: 680px) {
+  .hero-content .eyebrow,
+  .hero-actions,
+  .hero-tags {
+    /* Configura a propriedade justify-content deste elemento. */
+    justify-content: center;
+  }
+}
+/* Regras de .hero-subtitle — (max-width: 680px) */
+@media (max-width: 680px) {
+  .hero-subtitle {
+    /* Configura a propriedade margin-inline deste elemento. */
+    margin-inline: auto;
+  }
+}
+/* Regras de .hero-tags — (max-width: 680px) */
+@media (max-width: 680px) {
+  .hero-tags {
+    /* Configura a propriedade margin-top deste elemento. */
+    margin-top: 25px;
+  }
+}
+/* Regras de .hero-actions .btn — (max-width: 680px) */
+@media (max-width: 680px) {
+  .hero-actions .btn {
+    /* Configura a propriedade flex deste elemento. */
+    flex: 1;
+  }
+}
+/* Regras de .portrait-caption — (max-width: 680px) */
+@media (max-width: 680px) {
+  .portrait-caption {
+    /* Define o tamanho do texto. */
+    font-size: 0.55rem;
+  }
+}
+/* Regras de .hero-actions — (max-width: 380px) */
+@media (max-width: 380px) {
+  .hero-actions {
+    /* Configura a propriedade flex-direction deste elemento. */
+    flex-direction: column;
+  }
+}
+/* Regras de .hero-actions .btn — (max-width: 380px) */
+@media (max-width: 380px) {
+  .hero-actions .btn {
+    /* Define a largura. */
+    width: 100%;
+  }
+}
+/* Regras de html[data-theme="light"] .hero-subtitle strong */
+html[data-theme="light"] .hero-subtitle strong {
+  /* Define a cor do texto. */
+  color: var(--text);
+}
+/* Regras de html[data-theme="light"] .hero-tags span,
+html[data-theme="light"] .portrait-caption,
+html[data-theme="light"] .section-heading p */
+html[data-theme="light"] .hero-tags span,
+html[data-theme="light"] .portrait-caption,
+html[data-theme="light"] .section-heading p {
+  /* Define a cor do texto. */
+  color: var(--muted);
+}
+/* ============================================================
+3. SOBRE MIM
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .about-section */
+.about-section {
+  /* Define o fundo deste elemento. */
+  background: #11151c;
+  /* Configura a propriedade border-block deste elemento. */
+  border-block: 1px solid #20242d;
+}
+/* Regras de .about-layout */
+.about-layout {
+  /* Define como os elementos são distribuídos. */
+  display: grid;
+  /* Define as colunas da grade. */
+  grid-template-columns: 1fr 1.1fr;
+  /* Define a distância entre os elementos. */
+  gap: 72px;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: start;
+}
+/* Regras de .about-copy p */
+.about-copy p {
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Configura a propriedade margin-bottom deste elemento. */
+  margin-bottom: 16px;
+}
+/* Regras de .about-layout — (max-width: 980px) */
+@media (max-width: 980px) {
+  .about-layout {
+    /* Define a distância entre os elementos. */
+    gap: 36px;
+  }
+}
+/* Regras de .about-layout — (max-width: 680px) */
+@media (max-width: 680px) {
+  .about-layout {
+    /* Define as colunas da grade. */
+    grid-template-columns: 1fr;
+    /* Define a distância entre os elementos. */
+    gap: 25px;
+  }
+}
+/* Regras de html[data-theme="light"] .about-section */
+html[data-theme="light"] .about-section {
+  /* Define o fundo deste elemento. */
+  background: #dfe4ee;
+  /* Configura a propriedade border-block-color deste elemento. */
+  border-block-color: var(--border);
+}
+/* ============================================================
+4. HOBBIES — cartões e interações
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .skills-grid */
+.skills-grid {
+  /* Define como os elementos são distribuídos. */
+  display: grid;
+  /* Define as colunas da grade. */
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* Define a distância entre os elementos. */
   gap: 18px;
 }
-
+/* Regras de .skill-card */
 .skill-card {
+  /* Variável reutilizada pelas regras do portfólio. */
   --skill-glow: 255, 163, 84;
+  /* Define como os elementos são distribuídos. */
   display: flex;
+  /* Configura a propriedade flex-direction deste elemento. */
   flex-direction: column;
+  /* Configura a propriedade align-items deste elemento. */
   align-items: flex-start;
+  /* Configura a propriedade min-width deste elemento. */
   min-width: 0;
+  /* Configura a propriedade min-height deste elemento. */
   min-height: 210px;
+  /* Define o espaço interno. */
   padding: 29px;
+  /* Define o tipo de posicionamento. */
   position: relative;
+  /* Configura a propriedade isolation deste elemento. */
   isolation: isolate;
+  /* Define a borda. */
   border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Arredonda os cantos. */
   border-radius: 17px;
+  /* Define o fundo deste elemento. */
   background: rgba(35, 40, 49, 0.62);
+  /* Configura a propriedade box-shadow deste elemento. */
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  /* Configura a propriedade backdrop-filter deste elemento. */
   backdrop-filter: blur(6px);
+  /* Configura a propriedade -webkit-backdrop-filter deste elemento. */
   -webkit-backdrop-filter: blur(6px);
+  /* Configura a propriedade cursor deste elemento. */
   cursor: pointer;
+  /* Define a transição visual. */
   transition:
     transform 0.35s ease,
     border-color 0.35s ease,
     box-shadow 0.35s ease;
 }
-
-/* Borda brilhante sem encobrir o conteúdo. */
+/* Regras de .skill-card::before */
 .skill-card::before {
+  /* Configura a propriedade content deste elemento. */
   content: "";
+  /* Define o tipo de posicionamento. */
   position: absolute;
+  /* Configura a propriedade inset deste elemento. */
   inset: -1px;
+  /* Arredonda os cantos. */
   border-radius: inherit;
+  /* Define o espaço interno. */
   padding: 2px;
+  /* Define o fundo deste elemento. */
   background: conic-gradient(
     from var(--skill-angle, 0deg),
     transparent 0%,
@@ -386,499 +939,1610 @@ h3 {
     rgba(var(--skill-glow), 0.95) 55%,
     transparent 78%
   );
+  /* Configura a propriedade -webkit-mask deste elemento. */
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
+  /* Configura a propriedade -webkit-mask-composite deste elemento. */
   -webkit-mask-composite: xor;
+  /* Configura a propriedade mask deste elemento. */
   mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
+  /* Configura a propriedade mask-composite deste elemento. */
   mask-composite: exclude;
+  /* Configura a propriedade opacity deste elemento. */
   opacity: 0;
+  /* Configura a propriedade pointer-events deste elemento. */
   pointer-events: none;
+  /* Define a transição visual. */
   transition: opacity 0.3s ease;
 }
-
-@property --skill-angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-
-@keyframes skill-border-glow {
-  to {
-    --skill-angle: 360deg;
-  }
-}
-
+/* Regras de .skill-card:hover,
+.skill-card:focus-visible,
+.skill-card.is-selected */
 .skill-card:hover,
 .skill-card:focus-visible,
 .skill-card.is-selected {
+  /* Configura a propriedade border-color deste elemento. */
   border-color: rgba(var(--skill-glow), 0.65);
+  /* Configura a propriedade box-shadow deste elemento. */
   box-shadow:
     12px 17px 51px rgba(59, 42, 3, 0.479),
     0 0 22px rgba(var(--skill-glow), 0.24);
+  /* Aplica a transformação visual. */
   transform: translateY(-5px);
 }
-
+/* Regras de .skill-card:hover::before,
+.skill-card:focus-visible::before,
+.skill-card.is-selected::before */
 .skill-card:hover::before,
 .skill-card:focus-visible::before,
 .skill-card.is-selected::before {
+  /* Configura a propriedade opacity deste elemento. */
   opacity: 1;
+  /* Configura a propriedade animation deste elemento. */
   animation: skill-border-glow 3.5s linear infinite;
 }
-
+/* Regras de .skill-card:focus-visible */
 .skill-card:focus-visible {
+  /* Configura a propriedade outline deste elemento. */
   outline: 2px solid var(--accent);
+  /* Configura a propriedade outline-offset deste elemento. */
   outline-offset: 5px;
 }
+/* Regras de .skill-card:active */
 .skill-card:active {
+  /* Aplica a transformação visual. */
   transform: scale(0.98);
 }
-
-/* Área ao redor do ícone inspirada na referência enviada. */
+/* Regras de .skill-icon */
 .skill-icon {
+  /* Define como os elementos são distribuídos. */
   display: inline-flex;
+  /* Configura a propriedade justify-content deste elemento. */
   justify-content: center;
+  /* Configura a propriedade align-items deste elemento. */
   align-items: center;
+  /* Configura a propriedade flex-shrink deste elemento. */
   flex-shrink: 0;
+  /* Define a largura. */
   width: 58px;
+  /* Define a altura. */
   height: 58px;
+  /* Define o espaço interno. */
   padding: 8px;
+  /* Define a borda. */
   border: 1px solid rgba(255, 255, 255, 0.23);
+  /* Arredonda os cantos. */
   border-radius: 14px;
+  /* Define o fundo deste elemento. */
   background: #6b6054;
+  /* Define a cor do texto. */
   color: #fff;
+  /* Configura a propriedade box-shadow deste elemento. */
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.15),
     0 5px 14px rgba(0, 0, 0, 0.16);
+  /* Configura a propriedade margin-bottom deste elemento. */
   margin-bottom: 22px;
+  /* Define a transição visual. */
   transition:
     background 0.3s ease,
     box-shadow 0.3s ease,
     transform 0.3s ease;
 }
-
+/* Regras de .skill-icon img */
 .skill-icon img {
+  /* Define como os elementos são distribuídos. */
   display: block;
+  /* Define a largura. */
   width: 40px;
+  /* Define a altura. */
   height: 40px;
+  /* Configura a propriedade object-fit deste elemento. */
   object-fit: contain;
+  /* Configura a propriedade filter deste elemento. */
   filter: invert(1);
 }
-
+/* Regras de .skill-card:hover .skill-icon,
+.skill-card:focus-visible .skill-icon,
+.skill-card.is-selected .skill-icon */
 .skill-card:hover .skill-icon,
 .skill-card:focus-visible .skill-icon,
 .skill-card.is-selected .skill-icon {
+  /* Define o fundo deste elemento. */
   background: #fdc64e;
+  /* Aplica a transformação visual. */
   transform: translateY(-2px);
+  /* Configura a propriedade box-shadow deste elemento. */
   box-shadow:
     0 0 0 2px rgba(var(--skill-glow), 0.36),
     0 0 20px rgba(var(--skill-glow), 0.46);
 }
-
+/* Regras de .skill-card p */
 .skill-card p {
+  /* Define a cor do texto. */
   color: var(--muted);
+  /* Define o tamanho do texto. */
   font-size: 0.86rem;
+  /* Configura a propriedade margin-top deste elemento. */
   margin-top: 10px;
 }
-
+/* Regras de .skill-card::before — (prefers-reduced-motion: reduce) */
 @media (prefers-reduced-motion: reduce) {
   .skill-card::before {
+    /* Configura a propriedade animation deste elemento. */
     animation: none !important;
   }
+}
+/* Regras de .skill-card,
+  .skill-icon — (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
   .skill-card,
   .skill-icon {
+    /* Define a transição visual. */
     transition: none;
   }
 }
-
-/* 6. Projetos: Grid na galeria e Flexbox dentro dos cards */
+/* Regras de .skill-card:hover — (hover: none) */
+@media (hover: none) {
+  .skill-card:hover {
+    /* Aplica a transformação visual. */
+    transform: none;
+  }
+}
+/* Regras de .skills-grid — (max-width: 980px) */
+@media (max-width: 980px) {
+  .skills-grid {
+    /* Define as colunas da grade. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* Regras de html[data-theme="light"] .skill-icon */
+html[data-theme="light"] .skill-icon {
+  /* Define o fundo deste elemento. */
+  background: #eddbf0;
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: #cdb0d4;
+  /* Define a cor do texto. */
+  color: #302334;
+}
+/* Regras de html[data-theme="light"] .skill-icon img */
+html[data-theme="light"] .skill-icon img {
+  /* Configura a propriedade filter deste elemento. */
+  filter: none;
+}
+/* Regras de html[data-theme="light"] .skill-card:hover .skill-icon,
+html[data-theme="light"] .skill-card:focus-visible .skill-icon,
+html[data-theme="light"] .skill-card.is-selected .skill-icon */
+html[data-theme="light"] .skill-card:hover .skill-icon,
+html[data-theme="light"] .skill-card:focus-visible .skill-icon,
+html[data-theme="light"] .skill-card.is-selected .skill-icon {
+  /* Define o fundo deste elemento. */
+  background: #dec3e5;
+}
+/* ============================================================
+5. INSTANTES CONGELADOS — galeria e ampliação
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .memories-section */
+.memories-section {
+  /* Define o tipo de posicionamento. */
+  position: relative;
+  /* Controla o conteúdo que ultrapassa os limites. */
+  overflow: hidden;
+  /* Define o fundo deste elemento. */
+  background:
+    radial-gradient(circle at 88% 8%, rgba(236, 165, 245, 0.11), transparent 36%), var(--bg);
+}
+/* Regras de .memories-section .section-heading */
+.memories-section .section-heading {
+  /* Configura a propriedade margin-bottom deste elemento. */
+  margin-bottom: 28px;
+}
+/* Regras de .memories-intro */
+.memories-intro {
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Configura a propriedade max-width deste elemento. */
+  max-width: 650px;
+  /* Configura a propriedade line-height deste elemento. */
+  line-height: 1.7;
+}
+/* Regras de .memories-top */
+.memories-top {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: space-between;
+  /* Define a distância entre os elementos. */
+  gap: 16px;
+  /* Configura a propriedade margin-bottom deste elemento. */
+  margin-bottom: 20px;
+}
+/* Regras de .memories-counter */
+.memories-counter {
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Define o tamanho do texto. */
+  font-size: 0.85rem;
+  /* Configura a propriedade white-space deste elemento. */
+  white-space: nowrap;
+  /* Configura a propriedade font-variant-numeric deste elemento. */
+  font-variant-numeric: tabular-nums;
+}
+/* Regras de .memories-viewport */
+.memories-viewport {
+  /* Controla o conteúdo que ultrapassa os limites. */
+  overflow: hidden;
+  /* Define o espaço interno. */
+  padding: 12px 3px 24px;
+}
+/* Regras de .memories-track */
+.memories-track {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Define a distância entre os elementos. */
+  gap: 22px;
+  /* Configura a propriedade overflow-x deste elemento. */
+  overflow-x: auto;
+  /* Ajusta a parada da rolagem nos cartões. */
+  scroll-snap-type: x mandatory;
+  /* Configura a propriedade scroll-behavior deste elemento. */
+  scroll-behavior: smooth;
+  /* Configura a propriedade scrollbar-width deste elemento. */
+  scrollbar-width: none;
+  /* Define o espaço interno. */
+  padding: 4px 0 14px;
+  /* Configura a propriedade overscroll-behavior-x deste elemento. */
+  overscroll-behavior-x: contain;
+}
+/* Regras de .memories-track::-webkit-scrollbar */
+.memories-track::-webkit-scrollbar {
+  /* Define como os elementos são distribuídos. */
+  display: none;
+}
+/* Regras de .memory-card */
+.memory-card {
+  /* Configura a propriedade flex deste elemento. */
+  flex: 0 0 calc((100% - 44px) / 3);
+  /* Configura a propriedade min-width deste elemento. */
+  min-width: 0;
+  /* Configura a propriedade scroll-snap-align deste elemento. */
+  scroll-snap-align: start;
+  /* Define a borda. */
+  border: 1px solid var(--border);
+  /* Arredonda os cantos. */
+  border-radius: 18px;
+  /* Controla o conteúdo que ultrapassa os limites. */
+  overflow: hidden;
+  /* Define o fundo deste elemento. */
+  background: var(--surface);
+  /* Define a cor do texto. */
+  color: var(--text);
+  /* Define a transição visual. */
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+/* Regras de .memory-card:hover,
+.memory-card:focus-within */
+.memory-card:hover,
+.memory-card:focus-within {
+  /* Aplica a transformação visual. */
+  transform: translateY(-4px);
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: var(--accent);
+  /* Configura a propriedade box-shadow deste elemento. */
+  box-shadow: 0 0 22px rgba(236, 165, 245, 0.22);
+}
+/* Regras de .memory-open */
+.memory-open {
+  /* Define como os elementos são distribuídos. */
+  display: block;
+  /* Define a largura. */
+  width: 100%;
+  /* Define o espaço interno. */
+  padding: 0;
+  /* Define o fundo deste elemento. */
+  background: transparent;
+  /* Define a borda. */
+  border: 0;
+  /* Define a cor do texto. */
+  color: inherit;
+  /* Configura a propriedade text-align deste elemento. */
+  text-align: left;
+  /* Configura a propriedade cursor deste elemento. */
+  cursor: pointer;
+  /* Configura a propriedade font deste elemento. */
+  font: inherit;
+}
+/* Regras de .memory-open:focus-visible,
+.memories-button:focus-visible,
+.memory-modal-close:focus-visible */
+.memory-open:focus-visible,
+.memories-button:focus-visible,
+.memory-modal-close:focus-visible {
+  /* Configura a propriedade outline deste elemento. */
+  outline: 2px solid var(--accent);
+  /* Configura a propriedade outline-offset deste elemento. */
+  outline-offset: 3px;
+}
+/* Regras de .memory-media */
+.memory-media {
+  /* Define o tipo de posicionamento. */
+  position: relative;
+  /* Configura a propriedade aspect-ratio deste elemento. */
+  aspect-ratio: 4/5;
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade flex-direction deste elemento. */
+  flex-direction: column;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: center;
+  /* Define a distância entre os elementos. */
+  gap: 12px;
+  /* Controla o conteúdo que ultrapassa os limites. */
+  overflow: hidden;
+  /* Define o fundo deste elemento. */
+  background: linear-gradient(140deg, #30333d, #181c25 55%, #453122);
+  /* Define a cor do texto. */
+  color: #fff;
+}
+/* Regras de .memory-media::after */
+.memory-media::after {
+  /* Configura a propriedade content deste elemento. */
+  content: "";
+  /* Define o tipo de posicionamento. */
+  position: absolute;
+  /* Configura a propriedade inset deste elemento. */
+  inset: 0;
+  /* Configura a propriedade pointer-events deste elemento. */
+  pointer-events: none;
+  /* Define o fundo deste elemento. */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.34), transparent 35%);
+}
+/* Regras de .memory-media img */
+.memory-media img {
+  /* Define a largura. */
+  width: 100%;
+  /* Define a altura. */
+  height: 100%;
+  /* Configura a propriedade object-fit deste elemento. */
+  object-fit: cover;
+  /* Define como os elementos são distribuídos. */
+  display: block;
+}
+/* Regras de .memory-media.has-image > .memory-placeholder-symbol,
+.memory-media.has-image > .memory-placeholder-label */
+.memory-media.has-image > .memory-placeholder-symbol,
+.memory-media.has-image > .memory-placeholder-label {
+  /* Define como os elementos são distribuídos. */
+  display: none;
+}
+/* Regras de .memory-media.has-image */
+.memory-media.has-image {
+  /* Define como os elementos são distribuídos. */
+  display: block;
+}
+/* Regras de .memory-media.has-image img */
+.memory-media.has-image img {
+  /* Define o tipo de posicionamento. */
+  position: absolute;
+  /* Configura a propriedade inset deste elemento. */
+  inset: 0;
+}
+/* Regras de .memory-placeholder-symbol */
+.memory-placeholder-symbol {
+  /* Define a largura. */
+  width: 64px;
+  /* Define a altura. */
+  height: 64px;
+  /* Define como os elementos são distribuídos. */
+  display: grid;
+  /* Configura a propriedade place-items deste elemento. */
+  place-items: center;
+  /* Arredonda os cantos. */
+  border-radius: 19px;
+  /* Define a borda. */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  /* Define o tamanho do texto. */
+  font-size: 2rem;
+  /* Define o fundo deste elemento. */
+  background: rgba(255, 255, 255, 0.07);
+}
+/* Regras de .memory-placeholder-label */
+.memory-placeholder-label {
+  /* Define o tamanho do texto. */
+  font-size: 0.74rem;
+  /* Configura a propriedade letter-spacing deste elemento. */
+  letter-spacing: 0.14em;
+  /* Configura a propriedade text-transform deste elemento. */
+  text-transform: uppercase;
+  /* Define a cor do texto. */
+  color: #ded6d0;
+}
+/* Regras de .memory-body */
+.memory-body {
+  /* Define o espaço interno. */
+  padding: 21px 20px 24px;
+}
+/* Regras de .memory-category */
+.memory-category {
+  /* Define a cor do texto. */
+  color: var(--accent);
+  /* Define o tamanho do texto. */
+  font-size: 0.7rem;
+  /* Configura a propriedade font-weight deste elemento. */
+  font-weight: 700;
+  /* Configura a propriedade letter-spacing deste elemento. */
+  letter-spacing: 0.12em;
+  /* Configura a propriedade text-transform deste elemento. */
+  text-transform: uppercase;
+  /* Define o espaço externo. */
+  margin: 0 0 8px;
+}
+/* Regras de .memory-body h3 */
+.memory-body h3 {
+  /* Define o tamanho do texto. */
+  font-size: 1.09rem;
+  /* Configura a propriedade line-height deste elemento. */
+  line-height: 1.4;
+  /* Define o espaço externo. */
+  margin: 0 0 9px;
+}
+/* Regras de .memory-description */
+.memory-description {
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Define o tamanho do texto. */
+  font-size: 0.84rem;
+  /* Configura a propriedade line-height deste elemento. */
+  line-height: 1.65;
+  /* Define o espaço externo. */
+  margin: 0;
+}
+/* Regras de .memories-controls */
+.memories-controls {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: space-between;
+  /* Define a distância entre os elementos. */
+  gap: 16px;
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 6px;
+}
+/* Regras de .memories-dots */
+.memories-dots {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Define a distância entre os elementos. */
+  gap: 7px;
+  /* Configura a propriedade flex-wrap deste elemento. */
+  flex-wrap: wrap;
+}
+/* Regras de .memories-dot */
+.memories-dot {
+  /* Define a largura. */
+  width: 10px;
+  /* Define a altura. */
+  height: 10px;
+  /* Arredonda os cantos. */
+  border-radius: 50%;
+  /* Define a borda. */
+  border: 0;
+  /* Define o fundo deste elemento. */
+  background: var(--border);
+  /* Define o espaço interno. */
+  padding: 0;
+  /* Configura a propriedade cursor deste elemento. */
+  cursor: pointer;
+}
+/* Regras de .memories-dot[aria-current="true"] */
+.memories-dot[aria-current="true"] {
+  /* Define a largura. */
+  width: 26px;
+  /* Arredonda os cantos. */
+  border-radius: 12px;
+  /* Define o fundo deste elemento. */
+  background: var(--accent);
+}
+/* Regras de .memories-buttons */
+.memories-buttons {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Define a distância entre os elementos. */
+  gap: 10px;
+}
+/* Regras de .memories-button,
+.memory-modal-close */
+.memories-button,
+.memory-modal-close {
+  /* Define como os elementos são distribuídos. */
+  display: grid;
+  /* Configura a propriedade place-items deste elemento. */
+  place-items: center;
+  /* Define a largura. */
+  width: 42px;
+  /* Define a altura. */
+  height: 42px;
+  /* Arredonda os cantos. */
+  border-radius: 12px;
+  /* Define a borda. */
+  border: 1px solid var(--border);
+  /* Define o fundo deste elemento. */
+  background: var(--surface);
+  /* Define a cor do texto. */
+  color: var(--text);
+  /* Configura a propriedade font deste elemento. */
+  font: inherit;
+  /* Define o tamanho do texto. */
+  font-size: 1.3rem;
+  /* Configura a propriedade cursor deste elemento. */
+  cursor: pointer;
+  /* Define a transição visual. */
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+/* Regras de .memories-button:hover,
+.memory-modal-close:hover */
+.memories-button:hover,
+.memory-modal-close:hover {
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: var(--accent);
+  /* Define o fundo deste elemento. */
+  background: var(--surface-2);
+}
+/* Regras de .memories-button:disabled */
+.memories-button:disabled {
+  /* Configura a propriedade opacity deste elemento. */
+  opacity: 0.35;
+  /* Configura a propriedade cursor deste elemento. */
+  cursor: default;
+}
+/* Regras de .memory-modal */
+.memory-modal {
+  /* Define a borda. */
+  border: 0;
+  /* Define o espaço interno. */
+  padding: 0;
+  /* Configura a propriedade max-width deste elemento. */
+  max-width: min(920px, calc(100vw - 32px));
+  /* Configura a propriedade max-height deste elemento. */
+  max-height: calc(100vh - 32px);
+  /* Define a largura. */
+  width: 100%;
+  /* Arredonda os cantos. */
+  border-radius: 18px;
+  /* Controla o conteúdo que ultrapassa os limites. */
+  overflow: auto;
+  /* Define o fundo deste elemento. */
+  background: var(--surface);
+  /* Define a cor do texto. */
+  color: var(--text);
+  /* Configura a propriedade box-shadow deste elemento. */
+  box-shadow: 0 25px 90px #0009;
+}
+/* Regras de .memory-modal::backdrop */
+.memory-modal::backdrop {
+  /* Define o fundo deste elemento. */
+  background: rgba(4, 5, 9, 0.83);
+  /* Configura a propriedade backdrop-filter deste elemento. */
+  backdrop-filter: blur(7px);
+}
+/* Regras de .memory-modal-inner */
+.memory-modal-inner {
+  /* Define como os elementos são distribuídos. */
+  display: grid;
+  /* Define as colunas da grade. */
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+/* Regras de .memory-modal .memory-media */
+.memory-modal .memory-media {
+  /* Configura a propriedade aspect-ratio deste elemento. */
+  aspect-ratio: 4/5;
+  /* Configura a propriedade min-height deste elemento. */
+  min-height: 360px;
+}
+/* Regras de .memory-modal-text */
+.memory-modal-text {
+  /* Define o espaço interno. */
+  padding: 58px 30px 34px;
+  /* Configura a propriedade align-self deste elemento. */
+  align-self: center;
+}
+/* Regras de .memory-modal-text h3 */
+.memory-modal-text h3 {
+  /* Define o tamanho do texto. */
+  font-size: clamp(1.45rem, 2.8vw, 2rem);
+  /* Define o espaço externo. */
+  margin: 10px 0 14px;
+}
+/* Regras de .memory-modal-text p:not(.memory-category) */
+.memory-modal-text p:not(.memory-category) {
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Configura a propriedade line-height deste elemento. */
+  line-height: 1.7;
+}
+/* Regras de .memory-modal-close */
+.memory-modal-close {
+  /* Define o tipo de posicionamento. */
+  position: fixed;
+  /* Configura a propriedade top deste elemento. */
+  top: max(24px, calc((100vh - min(100vh - 32px, 700px)) / 2 + 10px));
+  /* Configura a propriedade right deste elemento. */
+  right: max(24px, calc((100vw - min(920px, 100vw - 32px)) / 2 + 10px));
+  /* Controla a sobreposição. */
+  z-index: 3;
+}
+/* Regras de html[data-theme="light"] .memories-section */
+html[data-theme="light"] .memories-section {
+  /* Define o fundo deste elemento. */
+  background:
+    radial-gradient(circle at 88% 8%, rgba(230, 118, 34, 0.1), transparent 35%), var(--bg);
+}
+/* Regras de .memory-card — (max-width: 980px) */
+@media (max-width: 980px) {
+  .memory-card {
+    /* Configura a propriedade flex-basis deste elemento. */
+    flex-basis: calc((100% - 22px) / 2);
+  }
+}
+/* Regras de .memory-card — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-card {
+    /* Configura a propriedade flex-basis deste elemento. */
+    flex-basis: 85%;
+  }
+}
+/* Regras de .memories-top — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memories-top {
+    /* Configura a propriedade align-items deste elemento. */
+    align-items: flex-start;
+  }
+}
+/* Regras de .memory-modal-inner — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal-inner {
+    /* Define as colunas da grade. */
+    grid-template-columns: 1fr;
+  }
+}
+/* Regras de .memory-modal .memory-media — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal .memory-media {
+    /* Configura a propriedade aspect-ratio deste elemento. */
+    aspect-ratio: 16/11;
+    /* Configura a propriedade min-height deste elemento. */
+    min-height: 210px;
+  }
+}
+/* Regras de .memory-modal-text — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal-text {
+    /* Define o espaço interno. */
+    padding: 26px 22px 30px;
+  }
+}
+/* Regras de .memory-modal-close — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal-close {
+    /* Configura a propriedade top deste elemento. */
+    top: 20px;
+    /* Configura a propriedade right deste elemento. */
+    right: 20px;
+  }
+}
+/* Regras de .memories-track — (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  .memories-track {
+    /* Configura a propriedade scroll-behavior deste elemento. */
+    scroll-behavior: auto;
+  }
+}
+/* Regras de .memory-card — (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  .memory-card {
+    /* Define a transição visual. */
+    transition: none;
+  }
+}
+/* Regras de .memory-modal */
+.memory-modal {
+  /* Define o tipo de posicionamento. */
+  position: fixed;
+  /* Configura a propriedade inset deste elemento. */
+  inset: 0;
+  /* Define o espaço externo. */
+  margin: auto;
+  /* Configura a propriedade box-sizing deste elemento. */
+  box-sizing: border-box;
+  /* Define a largura. */
+  width: min(960px, calc(100vw - 28px));
+  /* Configura a propriedade max-width deste elemento. */
+  max-width: calc(100vw - 28px);
+  /* Configura a propriedade max-height deste elemento. */
+  max-height: min(94vh, 94dvh);
+  /* Configura a propriedade overflow-x deste elemento. */
+  overflow-x: hidden;
+  /* Configura a propriedade overflow-y deste elemento. */
+  overflow-y: auto;
+  /* Arredonda os cantos. */
+  border-radius: 18px;
+}
+/* Regras de .memory-modal-inner */
+.memory-modal-inner {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade flex-direction deste elemento. */
+  flex-direction: column;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: stretch;
+  /* Define a largura. */
+  width: 100%;
+  /* Configura a propriedade min-width deste elemento. */
+  min-width: 0;
+}
+/* Regras de .memory-modal .memory-media */
+.memory-modal .memory-media {
+  /* Configura a propriedade box-sizing deste elemento. */
+  box-sizing: border-box;
+  /* Define a largura. */
+  width: 100%;
+  /* Configura a propriedade min-height deste elemento. */
+  min-height: 0;
+  /* Define a altura. */
+  height: auto;
+  /* Configura a propriedade max-height deste elemento. */
+  max-height: min(68vh, 68dvh);
+  /* Configura a propriedade aspect-ratio deste elemento. */
+  aspect-ratio: auto;
+  /* Define o espaço interno. */
+  padding: 12px;
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: center;
+  /* Controla o conteúdo que ultrapassa os limites. */
+  overflow: hidden;
+  /* Define o fundo deste elemento. */
+  background: #11151b;
+}
+/* Regras de .memory-modal .memory-media::after */
+.memory-modal .memory-media::after {
+  /* Define como os elementos são distribuídos. */
+  display: none;
+}
+/* Regras de .memory-modal .memory-media.has-image */
+.memory-modal .memory-media.has-image {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+}
+/* Regras de .memory-modal .memory-media img,
+.memory-modal .memory-media.has-image img */
+.memory-modal .memory-media img,
+.memory-modal .memory-media.has-image img {
+  /* Define o tipo de posicionamento. */
+  position: static;
+  /* Configura a propriedade inset deste elemento. */
+  inset: auto;
+  /* Define como os elementos são distribuídos. */
+  display: block;
+  /* Define a largura. */
+  width: auto;
+  /* Define a altura. */
+  height: auto;
+  /* Configura a propriedade max-width deste elemento. */
+  max-width: 100%;
+  /* Configura a propriedade max-height deste elemento. */
+  max-height: calc(min(68vh, 68dvh) - 24px);
+  /* Configura a propriedade object-fit deste elemento. */
+  object-fit: contain;
+  /* Configura a propriedade object-position deste elemento. */
+  object-position: center center;
+  /* Configura a propriedade flex deste elemento. */
+  flex: 0 1 auto;
+}
+/* Regras de .memory-modal-text */
+.memory-modal-text {
+  /* Define a largura. */
+  width: 100%;
+  /* Configura a propriedade box-sizing deste elemento. */
+  box-sizing: border-box;
+  /* Define o espaço interno. */
+  padding: 24px 30px 30px;
+  /* Configura a propriedade align-self deste elemento. */
+  align-self: stretch;
+  /* Configura a propriedade text-align deste elemento. */
+  text-align: center;
+}
+/* Regras de .memory-modal-text h3 */
+.memory-modal-text h3 {
+  /* Define o espaço externo. */
+  margin: 8px 0 12px;
+}
+/* Regras de .memory-modal-close */
+.memory-modal-close {
+  /* Define o tipo de posicionamento. */
+  position: sticky;
+  /* Configura a propriedade top deste elemento. */
+  top: 12px;
+  /* Configura a propriedade right deste elemento. */
+  right: auto;
+  /* Define o espaço externo. */
+  margin: 12px 12px -54px auto;
+  /* Controla a sobreposição. */
+  z-index: 5;
+  /* Define o fundo deste elemento. */
+  background: var(--surface);
+  /* Configura a propriedade box-shadow deste elemento. */
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.4);
+}
+/* Regras de .memory-modal — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal {
+    /* Define a largura. */
+    width: calc(100vw - 16px);
+    /* Configura a propriedade max-width deste elemento. */
+    max-width: calc(100vw - 16px);
+    /* Configura a propriedade max-height deste elemento. */
+    max-height: min(96vh, 96dvh);
+    /* Arredonda os cantos. */
+    border-radius: 14px;
+  }
+}
+/* Regras de .memory-modal .memory-media — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal .memory-media {
+    /* Configura a propriedade max-height deste elemento. */
+    max-height: min(70vh, 70dvh);
+    /* Define o espaço interno. */
+    padding: 8px;
+    /* Configura a propriedade min-height deste elemento. */
+    min-height: 0;
+    /* Configura a propriedade aspect-ratio deste elemento. */
+    aspect-ratio: auto;
+  }
+}
+/* Regras de .memory-modal .memory-media img,
+  .memory-modal .memory-media.has-image img — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal .memory-media img,
+  .memory-modal .memory-media.has-image img {
+    /* Configura a propriedade max-height deste elemento. */
+    max-height: calc(min(70vh, 70dvh) - 16px);
+  }
+}
+/* Regras de .memory-modal-text — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal-text {
+    /* Define o espaço interno. */
+    padding: 18px 18px 26px;
+  }
+}
+/* Regras de .memory-modal-close — (max-width: 680px) */
+@media (max-width: 680px) {
+  .memory-modal-close {
+    /* Configura a propriedade top deste elemento. */
+    top: 8px;
+    /* Configura a propriedade right deste elemento. */
+    right: auto;
+    /* Define o espaço externo. */
+    margin: 8px 8px -50px auto;
+  }
+}
+/* ============================================================
+6. PROJETOS E CONQUISTAS — cartões e navegação
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .projects-section */
 .projects-section {
+  /* Define o fundo deste elemento. */
   background: #10131a;
 }
-
+/* Regras de .projects-grid */
 .projects-grid {
+  /* Define como os elementos são distribuídos. */
   display: grid;
+  /* Define as colunas da grade. */
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Define a distância entre os elementos. */
   gap: 25px;
 }
-
+/* Regras de .project-card */
 .project-card {
+  /* Define como os elementos são distribuídos. */
   display: flex;
+  /* Configura a propriedade flex-direction deste elemento. */
   flex-direction: column;
+  /* Configura a propriedade min-width deste elemento. */
   min-width: 0;
+  /* Controla o conteúdo que ultrapassa os limites. */
   overflow: hidden;
+  /* Define o fundo deste elemento. */
   background: var(--surface);
+  /* Define a borda. */
   border: 1px solid var(--border);
+  /* Arredonda os cantos. */
   border-radius: 17px;
+  /* Define a transição visual. */
   transition:
     border-color 0.2s,
     transform 0.2s;
 }
-
+/* Regras de .project-card img */
 .project-card img {
+  /* Define a largura. */
   width: 100%;
+  /* Configura a propriedade aspect-ratio deste elemento. */
   aspect-ratio: 16/9;
+  /* Configura a propriedade object-fit deste elemento. */
   object-fit: cover;
 }
-
+/* Regras de .project-body */
 .project-body {
+  /* Define como os elementos são distribuídos. */
   display: flex;
+  /* Configura a propriedade flex-direction deste elemento. */
   flex-direction: column;
+  /* Configura a propriedade align-items deste elemento. */
   align-items: flex-start;
+  /* Configura a propriedade flex deste elemento. */
   flex: 1;
+  /* Define a distância entre os elementos. */
   gap: 11px;
+  /* Define o espaço interno. */
   padding: 26px;
 }
-
+/* Regras de .project-category */
 .project-category {
+  /* Define o tamanho do texto. */
   font-size: 0.69rem;
+  /* Define a cor do texto. */
   color: var(--accent);
+  /* Configura a propriedade letter-spacing deste elemento. */
   letter-spacing: 0.11em;
+  /* Configura a propriedade font-weight deste elemento. */
   font-weight: 700;
 }
-
+/* Regras de .project-body > p:not(.project-category) */
 .project-body > p:not(.project-category) {
+  /* Define a cor do texto. */
   color: var(--muted);
+  /* Define o tamanho do texto. */
   font-size: 0.89rem;
+  /* Configura a propriedade line-height deste elemento. */
   line-height: 1.7;
 }
-
+/* Regras de .project-link */
 .project-link {
+  /* Define como os elementos são distribuídos. */
   display: inline-flex;
+  /* Configura a propriedade align-items deste elemento. */
   align-items: center;
+  /* Define a distância entre os elementos. */
   gap: 12px;
+  /* Define a cor do texto. */
   color: var(--accent);
+  /* Define o tamanho do texto. */
   font-size: 0.87rem;
+  /* Configura a propriedade font-weight deste elemento. */
   font-weight: 600;
+  /* Configura a propriedade margin-top deste elemento. */
   margin-top: auto;
+  /* Configura a propriedade padding-top deste elemento. */
   padding-top: 14px;
 }
-
+/* Regras de .project-link:hover */
 .project-link:hover {
+  /* Configura a propriedade text-decoration deste elemento. */
   text-decoration: underline;
+  /* Configura a propriedade text-underline-offset deste elemento. */
   text-underline-offset: 5px;
 }
-
-/* 7. Formação e experiência: carrosséis e cards de vidro */
-.journey-section {
-  padding-top: 70px;
-}
-
-.journey-group + .journey-group {
-  margin-top: 42px;
-}
-
-.journey-group > h3 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-}
-
-/* Mesmo padrão de rolagem dos projetos, com cards adaptados a textos */
-.journey-carousel {
-  --card-width: 38%;
-  display: flex;
-  gap: 0.65rem;
-  overflow-x: auto;
-  padding: 0.75rem 0 1rem;
-  scroll-snap-type: x mandatory;
-  scrollbar-color: var(--border) transparent;
-}
-
-.journey-card {
-  box-sizing: border-box;
-  flex: 0 0 var(--card-width);
-  min-width: 0;
-  min-height: 19rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 12px;
-  scroll-snap-align: start;
-
-  background: rgba(35, 40, 49, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.65rem;
-  /* Card estático: só a borda do item atual recebe destaque. */
-  transition: border-color 0.2s;
-}
-
-.journey-carousel .journey-card:hover,
-.journey-carousel .journey-card:active {
-  transform: none;
-}
-
-.journey-carousel .journey-card.is-current {
-  border-color: var(--accent);
-}
-
-.journey-label {
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-
-.journey-card h4 {
-  margin: 0;
-  font-size: 1.14rem;
-  line-height: 1.4;
-  overflow-wrap: anywhere;
-}
-
-.journey-card p {
-  color: var(--muted);
-  font-size: 0.87rem;
-  line-height: 1.6;
-  overflow-wrap: anywhere;
-}
-
-.journey-card .journey-note {
-  margin-top: auto;
-  padding-top: 12px;
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-/* Cada carrossel tem botões e contador próprios */
-.journey-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 12px;
-}
-
-.journey-controls[hidden] {
-  display: none;
-}
-
-.journey-controls button {
-  background: transparent;
-}
-
-.journey-controls button:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-
-.journey-position {
-  min-width: 4rem;
-  text-align: center;
-  color: var(--muted);
-}
-
-@media (max-width: 900px) {
-  .journey-carousel {
-    --card-width: 55%;
-  }
-}
-
-@media (max-width: 600px) {
-  .journey-carousel {
-    --card-width: 88%;
-  }
-
-  .journey-card {
-    min-height: 19rem;
-    padding: 1rem;
-  }
-
-  .journey-section {
-    padding-top: 55px;
-  }
-}
-
-@media (hover: none) {
-  .skill-card:hover {
-    transform: none;
-  }
-}
-
-/* 8. Contato e rodapé: Flexbox nos links */
-.contact-section {
-  text-align: center;
-  background: radial-gradient(ellipse at center top, #251d1a, #0d1016 65%);
-  border-top: 1px solid #25252b;
-}
-
-.contact-content > p:not(.section-kicker) {
-  max-width: 580px;
-  color: var(--muted);
-  margin: 20px auto 0;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 34px;
-}
-
-.contact-content .contact-hint {
-  font-size: 0.75rem;
-  color: #ba9b83;
-  margin-top: 30px;
-}
-
-.site-footer {
-  border-top: 1px solid var(--border);
-  padding-block: 27px;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
-
-.footer-inner p {
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.footer-inner nav {
-  display: flex;
-  gap: 22px;
-  align-items: center;
-}
-
-/* 9. Adaptação para tablets */
-@media (max-width: 980px) {
-  .header-inner {
-    flex-direction: column;
-    padding-block: 20px;
-  }
-  .header-cta {
-    display: none;
-  }
-  .hero {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    min-height: 520px;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .journey-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .about-layout {
-    gap: 36px;
-  }
-}
-
-/* 10. Adaptação para celulares */
+/* Regras de .skills-grid,
+  .projects-grid,
+  .journey-grid — (max-width: 680px) */
 @media (max-width: 680px) {
-  html {
-    scroll-padding-top: 140px;
-  }
-  .container {
-    width: min(100% - 36px, 1140px);
-  }
-  .header-inner {
-    gap: 10px;
-  }
-  .menu {
-    gap: 10px 17px;
-  }
-  .menu a {
-    font-size: 0.78rem;
-  }
-  .hero {
-    grid-template-columns: 1fr;
-    grid-template-areas: "portrait" "intro";
-    padding-block: 32px 67px;
-    gap: 26px;
-    text-align: center;
-  }
-  .hero-portrait img {
-    max-width: 300px;
-  }
-  .hero-content .eyebrow,
-  .hero-actions,
-  .hero-tags {
-    justify-content: center;
-  }
-  .hero-subtitle {
-    margin-inline: auto;
-  }
-  .hero-tags {
-    margin-top: 25px;
-  }
-  .section {
-    padding-block: 66px;
-  }
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  .section-heading {
-    flex-direction: column;
-    align-items: start;
-  }
   .skills-grid,
   .projects-grid,
   .journey-grid {
+    /* Define as colunas da grade. */
     grid-template-columns: 1fr;
   }
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-inner nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .hero-actions .btn {
-    flex: 1;
-  }
-  .portrait-caption {
-    font-size: 0.55rem;
+}
+/* Regras de #projetos .projects-carousel */
+#projetos .projects-carousel {
+  /* Variável reutilizada pelas regras do portfólio. */
+  --card-width: 38%;
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade overflow-x deste elemento. */
+  overflow-x: auto;
+  /* Define a distância entre os elementos. */
+  gap: 0.65rem;
+  /* Define o espaço interno. */
+  padding: 0.75rem 0 1rem;
+  /* Ajusta a parada da rolagem nos cartões. */
+  scroll-snap-type: x mandatory;
+  /* Configura a propriedade scrollbar-color deste elemento. */
+  scrollbar-color: var(--border) transparent;
+}
+/* Regras de .projects-carousel .project-card */
+.projects-carousel .project-card {
+  /* Configura a propriedade flex deste elemento. */
+  flex: 0 0 var(--card-width);
+  /* Configura a propriedade scroll-snap-align deste elemento. */
+  scroll-snap-align: start;
+  /* Define como os elementos são distribuídos. */
+  display: grid;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: end;
+  /* Configura a propriedade min-height deste elemento. */
+  min-height: 19rem;
+  /* Define o tipo de posicionamento. */
+  position: relative;
+  /* Configura a propriedade isolation deste elemento. */
+  isolation: isolate;
+  /* Arredonda os cantos. */
+  border-radius: 0.65rem;
+}
+/* Regras de .projects-carousel .project-card img */
+.projects-carousel .project-card img {
+  /* Define o tipo de posicionamento. */
+  position: absolute;
+  /* Configura a propriedade inset deste elemento. */
+  inset: 0;
+  /* Define a altura. */
+  height: 100%;
+  /* Controla a sobreposição. */
+  z-index: -2;
+}
+/* Regras de .projects-carousel .project-card::before */
+.projects-carousel .project-card::before {
+  /* Configura a propriedade content deste elemento. */
+  content: "";
+  /* Define o tipo de posicionamento. */
+  position: absolute;
+  /* Configura a propriedade inset deste elemento. */
+  inset: 0;
+  /* Controla a sobreposição. */
+  z-index: -1;
+  /* Define o fundo deste elemento. */
+  background: linear-gradient(180deg, transparent 5%, rgba(11, 13, 18, 0.84) 55%, #0b0d12 100%);
+}
+/* Regras de .projects-carousel .project-body */
+.projects-carousel .project-body {
+  /* Define a distância entre os elementos. */
+  gap: 0.45rem;
+  /* Define o espaço interno. */
+  padding: 1rem;
+}
+/* Regras de .projects-carousel .project-link */
+.projects-carousel .project-link {
+  /* Configura a propriedade padding-top deste elemento. */
+  padding-top: 0.4rem;
+}
+/* Regras de .projects-carousel .project-card:hover */
+.projects-carousel .project-card:hover {
+  /* Aplica a transformação visual. */
+  transform: none;
+}
+/* Regras de .projects-carousel .project-card.is-current */
+.projects-carousel .project-card.is-current {
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: var(--accent);
+}
+/* Regras de .projects-controls */
+.projects-controls {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: center;
+  /* Define a distância entre os elementos. */
+  gap: 1rem;
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 1rem;
+}
+/* Regras de .projects-controls[hidden] */
+.projects-controls[hidden] {
+  /* Define como os elementos são distribuídos. */
+  display: none;
+}
+/* Regras de .projects-controls button */
+.projects-controls button {
+  /* Define o fundo deste elemento. */
+  background: transparent;
+}
+/* Regras de .projects-controls button:disabled */
+.projects-controls button:disabled {
+  /* Configura a propriedade opacity deste elemento. */
+  opacity: 0.4;
+  /* Configura a propriedade cursor deste elemento. */
+  cursor: default;
+}
+/* Regras de .projects-position */
+.projects-position {
+  /* Configura a propriedade min-width deste elemento. */
+  min-width: 4rem;
+  /* Configura a propriedade text-align deste elemento. */
+  text-align: center;
+  /* Define a cor do texto. */
+  color: var(--muted);
+}
+/* Regras de #projetos .projects-carousel — (max-width: 900px) */
+@media (max-width: 900px) {
+  #projetos .projects-carousel {
+    /* Variável reutilizada pelas regras do portfólio. */
+    --card-width: 55%;
   }
 }
+/* Regras de #projetos .projects-carousel — (max-width: 600px) */
+@media (max-width: 600px) {
+  #projetos .projects-carousel {
+    /* Variável reutilizada pelas regras do portfólio. */
+    --card-width: 88%;
+  }
+}
+/* Regras de html[data-theme="light"] .projects-section */
+html[data-theme="light"] .projects-section {
+  /* Define o fundo deste elemento. */
+  background: #a8abaf;
+}
+/* Regras de html[data-theme="light"] .project-card */
+html[data-theme="light"] .project-card {
+  /* Define o fundo deste elemento. */
+  background: var(--surface);
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: var(--border);
+}
+/* Regras de html[data-theme="light"] .projects-carousel .project-card */
+html[data-theme="light"] .projects-carousel .project-card {
+  /* Define a cor do texto. */
+  color: #fff;
+}
+/* Regras de html[data-theme="light"] .projects-carousel .project-card .project-category,
+html[data-theme="light"] .projects-carousel .project-card .project-link */
+html[data-theme="light"] .projects-carousel .project-card .project-category,
+html[data-theme="light"] .projects-carousel .project-card .project-link {
+  /* Define a cor do texto. */
+  color: #eca5f5;
+}
+/* Regras de html[data-theme="light"]
+  .projects-carousel
+  .project-card
+  .project-body
+  > p:not(.project-category) */
+html[data-theme="light"] .projects-carousel .project-card .project-body > p:not(.project-category) {
+  /* Define a cor do texto. */
+  color: #e0e4eb;
+}
+/* Regras de html[data-theme="light"] .projects-carousel .project-card.is-current */
+html[data-theme="light"] .projects-carousel .project-card.is-current {
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: #a040ae;
+}
+/* Regras de html[data-theme="light"] .journey-carousel,
+html[data-theme="light"] .projects-carousel */
+html[data-theme="light"] .journey-carousel,
+html[data-theme="light"] .projects-carousel {
+  /* Configura a propriedade scrollbar-color deste elemento. */
+  scrollbar-color: #aab1be transparent;
+}
+/* ============================================================
+7. FORMAÇÃO E EXPERIÊNCIA — cartões e navegação
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .journey-section */
+.journey-section {
+  /* Configura a propriedade padding-top deste elemento. */
+  padding-top: 70px;
+}
+/* Regras de .journey-group + .journey-group */
+.journey-group + .journey-group {
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 42px;
+}
+/* Regras de .journey-group > h3 */
+.journey-group > h3 {
+  /* Define o tamanho do texto. */
+  font-size: 1.5rem;
+  /* Configura a propriedade margin-bottom deste elemento. */
+  margin-bottom: 12px;
+}
+/* Regras de .journey-carousel */
+.journey-carousel {
+  /* Variável reutilizada pelas regras do portfólio. */
+  --card-width: 38%;
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Define a distância entre os elementos. */
+  gap: 0.65rem;
+  /* Configura a propriedade overflow-x deste elemento. */
+  overflow-x: auto;
+  /* Define o espaço interno. */
+  padding: 0.75rem 0 1rem;
+  /* Ajusta a parada da rolagem nos cartões. */
+  scroll-snap-type: x mandatory;
+  /* Configura a propriedade scrollbar-color deste elemento. */
+  scrollbar-color: var(--border) transparent;
+}
+/* Regras de .journey-card */
+.journey-card {
+  /* Configura a propriedade box-sizing deste elemento. */
+  box-sizing: border-box;
+  /* Configura a propriedade flex deste elemento. */
+  flex: 0 0 var(--card-width);
+  /* Configura a propriedade min-width deste elemento. */
+  min-width: 0;
+  /* Configura a propriedade min-height deste elemento. */
+  min-height: 19rem;
+  /* Define o espaço interno. */
+  padding: 1rem;
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade flex-direction deste elemento. */
+  flex-direction: column;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: flex-start;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: flex-start;
+  /* Define a distância entre os elementos. */
+  gap: 12px;
+  /* Configura a propriedade scroll-snap-align deste elemento. */
+  scroll-snap-align: start;
 
+  /* Define o fundo deste elemento. */
+
+  background: rgba(35, 40, 49, 0.62);
+  /* Define a borda. */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Arredonda os cantos. */
+  border-radius: 0.65rem;
+  /* Define a transição visual. */
+  transition: border-color 0.2s;
+}
+/* Regras de .journey-carousel .journey-card:hover,
+.journey-carousel .journey-card:active */
+.journey-carousel .journey-card:hover,
+.journey-carousel .journey-card:active {
+  /* Aplica a transformação visual. */
+  transform: none;
+}
+/* Regras de .journey-carousel .journey-card.is-current */
+.journey-carousel .journey-card.is-current {
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: var(--accent);
+}
+/* Regras de .journey-label */
+.journey-label {
+  /* Define a cor do texto. */
+  color: var(--accent);
+  /* Define o tamanho do texto. */
+  font-size: 0.7rem;
+  /* Configura a propriedade font-weight deste elemento. */
+  font-weight: 700;
+  /* Configura a propriedade letter-spacing deste elemento. */
+  letter-spacing: 0.1em;
+}
+/* Regras de .journey-card h4 */
+.journey-card h4 {
+  /* Define o espaço externo. */
+  margin: 0;
+  /* Define o tamanho do texto. */
+  font-size: 1.14rem;
+  /* Configura a propriedade line-height deste elemento. */
+  line-height: 1.4;
+  /* Configura a propriedade overflow-wrap deste elemento. */
+  overflow-wrap: anywhere;
+}
+/* Regras de .journey-card p */
+.journey-card p {
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Define o tamanho do texto. */
+  font-size: 0.87rem;
+  /* Configura a propriedade line-height deste elemento. */
+  line-height: 1.6;
+  /* Configura a propriedade overflow-wrap deste elemento. */
+  overflow-wrap: anywhere;
+}
+/* Regras de .journey-card .journey-note */
+.journey-card .journey-note {
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: auto;
+  /* Configura a propriedade padding-top deste elemento. */
+  padding-top: 12px;
+  /* Define a cor do texto. */
+  color: var(--accent);
+  /* Define o tamanho do texto. */
+  font-size: 0.78rem;
+  /* Configura a propriedade font-weight deste elemento. */
+  font-weight: 600;
+}
+/* Regras de .journey-controls */
+.journey-controls {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: center;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Define a distância entre os elementos. */
+  gap: 1rem;
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 12px;
+}
+/* Regras de .journey-controls[hidden] */
+.journey-controls[hidden] {
+  /* Define como os elementos são distribuídos. */
+  display: none;
+}
+/* Regras de .journey-controls button */
+.journey-controls button {
+  /* Define o fundo deste elemento. */
+  background: transparent;
+}
+/* Regras de .journey-controls button:disabled */
+.journey-controls button:disabled {
+  /* Configura a propriedade opacity deste elemento. */
+  opacity: 0.4;
+  /* Configura a propriedade cursor deste elemento. */
+  cursor: default;
+}
+/* Regras de .journey-position */
+.journey-position {
+  /* Configura a propriedade min-width deste elemento. */
+  min-width: 4rem;
+  /* Configura a propriedade text-align deste elemento. */
+  text-align: center;
+  /* Define a cor do texto. */
+  color: var(--muted);
+}
+/* Regras de .journey-carousel — (max-width: 900px) */
+@media (max-width: 900px) {
+  .journey-carousel {
+    /* Variável reutilizada pelas regras do portfólio. */
+    --card-width: 55%;
+  }
+}
+/* Regras de .journey-carousel — (max-width: 600px) */
+@media (max-width: 600px) {
+  .journey-carousel {
+    /* Variável reutilizada pelas regras do portfólio. */
+    --card-width: 88%;
+  }
+}
+/* Regras de .journey-card — (max-width: 600px) */
+@media (max-width: 600px) {
+  .journey-card {
+    /* Configura a propriedade min-height deste elemento. */
+    min-height: 19rem;
+    /* Define o espaço interno. */
+    padding: 1rem;
+  }
+}
+/* Regras de .journey-section — (max-width: 600px) */
+@media (max-width: 600px) {
+  .journey-section {
+    /* Configura a propriedade padding-top deste elemento. */
+    padding-top: 55px;
+  }
+}
+/* Regras de .journey-grid — (max-width: 980px) */
+@media (max-width: 980px) {
+  .journey-grid {
+    /* Define as colunas da grade. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* Regras de .skill-card,
+  .journey-card — (max-width: 380px) */
 @media (max-width: 380px) {
-  .menu {
-    gap: 7px 11px;
-  }
-  .menu a {
-    font-size: 0.72rem;
-  }
-  .hero-actions {
-    flex-direction: column;
-  }
-  .hero-actions .btn {
-    width: 100%;
-  }
-  .contact-links {
-    flex-direction: column;
-  }
-  .contact-links .btn {
-    width: 100%;
-  }
   .skill-card,
   .journey-card {
+    /* Define o espaço interno. */
     padding: 22px;
   }
 }
-
-/* 11. Reduz animações quando o usuário prefere */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+/* Regras de html[data-theme="light"] .skill-card,
+html[data-theme="light"] .journey-card */
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .journey-card {
+  /* Define o fundo deste elemento. */
+  background: rgba(255, 255, 255, 0.84);
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: #c5ccd7;
+  /* Configura a propriedade box-shadow deste elemento. */
+  box-shadow: 8px 14px 28px rgba(30, 45, 70, 0.09);
+}
+/* Regras de html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .journey-card.is-current */
+html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .journey-card.is-current {
+  /* Configura a propriedade border-color deste elemento. */
+  border-color: var(--accent);
+}
+/* Regras de html[data-theme="light"] .journey-card .journey-note,
+html[data-theme="light"] .journey-label */
+html[data-theme="light"] .journey-card .journey-note,
+html[data-theme="light"] .journey-label {
+  /* Define a cor do texto. */
+  color: var(--accent);
+}
+/* ============================================================
+8. CONTATO
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .contact-section */
+.contact-section {
+  /* Configura a propriedade text-align deste elemento. */
+  text-align: center;
+  /* Define o fundo deste elemento. */
+  background: radial-gradient(ellipse at center top, #251d1a, #0d1016 65%);
+  /* Configura a propriedade border-top deste elemento. */
+  border-top: 1px solid #25252b;
+}
+/* Regras de .contact-content > p:not(.section-kicker) */
+.contact-content > p:not(.section-kicker) {
+  /* Configura a propriedade max-width deste elemento. */
+  max-width: 580px;
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Define o espaço externo. */
+  margin: 20px auto 0;
+}
+/* Regras de .contact-links */
+.contact-links {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: center;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Define a distância entre os elementos. */
+  gap: 14px;
+  /* Configura a propriedade flex-wrap deste elemento. */
+  flex-wrap: wrap;
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 34px;
+}
+/* Regras de .contact-content .contact-hint */
+.contact-content .contact-hint {
+  /* Define o tamanho do texto. */
+  font-size: 0.75rem;
+  /* Define a cor do texto. */
+  color: #ba9b83;
+  /* Configura a propriedade margin-top deste elemento. */
+  margin-top: 30px;
+}
+/* Regras de .contact-links — (max-width: 380px) */
+@media (max-width: 380px) {
+  .contact-links {
+    /* Configura a propriedade flex-direction deste elemento. */
+    flex-direction: column;
   }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+}
+/* Regras de .contact-links .btn — (max-width: 380px) */
+@media (max-width: 380px) {
+  .contact-links .btn {
+    /* Define a largura. */
+    width: 100%;
   }
+}
+/* Regras de html[data-theme="light"] .contact-section */
+html[data-theme="light"] .contact-section {
+  /* Define o fundo deste elemento. */
+  background: radial-gradient(ellipse at center top, #f9e9fc, #f6f7fa 68%);
+  /* Configura a propriedade border-top-color deste elemento. */
+  border-top-color: var(--border);
+}
+/* ============================================================
+9. RODAPÉ
+Estilos padrão, estados de interação, tema claro e ajustes de tela.
+============================================================ */
+/* Regras de .menu a,
+.footer-inner a */
+.menu a,
+.footer-inner a {
+  /* Define o tamanho do texto. */
+  font-size: 0.86rem;
+  /* Define a cor do texto. */
+  color: #c8cbd2;
+  /* Define a transição visual. */
+  transition: color 0.2s;
+}
+/* Regras de .menu a:hover,
+.footer-inner a:hover */
+.menu a:hover,
+.footer-inner a:hover {
+  /* Define a cor do texto. */
+  color: var(--accent);
+}
+/* Regras de .site-footer */
+.site-footer {
+  /* Configura a propriedade border-top deste elemento. */
+  border-top: 1px solid var(--border);
+  /* Configura a propriedade padding-block deste elemento. */
+  padding-block: 27px;
+}
+/* Regras de .footer-inner */
+.footer-inner {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Configura a propriedade justify-content deste elemento. */
+  justify-content: space-between;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+  /* Define a distância entre os elementos. */
+  gap: 24px;
+}
+/* Regras de .footer-inner p */
+.footer-inner p {
+  /* Define a cor do texto. */
+  color: var(--muted);
+  /* Define o tamanho do texto. */
+  font-size: 0.8rem;
+}
+/* Regras de .footer-inner nav */
+.footer-inner nav {
+  /* Define como os elementos são distribuídos. */
+  display: flex;
+  /* Define a distância entre os elementos. */
+  gap: 22px;
+  /* Configura a propriedade align-items deste elemento. */
+  align-items: center;
+}
+/* Regras de .footer-inner — (max-width: 680px) */
+@media (max-width: 680px) {
+  .footer-inner {
+    /* Configura a propriedade flex-direction deste elemento. */
+    flex-direction: column;
+    /* Configura a propriedade text-align deste elemento. */
+    text-align: center;
+  }
+}
+/* Regras de .footer-inner nav — (max-width: 680px) */
+@media (max-width: 680px) {
+  .footer-inner nav {
+    /* Configura a propriedade flex-wrap deste elemento. */
+    flex-wrap: wrap;
+    /* Configura a propriedade justify-content deste elemento. */
+    justify-content: center;
+  }
+}
+/* Regras de html[data-theme="light"] .menu a,
+html[data-theme="light"] .footer-inner a */
+html[data-theme="light"] .menu a,
+html[data-theme="light"] .footer-inner a {
+  /* Define a cor do texto. */
+  color: var(--text);
+}
+/* Regras de html[data-theme="light"] .menu a:hover,
+html[data-theme="light"] .footer-inner a:hover */
+html[data-theme="light"] .menu a:hover,
+html[data-theme="light"] .footer-inner a:hover {
+  /* Define a cor do texto. */
+  color: var(--accent);
+}
+/* Regras de html[data-theme="light"] .site-footer */
+html[data-theme="light"] .site-footer {
+  /* Configura a propriedade border-top-color deste elemento. */
+  border-top-color: var(--border);
 }

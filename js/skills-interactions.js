@@ -1,4 +1,9 @@
+/* skills-interactions.js
+   Interações da página. Os textos e as imagens são editados no index.html.
+   Os seletores abaixo conectam os controles aos elementos do HTML.
+*/
 // Seleção visual acessível dos cards de habilidades (sem navegar ou alterar dados).
+// Responde ao evento deste controle.
 document.addEventListener("DOMContentLoaded", () => {
   const cards = [...document.querySelectorAll("#habilidades .skill-card")];
   cards.forEach((card) => {
@@ -15,7 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
         card.setAttribute("aria-pressed", "true");
       }
     };
+    // Responde ao evento deste controle.
     card.addEventListener("click", toggle);
+    // Responde ao evento deste controle.
     card.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
