@@ -1,836 +1,2586 @@
-/* 1. Cores e configurações gerais */
+/* Aplica os estilos ao seletor :root */
 :root {
-    --bg: #0b0d12;
-    --surface: #141820;
-    --surface-2: #191e27;
-    --border: #30343d;
-    --text: #f5f5f6;
-    --muted: #a4a9b4;
-    --accent: #eca5f5;
-    --accent-light: #d559ee;
-    --font: 'Poppins',Arial,sans-serif;
+  /* Configura --bg com o valor #0b0d12. */
+  --bg: #0b0d12;
+  /* Configura --surface com o valor #141820. */
+  --surface: #141820;
+  /* Configura --surface-2 com o valor #191e27. */
+  --surface-2: #191e27;
+  /* Configura --border com o valor #30343d. */
+  --border: #30343d;
+  /* Configura --text com o valor #f5f5f6. */
+  --text: #f5f5f6;
+  /* Configura --muted com o valor #a4a9b4. */
+  --muted: #a4a9b4;
+  /* Configura --accent com o valor #eca5f5. */
+  --accent: #eca5f5;
+  /* Configura --accent-light com o valor #d559ee. */
+  --accent-light: #d559ee;
+  /* Configura --font com o valor "Poppins", Arial, sans-serif. */
+  --font: "Poppins", Arial, sans-serif;
 }
-
+/* Aplica os estilos ao seletor * */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  /* Define o espaçamento externo com o valor 0. */
+  margin: 0;
+  /* Define o espaçamento interno com o valor 0. */
+  padding: 0;
+  /* Configura box-sizing com o valor border-box. */
+  box-sizing: border-box;
 }
-
+/* Aplica os estilos ao seletor html */
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 105px;
+  /* Configura scroll-behavior com o valor smooth. */
+  scroll-behavior: smooth;
+  /* Configura scroll-padding-top com o valor 105px. */
+  scroll-padding-top: 105px;
 }
-
+/* Aplica os estilos ao seletor body */
 body {
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.65;
+  /* Configura font-family com o valor var(--font). */
+  font-family: var(--font);
+  /* Define o fundo com o valor var(--bg). */
+  background: var(--bg);
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
+  /* Configura line-height com o valor 1.65. */
+  line-height: 1.65;
 }
-
+/* Aplica os estilos ao seletor a */
 a {
-    color: inherit;
-    text-decoration: none;
+  /* Define a cor do texto com o valor inherit. */
+  color: inherit;
+  /* Configura text-decoration com o valor none. */
+  text-decoration: none;
 }
-
+/* Aplica os estilos ao seletor img */
 img {
-    display: block;
-    max-width: 100%;
+  /* Define o modelo de distribuição dos elementos com o valor block. */
+  display: block;
+  /* Configura max-width com o valor 100%. */
+  max-width: 100%;
 }
-
+/* Aplica os estilos ao seletor ul */
 ul {
-    list-style: none;
+  /* Configura list-style com o valor none. */
+  list-style: none;
 }
-
-
-
+/* Aplica os estilos ao seletor .container */
 .container {
-    width: min(1140px,90%);
-    margin-inline: auto;
+  /* Define a largura com o valor min(1140px, 90%). */
+  width: min(1140px, 90%);
+  /* Configura margin-inline com o valor auto. */
+  margin-inline: auto;
 }
-
+/* Aplica os estilos ao seletor .pular */
 .pular {
-    position: absolute;
-    top: -100px;
-    left: 12px;
-    z-index: 20;
-    background: var(--accent);
-    color: #111;
-    padding: 10px;
-    border-radius: 8px;
+  /* Define como o elemento é posicionado com o valor absolute. */
+  position: absolute;
+  /* Configura top com o valor -100px. */
+  top: -100px;
+  /* Configura left com o valor 12px. */
+  left: 12px;
+  /* Define a ordem de sobreposição com o valor 20. */
+  z-index: 20;
+  /* Define o fundo com o valor var(--accent). */
+  background: var(--accent);
+  /* Define a cor do texto com o valor #111. */
+  color: #111;
+  /* Define o espaçamento interno com o valor 10px. */
+  padding: 10px;
+  /* Configura border-radius com o valor 8px. */
+  border-radius: 8px;
 }
-
+/* Aplica os estilos ao seletor .pular:focus */
 .pular:focus {
-    top: 12px;
+  /* Configura top com o valor 12px. */
+  top: 12px;
 }
-
-/* 2. Menu: Flexbox deixa os links lado a lado */
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(11,13,18,.94);
-    border-bottom: 1px solid #242832;
-    backdrop-filter: blur(12px);
-}
-
-.header-inner {
-    min-height: 86px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 26px;
-}
-
-.logo {
-    font-weight: 800;
-    letter-spacing: .05em;
-    font-size: 1.65rem;
-}
-
-.logo span {
-    color: var(--accent);
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 27px;
-    flex-wrap: wrap;
-}
-
-.menu a,.footer-inner a {
-    font-size: .86rem;
-    color: #c8cbd2;
-    transition: color .2s;
-}
-
-.menu a:hover,.footer-inner a:hover {
-    color: var(--accent);
-}
-
+/* Aplica os estilos ao seletor .btn */
 .btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid transparent;
-    border-radius: 9px;
-    padding: 13px 21px;
-    font: 600 .88rem var(--font);
-    transition: transform .2s,background .2s,border-color .2s;
-    white-space: nowrap;
+  /* Define o modelo de distribuição dos elementos com o valor inline-flex. */
+  display: inline-flex;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 12px. */
+  gap: 12px;
+  /* Define a borda com o valor 1px solid transparent. */
+  border: 1px solid transparent;
+  /* Configura border-radius com o valor 9px. */
+  border-radius: 9px;
+  /* Define o espaçamento interno com o valor 13px 21px. */
+  padding: 13px 21px;
+  /* Configura font com o valor 600 0.88rem var(--font). */
+  font: 600 0.88rem var(--font);
+  /* Configura a transição visual com o valor transform 0.2s,
+    background 0.2s,
+    border-color 0.2s. */
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+  /* Configura white-space com o valor nowrap. */
+  white-space: nowrap;
 }
-
+/* Aplica os estilos ao seletor .btn:hover */
 .btn:hover {
-    transform: translateY(-3px);
+  /* Aplica uma transformação visual com o valor translateY(-3px). */
+  transform: translateY(-3px);
 }
-
+/* Aplica os estilos ao seletor .btn-primary */
 .btn-primary {
-    background: var(--accent);
-    color: #16110e;
+  /* Define o fundo com o valor var(--accent). */
+  background: var(--accent);
+  /* Define a cor do texto com o valor #16110e. */
+  color: #16110e;
 }
-
+/* Aplica os estilos ao seletor .btn-primary:hover */
 .btn-primary:hover {
-    background: var(--accent-light);
+  /* Define o fundo com o valor var(--accent-light). */
+  background: var(--accent-light);
 }
-
+/* Aplica os estilos ao seletor .btn-outline */
 .btn-outline {
-    border-color: #525762;
-    color: var(--text);
+  /* Configura border-color com o valor #525762. */
+  border-color: #525762;
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
 }
-
+/* Aplica os estilos ao seletor .btn-outline:hover */
 .btn-outline:hover {
-    border-color: var(--accent);
+  /* Configura border-color com o valor var(--accent). */
+  border-color: var(--accent);
 }
-
-/* 3. Apresentação: Grid organiza texto e imagem */
-.hero {
-    min-height: 610px;
-    display: grid;
-    grid-template-columns: 1.15fr .85fr;
-    grid-template-areas: 'intro portrait';
-    gap: 54px;
-    align-items: center;
-    padding-block: 80px 86px;
-}
-
-.hero-content {
-    grid-area: intro;
-}
-
-.hero-portrait {
-    grid-area: portrait;
-    min-width: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    isolation: isolate;
-}
-
-.eyebrow,.section-kicker {
-    color: var(--accent);
-    font-size: .76rem;
-    letter-spacing: .17em;
-    font-weight: 700;
-    margin-bottom: 23px;
-}
-
-.eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
-    border-radius: 50%;
-}
-
+/* Aplica os estilos ao seletor h1 */
 h1 {
-    font-size: clamp(2.8rem,5.2vw,4.65rem);
-    letter-spacing: -.055em;
-    line-height: 1.16;
-    max-width: 650px;
+  /* Define o tamanho do texto com o valor clamp(2.8rem, 5.2vw, 4.65rem). */
+  font-size: clamp(2.8rem, 5.2vw, 4.65rem);
+  /* Configura letter-spacing com o valor -0.055em. */
+  letter-spacing: -0.055em;
+  /* Configura line-height com o valor 1.16. */
+  line-height: 1.16;
+  /* Configura max-width com o valor 650px. */
+  max-width: 650px;
 }
-
-h1 span,h2 span {
-    color: var(--accent);
+/* Aplica os estilos ao seletor h1 span,
+h2 span */
+h1 span,
+h2 span {
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
 }
-
-.hero-subtitle {
-    color: var(--muted);
-    font-size: 1.02rem;
-    margin-top: 25px;
-    max-width: 560px;
-}
-
-.hero-subtitle strong {
-    color: #e9ebed;
-    font-weight: 600;
-}
-
-.hero-actions,.hero-tags {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.hero-actions {
-    margin-top: 33px;
-}
-
-.hero-tags {
-    margin-top: 45px;
-    gap: 10px;
-}
-
-.hero-tags span {
-    font-size: .73rem;
-    color: #c1c5cb;
-    border: 1px solid var(--border);
-    padding: 8px 13px;
-    border-radius: 100px;
-}
-
-.portrait-glow {
-    position: absolute;
-    inset: 12%;
-    background: radial-gradient(circle,rgba(228, 109, 13, 0.34),transparent 72%);
-    filter: blur(18px);
-    z-index: -1;
-}
-
-
-/* Foto de perfil: corte circular sem deformar a imagem. */
-.hero-portrait img {
-    width: min(440px,100%);
-    aspect-ratio: 1;
-    height: auto;
-    object-fit: cover;
-    object-position: center 35%;
-    border-radius: 50%;
-    border: 2px solid var(--accent);
-    box-shadow: 0 1px 30px rgba(236, 165, 245, 0.582);
-}
-
-.portrait-caption {
-    font-size: .7rem;
-    letter-spacing: .18em;
-    color: #b2b3b8;
-}
-
-.portrait-caption span {
-    color: var(--accent);
-}
-
-/* 4. Seções e Sobre mim */
+/* Aplica os estilos ao seletor .section */
 .section {
-    padding-block: 95px;
-    scroll-margin-top: 94px;
+  /* Configura padding-block com o valor 95px. */
+  padding-block: 95px;
+  /* Configura scroll-margin-top com o valor 94px. */
+  scroll-margin-top: 94px;
 }
-
+/* Aplica os estilos ao seletor .section-kicker */
 .section-kicker {
-    margin-bottom: 16px;
+  /* Configura margin-bottom com o valor 16px. */
+  margin-bottom: 16px;
 }
-
+/* Aplica os estilos ao seletor h2 */
 h2 {
-    font-size: clamp(2rem,3.7vw,3rem);
-    letter-spacing: -.045em;
-    line-height: 1.22;
+  /* Define o tamanho do texto com o valor clamp(2rem, 3.7vw, 3rem). */
+  font-size: clamp(2rem, 3.7vw, 3rem);
+  /* Configura letter-spacing com o valor -0.045em. */
+  letter-spacing: -0.045em;
+  /* Configura line-height com o valor 1.22. */
+  line-height: 1.22;
 }
-
+/* Aplica os estilos ao seletor h3 */
 h3 {
-    font-size: 1.14rem;
-    line-height: 1.35;
+  /* Define o tamanho do texto com o valor 1.14rem. */
+  font-size: 1.14rem;
+  /* Configura line-height com o valor 1.35. */
+  line-height: 1.35;
 }
-
+/* Aplica os estilos ao seletor .section-heading */
 .section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 24px;
-    margin-bottom: 34px;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura justify-content com o valor space-between. */
+  justify-content: space-between;
+  /* Configura align-items com o valor end. */
+  align-items: end;
+  /* Define a distância entre itens com o valor 24px. */
+  gap: 24px;
+  /* Configura margin-bottom com o valor 34px. */
+  margin-bottom: 34px;
 }
-
+/* Aplica os estilos ao seletor .section-heading p */
 .section-heading p {
-    max-width: 370px;
-    color: var(--muted);
-    font-size: .9rem;
+  /* Configura max-width com o valor 370px. */
+  max-width: 370px;
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o tamanho do texto com o valor 0.9rem. */
+  font-size: 0.9rem;
 }
-
-.about-section {
-    background: #11151c;
-    border-block: 1px solid #20242d;
-}
-
-.about-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 72px;
-    align-items: start;
-}
-
-.about-copy p {
-    color: var(--muted);
-    margin-bottom: 16px;
-}
-
+/* Aplica os estilos ao seletor .text-link */
 .text-link {
-    display: inline-flex;
-    gap: 12px;
-    color: var(--accent);
-    font-weight: 600;
-    margin-top: 12px;
+  /* Define o modelo de distribuição dos elementos com o valor inline-flex. */
+  display: inline-flex;
+  /* Define a distância entre itens com o valor 12px. */
+  gap: 12px;
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+  /* Configura font-weight com o valor 600. */
+  font-weight: 600;
+  /* Configura margin-top com o valor 12px. */
+  margin-top: 12px;
 }
-
-/* 5. Habilidades: cartões com efeito de vidro e realce luminoso */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.skill-card {
-    --skill-glow: 255, 163, 84;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 0;
-    min-height: 210px;
-    padding: 29px;
-    position: relative;
-    isolation: isolate;
-    border: 1px solid rgba(255, 255, 255, .20);
-    border-radius: 17px;
-    background: rgba(35, 40, 49, .62);
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, .22);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    cursor: pointer;
-    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
-}
-
-/* Borda brilhante sem encobrir o conteúdo. */
-.skill-card::before {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    padding: 2px;
-    background: conic-gradient(from var(--skill-angle, 0deg),
-        transparent 0%, rgba(var(--skill-glow), .12) 18%,
-        rgba(var(--skill-glow), .95) 40%, #fff 48%,
-        rgba(var(--skill-glow), .95) 55%,
-        transparent 78%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s ease;
-}
-
-@property --skill-angle {
-    syntax: "<angle>";
-    inherits: false;
-    initial-value: 0deg;
-}
-
+/* Condição de aplicação dos estilos: keyframes skill-border-glow */
 @keyframes skill-border-glow {
-    to { --skill-angle: 360deg; }
+  /* Aplica os estilos ao seletor to */
+  to {
+    /* Configura --skill-angle com o valor 360deg. */
+    --skill-angle: 360deg;
+  }
 }
-
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor html */
+  html {
+    /* Configura scroll-padding-top com o valor 140px. */
+    scroll-padding-top: 140px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .container */
+  .container {
+    /* Define a largura com o valor min(100% - 36px, 1140px). */
+    width: min(100% - 36px, 1140px);
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .section */
+  .section {
+    /* Configura padding-block com o valor 66px. */
+    padding-block: 66px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .section-heading */
+  .section-heading {
+    /* Configura flex-direction com o valor column. */
+    flex-direction: column;
+    /* Configura align-items com o valor start. */
+    align-items: start;
+  }
+}
+/* Condição de aplicação dos estilos: media (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  /* Aplica os estilos ao seletor html */
+  html {
+    /* Configura scroll-behavior com o valor auto. */
+    scroll-behavior: auto;
+  }
+}
+/* Condição de aplicação dos estilos: media (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  /* Aplica os estilos ao seletor *,
+  *::before,
+  *::after */
+  *,
+  *::before,
+  *::after {
+    /* Configura animation-duration com o valor 0.01ms. */
+    animation-duration: 0.01ms !important;
+    /* Configura transition-duration com o valor 0.01ms. */
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] */
+html[data-theme="light"] {
+  /* Configura color-scheme com o valor light. */
+  color-scheme: light;
+  /* Configura --bg com o valor #f6f7fa. */
+  --bg: #f6f7fa;
+  /* Configura --surface com o valor #ffffff. */
+  --surface: #ffffff;
+  /* Configura --surface-2 com o valor #edf0f5. */
+  --surface-2: #edf0f5;
+  /* Configura --border com o valor #c8ced9. */
+  --border: #c8ced9;
+  /* Configura --text com o valor #1b1d20. */
+  --text: #1b1d20;
+  /* Configura --muted com o valor #30343a. */
+  --muted: #30343a;
+  /* Configura --accent com o valor #873093. */
+  --accent: #873093;
+  /* Configura --accent-light com o valor #9f3eac. */
+  --accent-light: #9f3eac;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .btn-outline */
+html[data-theme="light"] .btn-outline {
+  /* Configura border-color com o valor #8e97a8. */
+  border-color: #8e97a8;
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .pular */
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .pular {
+  /* Define o fundo com o valor #873093. */
+  background: #873093;
+  /* Define a cor do texto com o valor #fff. */
+  color: #fff;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .btn-primary:hover */
+html[data-theme="light"] .btn-primary:hover {
+  /* Define o fundo com o valor #6b2476. */
+  background: #6b2476;
+}
+/* Aplica os estilos ao seletor .site-header */
+.site-header {
+  /* Define como o elemento é posicionado com o valor sticky. */
+  position: sticky;
+  /* Configura top com o valor 0. */
+  top: 0;
+  /* Define a ordem de sobreposição com o valor 10. */
+  z-index: 10;
+  /* Define o fundo com o valor rgba(11, 13, 18, 0.94). */
+  background: rgba(11, 13, 18, 0.94);
+  /* Configura border-bottom com o valor 1px solid #242832. */
+  border-bottom: 1px solid #242832;
+  /* Configura backdrop-filter com o valor blur(12px). */
+  backdrop-filter: blur(12px);
+}
+/* Aplica os estilos ao seletor .header-inner */
+.header-inner {
+  /* Configura min-height com o valor 86px. */
+  min-height: 86px;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura justify-content com o valor space-between. */
+  justify-content: space-between;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 26px. */
+  gap: 26px;
+}
+/* Aplica os estilos ao seletor .logo */
+.logo {
+  /* Configura font-weight com o valor 800. */
+  font-weight: 800;
+  /* Configura letter-spacing com o valor 0.05em. */
+  letter-spacing: 0.05em;
+  /* Define o tamanho do texto com o valor 1.65rem. */
+  font-size: 1.65rem;
+}
+/* Aplica os estilos ao seletor .logo span */
+.logo span {
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+}
+/* Aplica os estilos ao seletor .menu */
+.menu {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 27px. */
+  gap: 27px;
+  /* Configura flex-wrap com o valor wrap. */
+  flex-wrap: wrap;
+}
+/* Condição de aplicação dos estilos: media (max-width: 980px) */
+@media (max-width: 980px) {
+  /* Aplica os estilos ao seletor .header-inner */
+  .header-inner {
+    /* Configura flex-direction com o valor column. */
+    flex-direction: column;
+    /* Configura padding-block com o valor 20px. */
+    padding-block: 20px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 980px) */
+@media (max-width: 980px) {
+  /* Aplica os estilos ao seletor .header-cta */
+  .header-cta {
+    /* Define o modelo de distribuição dos elementos com o valor none. */
+    display: none;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .header-inner */
+  .header-inner {
+    /* Define a distância entre itens com o valor 10px. */
+    gap: 10px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .menu */
+  .menu {
+    /* Define a distância entre itens com o valor 10px 17px. */
+    gap: 10px 17px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .menu a */
+  .menu a {
+    /* Define o tamanho do texto com o valor 0.78rem. */
+    font-size: 0.78rem;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 380px) */
+@media (max-width: 380px) {
+  /* Aplica os estilos ao seletor .menu */
+  .menu {
+    /* Define a distância entre itens com o valor 7px 11px. */
+    gap: 7px 11px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 380px) */
+@media (max-width: 380px) {
+  /* Aplica os estilos ao seletor .menu a */
+  .menu a {
+    /* Define o tamanho do texto com o valor 0.72rem. */
+    font-size: 0.72rem;
+  }
+}
+/* Aplica os estilos ao seletor .theme-toggle */
+.theme-toggle {
+  /* Define o modelo de distribuição dos elementos com o valor inline-flex. */
+  display: inline-flex;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Define a distância entre itens com o valor 7px. */
+  gap: 7px;
+  /* Configura min-height com o valor 36px. */
+  min-height: 36px;
+  /* Define o espaçamento interno com o valor 6px 11px. */
+  padding: 6px 11px;
+  /* Define a borda com o valor 1px solid var(--border). */
+  border: 1px solid var(--border);
+  /* Configura border-radius com o valor 9px. */
+  border-radius: 9px;
+  /* Define o fundo com o valor transparent. */
+  background: transparent;
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
+  /* Configura font com o valor 600 0.78rem var(--font). */
+  font: 600 0.78rem var(--font);
+  /* Configura cursor com o valor pointer. */
+  cursor: pointer;
+  /* Configura white-space com o valor nowrap. */
+  white-space: nowrap;
+  /* Configura a transição visual com o valor border-color 0.2s,
+    background 0.2s. */
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+/* Aplica os estilos ao seletor .theme-toggle:hover,
+.theme-toggle:focus-visible */
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  /* Configura border-color com o valor var(--accent). */
+  border-color: var(--accent);
+}
+/* Aplica os estilos ao seletor .theme-toggle:focus-visible */
+.theme-toggle:focus-visible {
+  /* Configura outline com o valor 2px solid var(--accent). */
+  outline: 2px solid var(--accent);
+  /* Configura outline-offset com o valor 3px. */
+  outline-offset: 3px;
+}
+/* Aplica os estilos ao seletor .theme-icon-light */
+.theme-icon-light {
+  /* Define o modelo de distribuição dos elementos com o valor inline. */
+  display: inline;
+}
+/* Aplica os estilos ao seletor .theme-icon-dark */
+.theme-icon-dark {
+  /* Define o modelo de distribuição dos elementos com o valor none. */
+  display: none;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .theme-icon-light */
+html[data-theme="light"] .theme-icon-light {
+  /* Define o modelo de distribuição dos elementos com o valor none. */
+  display: none;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .theme-icon-dark */
+html[data-theme="light"] .theme-icon-dark {
+  /* Define o modelo de distribuição dos elementos com o valor inline. */
+  display: inline;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .site-header */
+html[data-theme="light"] .site-header {
+  /* Define o fundo com o valor rgba(255, 255, 255, 0.94). */
+  background: rgba(255, 255, 255, 0.94);
+  /* Configura border-bottom-color com o valor var(--border). */
+  border-bottom-color: var(--border);
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .theme-toggle */
+  .theme-toggle {
+    /* Configura min-height com o valor 34px. */
+    min-height: 34px;
+    /* Define o espaçamento interno com o valor 5px 9px. */
+    padding: 5px 9px;
+    /* Define o tamanho do texto com o valor 0.74rem. */
+    font-size: 0.74rem;
+  }
+}
+/* Aplica os estilos ao seletor .hero */
+.hero {
+  /* Configura min-height com o valor 610px. */
+  min-height: 610px;
+  /* Define o modelo de distribuição dos elementos com o valor grid. */
+  display: grid;
+  /* Configura grid-template-columns com o valor 1.15fr 0.85fr. */
+  grid-template-columns: 1.15fr 0.85fr;
+  /* Configura grid-template-areas com o valor "intro portrait". */
+  grid-template-areas: "intro portrait";
+  /* Define a distância entre itens com o valor 54px. */
+  gap: 54px;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura padding-block com o valor 80px 86px. */
+  padding-block: 80px 86px;
+}
+/* Aplica os estilos ao seletor .hero-content */
+.hero-content {
+  /* Configura grid-area com o valor intro. */
+  grid-area: intro;
+}
+/* Aplica os estilos ao seletor .hero-portrait */
+.hero-portrait {
+  /* Configura grid-area com o valor portrait. */
+  grid-area: portrait;
+  /* Configura min-width com o valor 0. */
+  min-width: 0;
+  /* Define como o elemento é posicionado com o valor relative. */
+  position: relative;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura flex-direction com o valor column. */
+  flex-direction: column;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Configura isolation com o valor isolate. */
+  isolation: isolate;
+}
+/* Aplica os estilos ao seletor .eyebrow,
+.section-kicker */
+.eyebrow,
+.section-kicker {
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+  /* Define o tamanho do texto com o valor 0.76rem. */
+  font-size: 0.76rem;
+  /* Configura letter-spacing com o valor 0.17em. */
+  letter-spacing: 0.17em;
+  /* Configura font-weight com o valor 700. */
+  font-weight: 700;
+  /* Configura margin-bottom com o valor 23px. */
+  margin-bottom: 23px;
+}
+/* Aplica os estilos ao seletor .eyebrow */
+.eyebrow {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 10px. */
+  gap: 10px;
+}
+/* Aplica os estilos ao seletor .status-dot */
+.status-dot {
+  /* Define a largura com o valor 8px. */
+  width: 8px;
+  /* Define a altura com o valor 8px. */
+  height: 8px;
+  /* Define o fundo com o valor var(--accent). */
+  background: var(--accent);
+  /* Configura border-radius com o valor 50%. */
+  border-radius: 50%;
+}
+/* Aplica os estilos ao seletor .hero-subtitle */
+.hero-subtitle {
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o tamanho do texto com o valor 1.02rem. */
+  font-size: 1.02rem;
+  /* Configura margin-top com o valor 25px. */
+  margin-top: 25px;
+  /* Configura max-width com o valor 560px. */
+  max-width: 560px;
+}
+/* Aplica os estilos ao seletor .hero-subtitle strong */
+.hero-subtitle strong {
+  /* Define a cor do texto com o valor #e9ebed. */
+  color: #e9ebed;
+  /* Configura font-weight com o valor 600. */
+  font-weight: 600;
+}
+/* Aplica os estilos ao seletor .hero-actions,
+.hero-tags */
+.hero-actions,
+.hero-tags {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 14px. */
+  gap: 14px;
+  /* Configura flex-wrap com o valor wrap. */
+  flex-wrap: wrap;
+}
+/* Aplica os estilos ao seletor .hero-actions */
+.hero-actions {
+  /* Configura margin-top com o valor 33px. */
+  margin-top: 33px;
+}
+/* Aplica os estilos ao seletor .hero-tags */
+.hero-tags {
+  /* Configura margin-top com o valor 45px. */
+  margin-top: 45px;
+  /* Define a distância entre itens com o valor 10px. */
+  gap: 10px;
+}
+/* Aplica os estilos ao seletor .hero-tags span */
+.hero-tags span {
+  /* Define o tamanho do texto com o valor 0.73rem. */
+  font-size: 0.73rem;
+  /* Define a cor do texto com o valor #c1c5cb. */
+  color: #c1c5cb;
+  /* Define a borda com o valor 1px solid var(--border). */
+  border: 1px solid var(--border);
+  /* Define o espaçamento interno com o valor 8px 13px. */
+  padding: 8px 13px;
+  /* Configura border-radius com o valor 100px. */
+  border-radius: 100px;
+}
+/* Aplica os estilos ao seletor .portrait-glow */
+.portrait-glow {
+  /* Define como o elemento é posicionado com o valor absolute. */
+  position: absolute;
+  /* Configura inset com o valor 12%. */
+  inset: 12%;
+  /* Define o fundo com o valor radial-gradient(circle, rgba(228, 109, 13, 0.34), transparent 72%). */
+  background: radial-gradient(circle, rgba(228, 109, 13, 0.34), transparent 72%);
+  /* Configura filter com o valor blur(18px). */
+  filter: blur(18px);
+  /* Define a ordem de sobreposição com o valor -1. */
+  z-index: -1;
+}
+/* Aplica os estilos ao seletor .hero-portrait img */
+.hero-portrait img {
+  /* Define a largura com o valor min(440px, 100%). */
+  width: min(440px, 100%);
+  /* Configura aspect-ratio com o valor 1. */
+  aspect-ratio: 1;
+  /* Define a altura com o valor auto. */
+  height: auto;
+  /* Configura object-fit com o valor cover. */
+  object-fit: cover;
+  /* Configura object-position com o valor center 35%. */
+  object-position: center 35%;
+  /* Configura border-radius com o valor 50%. */
+  border-radius: 50%;
+  /* Define a borda com o valor 2px solid var(--accent). */
+  border: 2px solid var(--accent);
+  /* Configura box-shadow com o valor 0 1px 30px rgba(236, 165, 245, 0.582). */
+  box-shadow: 0 1px 30px rgba(236, 165, 245, 0.582);
+}
+/* Aplica os estilos ao seletor .portrait-caption */
+.portrait-caption {
+  /* Define o tamanho do texto com o valor 0.7rem. */
+  font-size: 0.7rem;
+  /* Configura letter-spacing com o valor 0.18em. */
+  letter-spacing: 0.18em;
+  /* Define a cor do texto com o valor #b2b3b8. */
+  color: #b2b3b8;
+}
+/* Aplica os estilos ao seletor .portrait-caption span */
+.portrait-caption span {
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+}
+/* Condição de aplicação dos estilos: media (max-width: 980px) */
+@media (max-width: 980px) {
+  /* Aplica os estilos ao seletor .hero */
+  .hero {
+    /* Configura grid-template-columns com o valor 1fr 1fr. */
+    grid-template-columns: 1fr 1fr;
+    /* Define a distância entre itens com o valor 24px. */
+    gap: 24px;
+    /* Configura min-height com o valor 520px. */
+    min-height: 520px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .hero */
+  .hero {
+    /* Configura grid-template-columns com o valor 1fr. */
+    grid-template-columns: 1fr;
+    /* Configura grid-template-areas com o valor "portrait" "intro". */
+    grid-template-areas: "portrait" "intro";
+    /* Configura padding-block com o valor 32px 67px. */
+    padding-block: 32px 67px;
+    /* Define a distância entre itens com o valor 26px. */
+    gap: 26px;
+    /* Configura text-align com o valor center. */
+    text-align: center;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .hero-portrait img */
+  .hero-portrait img {
+    /* Configura max-width com o valor 300px. */
+    max-width: 300px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .hero-content .eyebrow,
+  .hero-actions,
+  .hero-tags */
+  .hero-content .eyebrow,
+  .hero-actions,
+  .hero-tags {
+    /* Configura justify-content com o valor center. */
+    justify-content: center;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .hero-subtitle */
+  .hero-subtitle {
+    /* Configura margin-inline com o valor auto. */
+    margin-inline: auto;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .hero-tags */
+  .hero-tags {
+    /* Configura margin-top com o valor 25px. */
+    margin-top: 25px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .hero-actions .btn */
+  .hero-actions .btn {
+    /* Configura flex com o valor 1. */
+    flex: 1;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .portrait-caption */
+  .portrait-caption {
+    /* Define o tamanho do texto com o valor 0.55rem. */
+    font-size: 0.55rem;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 380px) */
+@media (max-width: 380px) {
+  /* Aplica os estilos ao seletor .hero-actions */
+  .hero-actions {
+    /* Configura flex-direction com o valor column. */
+    flex-direction: column;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 380px) */
+@media (max-width: 380px) {
+  /* Aplica os estilos ao seletor .hero-actions .btn */
+  .hero-actions .btn {
+    /* Define a largura com o valor 100%. */
+    width: 100%;
+  }
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .hero-subtitle strong */
+html[data-theme="light"] .hero-subtitle strong {
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .hero-tags span,
+html[data-theme="light"] .portrait-caption,
+html[data-theme="light"] .section-heading p */
+html[data-theme="light"] .hero-tags span,
+html[data-theme="light"] .portrait-caption,
+html[data-theme="light"] .section-heading p {
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+}
+/* Aplica os estilos ao seletor .about-section */
+.about-section {
+  /* Define o fundo com o valor #11151c. */
+  background: #11151c;
+  /* Configura border-block com o valor 1px solid #20242d. */
+  border-block: 1px solid #20242d;
+}
+/* Aplica os estilos ao seletor .about-layout */
+.about-layout {
+  /* Define o modelo de distribuição dos elementos com o valor grid. */
+  display: grid;
+  /* Configura grid-template-columns com o valor 1fr 1.1fr. */
+  grid-template-columns: 1fr 1.1fr;
+  /* Define a distância entre itens com o valor 72px. */
+  gap: 72px;
+  /* Configura align-items com o valor start. */
+  align-items: start;
+}
+/* Aplica os estilos ao seletor .about-copy p */
+.about-copy p {
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Configura margin-bottom com o valor 16px. */
+  margin-bottom: 16px;
+}
+/* Condição de aplicação dos estilos: media (max-width: 980px) */
+@media (max-width: 980px) {
+  /* Aplica os estilos ao seletor .about-layout */
+  .about-layout {
+    /* Define a distância entre itens com o valor 36px. */
+    gap: 36px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .about-layout */
+  .about-layout {
+    /* Configura grid-template-columns com o valor 1fr. */
+    grid-template-columns: 1fr;
+    /* Define a distância entre itens com o valor 25px. */
+    gap: 25px;
+  }
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .about-section */
+html[data-theme="light"] .about-section {
+  /* Define o fundo com o valor #dfe4ee. */
+  background: #dfe4ee;
+  /* Configura border-block-color com o valor var(--border). */
+  border-block-color: var(--border);
+}
+/* Aplica os estilos ao seletor .skills-grid */
+.skills-grid {
+  /* Define o modelo de distribuição dos elementos com o valor grid. */
+  display: grid;
+  /* Configura grid-template-columns com o valor repeat(3, minmax(0, 1fr)). */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* Define a distância entre itens com o valor 18px. */
+  gap: 18px;
+}
+/* Aplica os estilos ao seletor .skill-card */
+.skill-card {
+  /* Configura --skill-glow com o valor 255, 163, 84. */
+  --skill-glow: 255, 163, 84;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura flex-direction com o valor column. */
+  flex-direction: column;
+  /* Configura align-items com o valor flex-start. */
+  align-items: flex-start;
+  /* Configura min-width com o valor 0. */
+  min-width: 0;
+  /* Configura min-height com o valor 210px. */
+  min-height: 210px;
+  /* Define o espaçamento interno com o valor 29px. */
+  padding: 29px;
+  /* Define como o elemento é posicionado com o valor relative. */
+  position: relative;
+  /* Configura isolation com o valor isolate. */
+  isolation: isolate;
+  /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.2). */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Configura border-radius com o valor 17px. */
+  border-radius: 17px;
+  /* Define o fundo com o valor rgba(35, 40, 49, 0.62). */
+  background: rgba(35, 40, 49, 0.62);
+  /* Configura box-shadow com o valor 12px 17px 51px rgba(0, 0, 0, 0.22). */
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  /* Configura backdrop-filter com o valor blur(6px). */
+  backdrop-filter: blur(6px);
+  /* Configura -webkit-backdrop-filter com o valor blur(6px). */
+  -webkit-backdrop-filter: blur(6px);
+  /* Configura cursor com o valor pointer. */
+  cursor: pointer;
+  /* Configura a transição visual com o valor transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease. */
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+/* Aplica os estilos ao seletor .skill-card::before */
+.skill-card::before {
+  /* Configura content com o valor "". */
+  content: "";
+  /* Define como o elemento é posicionado com o valor absolute. */
+  position: absolute;
+  /* Configura inset com o valor -1px. */
+  inset: -1px;
+  /* Configura border-radius com o valor inherit. */
+  border-radius: inherit;
+  /* Define o espaçamento interno com o valor 2px. */
+  padding: 2px;
+  /* Define o fundo com o valor conic-gradient(
+    from var(--skill-angle, 0deg),
+    transparent 0%,
+    rgba(var(--skill-glow), 0.12) 18%,
+    rgba(var(--skill-glow), 0.95) 40%,
+    #fff 48%,
+    rgba(var(--skill-glow), 0.95) 55%,
+    transparent 78%
+  ). */
+  background: conic-gradient(
+    from var(--skill-angle, 0deg),
+    transparent 0%,
+    rgba(var(--skill-glow), 0.12) 18%,
+    rgba(var(--skill-glow), 0.95) 40%,
+    #fff 48%,
+    rgba(var(--skill-glow), 0.95) 55%,
+    transparent 78%
+  );
+  /* Configura -webkit-mask com o valor linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0). */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  /* Configura -webkit-mask-composite com o valor xor. */
+  -webkit-mask-composite: xor;
+  /* Configura mask com o valor linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0). */
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  /* Configura mask-composite com o valor exclude. */
+  mask-composite: exclude;
+  /* Configura opacity com o valor 0. */
+  opacity: 0;
+  /* Configura pointer-events com o valor none. */
+  pointer-events: none;
+  /* Configura a transição visual com o valor opacity 0.3s ease. */
+  transition: opacity 0.3s ease;
+}
+/* Aplica os estilos ao seletor .skill-card:hover,
+.skill-card:focus-visible,
+.skill-card.is-selected */
 .skill-card:hover,
 .skill-card:focus-visible,
 .skill-card.is-selected {
-    border-color: rgba(var(--skill-glow), .65);
-    box-shadow: 12px 17px 51px rgba(59, 42, 3, 0.479),
-                0 0 22px rgba(var(--skill-glow), .24);
-    transform: translateY(-5px);
+  /* Configura border-color com o valor rgba(var(--skill-glow), 0.65). */
+  border-color: rgba(var(--skill-glow), 0.65);
+  /* Configura box-shadow com o valor 12px 17px 51px rgba(59, 42, 3, 0.479),
+    0 0 22px rgba(var(--skill-glow), 0.24). */
+  box-shadow:
+    12px 17px 51px rgba(59, 42, 3, 0.479),
+    0 0 22px rgba(var(--skill-glow), 0.24);
+  /* Aplica uma transformação visual com o valor translateY(-5px). */
+  transform: translateY(-5px);
 }
-
+/* Aplica os estilos ao seletor .skill-card:hover::before,
+.skill-card:focus-visible::before,
+.skill-card.is-selected::before */
 .skill-card:hover::before,
 .skill-card:focus-visible::before,
 .skill-card.is-selected::before {
-    opacity: 1;
-    animation: skill-border-glow 3.5s linear infinite;
+  /* Configura opacity com o valor 1. */
+  opacity: 1;
+  /* Configura animation com o valor skill-border-glow 3.5s linear infinite. */
+  animation: skill-border-glow 3.5s linear infinite;
 }
-
-.skill-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
-.skill-card:active { transform: scale(.98); }
-
-/* Área ao redor do ícone inspirada na referência enviada. */
+/* Aplica os estilos ao seletor .skill-card:focus-visible */
+.skill-card:focus-visible {
+  /* Configura outline com o valor 2px solid var(--accent). */
+  outline: 2px solid var(--accent);
+  /* Configura outline-offset com o valor 5px. */
+  outline-offset: 5px;
+}
+/* Aplica os estilos ao seletor .skill-card:active */
+.skill-card:active {
+  /* Aplica uma transformação visual com o valor scale(0.98). */
+  transform: scale(0.98);
+}
+/* Aplica os estilos ao seletor .skill-icon */
 .skill-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: 58px;
-    height: 58px;
-    padding: 8px;
-    border: 1px solid rgba(255,255,255,.23);
-    border-radius: 14px;
-    background: #6b6054;
-    color: #fff;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 5px 14px rgba(0,0,0,.16);
-    margin-bottom: 22px;
-    transition: background .3s ease, box-shadow .3s ease, transform .3s ease;
+  /* Define o modelo de distribuição dos elementos com o valor inline-flex. */
+  display: inline-flex;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura flex-shrink com o valor 0. */
+  flex-shrink: 0;
+  /* Define a largura com o valor 58px. */
+  width: 58px;
+  /* Define a altura com o valor 58px. */
+  height: 58px;
+  /* Define o espaçamento interno com o valor 8px. */
+  padding: 8px;
+  /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.23). */
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  /* Configura border-radius com o valor 14px. */
+  border-radius: 14px;
+  /* Define o fundo com o valor #6b6054. */
+  background: #6b6054;
+  /* Define a cor do texto com o valor #fff. */
+  color: #fff;
+  /* Configura box-shadow com o valor inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 5px 14px rgba(0, 0, 0, 0.16). */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 5px 14px rgba(0, 0, 0, 0.16);
+  /* Configura margin-bottom com o valor 22px. */
+  margin-bottom: 22px;
+  /* Configura a transição visual com o valor background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease. */
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
-
+/* Aplica os estilos ao seletor .skill-icon img */
 .skill-icon img {
-    display: block;
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    filter: invert(1);
+  /* Define o modelo de distribuição dos elementos com o valor block. */
+  display: block;
+  /* Define a largura com o valor 40px. */
+  width: 40px;
+  /* Define a altura com o valor 40px. */
+  height: 40px;
+  /* Configura object-fit com o valor contain. */
+  object-fit: contain;
+  /* Configura filter com o valor invert(1). */
+  filter: invert(1);
 }
-
+/* Aplica os estilos ao seletor .skill-card:hover .skill-icon,
+.skill-card:focus-visible .skill-icon,
+.skill-card.is-selected .skill-icon */
 .skill-card:hover .skill-icon,
 .skill-card:focus-visible .skill-icon,
 .skill-card.is-selected .skill-icon {
-    background: #fdc64e;
-    transform: translateY(-2px);
-    box-shadow: 0 0 0 2px rgba(var(--skill-glow), .36),
-                0 0 20px rgba(var(--skill-glow), .46);
+  /* Define o fundo com o valor #fdc64e. */
+  background: #fdc64e;
+  /* Aplica uma transformação visual com o valor translateY(-2px). */
+  transform: translateY(-2px);
+  /* Configura box-shadow com o valor 0 0 0 2px rgba(var(--skill-glow), 0.36),
+    0 0 20px rgba(var(--skill-glow), 0.46). */
+  box-shadow:
+    0 0 0 2px rgba(var(--skill-glow), 0.36),
+    0 0 20px rgba(var(--skill-glow), 0.46);
 }
-
+/* Aplica os estilos ao seletor .skill-card p */
 .skill-card p {
-    color: var(--muted);
-    font-size: .86rem;
-    margin-top: 10px;
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o tamanho do texto com o valor 0.86rem. */
+  font-size: 0.86rem;
+  /* Configura margin-top com o valor 10px. */
+  margin-top: 10px;
 }
-
+/* Condição de aplicação dos estilos: media (prefers-reduced-motion: reduce) */
 @media (prefers-reduced-motion: reduce) {
-    .skill-card::before { animation: none !important; }
-    .skill-card, .skill-icon { transition: none; }
+  /* Aplica os estilos ao seletor .skill-card::before */
+  .skill-card::before {
+    /* Configura animation com o valor none. */
+    animation: none !important;
+  }
 }
-
-/* 6. Projetos: Grid na galeria e Flexbox dentro dos cards */
+/* Condição de aplicação dos estilos: media (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  /* Aplica os estilos ao seletor .skill-card,
+  .skill-icon */
+  .skill-card,
+  .skill-icon {
+    /* Configura a transição visual com o valor none. */
+    transition: none;
+  }
+}
+/* Condição de aplicação dos estilos: media (hover: none) */
+@media (hover: none) {
+  /* Aplica os estilos ao seletor .skill-card:hover */
+  .skill-card:hover {
+    /* Aplica uma transformação visual com o valor none. */
+    transform: none;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 980px) */
+@media (max-width: 980px) {
+  /* Aplica os estilos ao seletor .skills-grid */
+  .skills-grid {
+    /* Configura grid-template-columns com o valor repeat(2, minmax(0, 1fr)). */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .skill-icon */
+html[data-theme="light"] .skill-icon {
+  /* Define o fundo com o valor #eddbf0. */
+  background: #eddbf0;
+  /* Configura border-color com o valor #cdb0d4. */
+  border-color: #cdb0d4;
+  /* Define a cor do texto com o valor #302334. */
+  color: #302334;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .skill-icon img */
+html[data-theme="light"] .skill-icon img {
+  /* Configura filter com o valor none. */
+  filter: none;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .skill-card:hover .skill-icon,
+html[data-theme="light"] .skill-card:focus-visible .skill-icon,
+html[data-theme="light"] .skill-card.is-selected .skill-icon */
+html[data-theme="light"] .skill-card:hover .skill-icon,
+html[data-theme="light"] .skill-card:focus-visible .skill-icon,
+html[data-theme="light"] .skill-card.is-selected .skill-icon {
+  /* Define o fundo com o valor #dec3e5. */
+  background: #dec3e5;
+}
+/* Aplica os estilos ao seletor .memories-section */
+.memories-section {
+  /* Define como o elemento é posicionado com o valor relative. */
+  position: relative;
+  /* Controla o conteúdo que ultrapassa o elemento com o valor hidden. */
+  overflow: hidden;
+  /* Define o fundo com o valor radial-gradient(circle at 88% 8%, rgba(236, 165, 245, 0.11), transparent 36%), var(--bg). */
+  background:
+    radial-gradient(circle at 88% 8%, rgba(236, 165, 245, 0.11), transparent 36%), var(--bg);
+}
+/* Aplica os estilos ao seletor .memories-section .section-heading */
+.memories-section .section-heading {
+  /* Configura margin-bottom com o valor 28px. */
+  margin-bottom: 28px;
+}
+/* Aplica os estilos ao seletor .memories-intro */
+.memories-intro {
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Configura max-width com o valor 650px. */
+  max-width: 650px;
+  /* Configura line-height com o valor 1.7. */
+  line-height: 1.7;
+}
+/* Aplica os estilos ao seletor .memories-top */
+.memories-top {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura justify-content com o valor space-between. */
+  justify-content: space-between;
+  /* Define a distância entre itens com o valor 16px. */
+  gap: 16px;
+  /* Configura margin-bottom com o valor 20px. */
+  margin-bottom: 20px;
+}
+/* Aplica os estilos ao seletor .memories-counter */
+.memories-counter {
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o tamanho do texto com o valor 0.85rem. */
+  font-size: 0.85rem;
+  /* Configura white-space com o valor nowrap. */
+  white-space: nowrap;
+  /* Configura font-variant-numeric com o valor tabular-nums. */
+  font-variant-numeric: tabular-nums;
+}
+/* Aplica os estilos ao seletor .memories-viewport */
+.memories-viewport {
+  /* Controla o conteúdo que ultrapassa o elemento com o valor hidden. */
+  overflow: hidden;
+  /* Define o espaçamento interno com o valor 12px 3px 24px. */
+  padding: 12px 3px 24px;
+}
+/* Aplica os estilos ao seletor .memories-track */
+.memories-track {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Define a distância entre itens com o valor 22px. */
+  gap: 22px;
+  /* Configura overflow-x com o valor auto. */
+  overflow-x: auto;
+  /* Configura scroll-snap-type com o valor x mandatory. */
+  scroll-snap-type: x mandatory;
+  /* Configura scroll-behavior com o valor smooth. */
+  scroll-behavior: smooth;
+  /* Configura scrollbar-width com o valor none. */
+  scrollbar-width: none;
+  /* Define o espaçamento interno com o valor 4px 0 14px. */
+  padding: 4px 0 14px;
+  /* Configura overscroll-behavior-x com o valor contain. */
+  overscroll-behavior-x: contain;
+}
+/* Aplica os estilos ao seletor .memories-track::-webkit-scrollbar */
+.memories-track::-webkit-scrollbar {
+  /* Define o modelo de distribuição dos elementos com o valor none. */
+  display: none;
+}
+/* Aplica os estilos ao seletor .memory-card */
+.memory-card {
+  /* Configura flex com o valor 0 0 calc((100% - 44px) / 3). */
+  flex: 0 0 calc((100% - 44px) / 3);
+  /* Configura min-width com o valor 0. */
+  min-width: 0;
+  /* Configura scroll-snap-align com o valor start. */
+  scroll-snap-align: start;
+  /* Define a borda com o valor 1px solid var(--border). */
+  border: 1px solid var(--border);
+  /* Configura border-radius com o valor 18px. */
+  border-radius: 18px;
+  /* Controla o conteúdo que ultrapassa o elemento com o valor hidden. */
+  overflow: hidden;
+  /* Define o fundo com o valor var(--surface). */
+  background: var(--surface);
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
+  /* Configura a transição visual com o valor transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease. */
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+/* Aplica os estilos ao seletor .memory-card:hover,
+.memory-card:focus-within */
+.memory-card:hover,
+.memory-card:focus-within {
+  /* Aplica uma transformação visual com o valor translateY(-4px). */
+  transform: translateY(-4px);
+  /* Configura border-color com o valor var(--accent). */
+  border-color: var(--accent);
+  /* Configura box-shadow com o valor 0 0 22px rgba(236, 165, 245, 0.22). */
+  box-shadow: 0 0 22px rgba(236, 165, 245, 0.22);
+}
+/* Aplica os estilos ao seletor .memory-open */
+.memory-open {
+  /* Define o modelo de distribuição dos elementos com o valor block. */
+  display: block;
+  /* Define a largura com o valor 100%. */
+  width: 100%;
+  /* Define o espaçamento interno com o valor 0. */
+  padding: 0;
+  /* Define o fundo com o valor transparent. */
+  background: transparent;
+  /* Define a borda com o valor 0. */
+  border: 0;
+  /* Define a cor do texto com o valor inherit. */
+  color: inherit;
+  /* Configura text-align com o valor left. */
+  text-align: left;
+  /* Configura cursor com o valor pointer. */
+  cursor: pointer;
+  /* Configura font com o valor inherit. */
+  font: inherit;
+}
+/* Aplica os estilos ao seletor .memory-open:focus-visible,
+.memories-button:focus-visible,
+.memory-modal-close:focus-visible */
+.memory-open:focus-visible,
+.memories-button:focus-visible,
+.memory-modal-close:focus-visible {
+  /* Configura outline com o valor 2px solid var(--accent). */
+  outline: 2px solid var(--accent);
+  /* Configura outline-offset com o valor 3px. */
+  outline-offset: 3px;
+}
+/* Aplica os estilos ao seletor .memory-media */
+.memory-media {
+  /* Define como o elemento é posicionado com o valor relative. */
+  position: relative;
+  /* Configura aspect-ratio com o valor 4/5. */
+  aspect-ratio: 4/5;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura flex-direction com o valor column. */
+  flex-direction: column;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Define a distância entre itens com o valor 12px. */
+  gap: 12px;
+  /* Controla o conteúdo que ultrapassa o elemento com o valor hidden. */
+  overflow: hidden;
+  /* Define o fundo com o valor linear-gradient(140deg, #30333d, #181c25 55%, #453122). */
+  background: linear-gradient(140deg, #30333d, #181c25 55%, #453122);
+  /* Define a cor do texto com o valor #fff. */
+  color: #fff;
+}
+/* Aplica os estilos ao seletor .memory-media::after */
+.memory-media::after {
+  /* Configura content com o valor "". */
+  content: "";
+  /* Define como o elemento é posicionado com o valor absolute. */
+  position: absolute;
+  /* Configura inset com o valor 0. */
+  inset: 0;
+  /* Configura pointer-events com o valor none. */
+  pointer-events: none;
+  /* Define o fundo com o valor linear-gradient(0deg, rgba(0, 0, 0, 0.34), transparent 35%). */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.34), transparent 35%);
+}
+/* Aplica os estilos ao seletor .memory-media img */
+.memory-media img {
+  /* Define a largura com o valor 100%. */
+  width: 100%;
+  /* Define a altura com o valor 100%. */
+  height: 100%;
+  /* Configura object-fit com o valor cover. */
+  object-fit: cover;
+  /* Define o modelo de distribuição dos elementos com o valor block. */
+  display: block;
+}
+/* Aplica os estilos ao seletor .memory-media.has-image > .memory-placeholder-symbol,
+.memory-media.has-image > .memory-placeholder-label */
+.memory-media.has-image > .memory-placeholder-symbol,
+.memory-media.has-image > .memory-placeholder-label {
+  /* Define o modelo de distribuição dos elementos com o valor none. */
+  display: none;
+}
+/* Aplica os estilos ao seletor .memory-media.has-image */
+.memory-media.has-image {
+  /* Define o modelo de distribuição dos elementos com o valor block. */
+  display: block;
+}
+/* Aplica os estilos ao seletor .memory-media.has-image img */
+.memory-media.has-image img {
+  /* Define como o elemento é posicionado com o valor absolute. */
+  position: absolute;
+  /* Configura inset com o valor 0. */
+  inset: 0;
+}
+/* Aplica os estilos ao seletor .memory-placeholder-symbol */
+.memory-placeholder-symbol {
+  /* Define a largura com o valor 64px. */
+  width: 64px;
+  /* Define a altura com o valor 64px. */
+  height: 64px;
+  /* Define o modelo de distribuição dos elementos com o valor grid. */
+  display: grid;
+  /* Configura place-items com o valor center. */
+  place-items: center;
+  /* Configura border-radius com o valor 19px. */
+  border-radius: 19px;
+  /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.35). */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  /* Define o tamanho do texto com o valor 2rem. */
+  font-size: 2rem;
+  /* Define o fundo com o valor rgba(255, 255, 255, 0.07). */
+  background: rgba(255, 255, 255, 0.07);
+}
+/* Aplica os estilos ao seletor .memory-placeholder-label */
+.memory-placeholder-label {
+  /* Define o tamanho do texto com o valor 0.74rem. */
+  font-size: 0.74rem;
+  /* Configura letter-spacing com o valor 0.14em. */
+  letter-spacing: 0.14em;
+  /* Configura text-transform com o valor uppercase. */
+  text-transform: uppercase;
+  /* Define a cor do texto com o valor #ded6d0. */
+  color: #ded6d0;
+}
+/* Aplica os estilos ao seletor .memory-body */
+.memory-body {
+  /* Define o espaçamento interno com o valor 21px 20px 24px. */
+  padding: 21px 20px 24px;
+}
+/* Aplica os estilos ao seletor .memory-category */
+.memory-category {
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+  /* Define o tamanho do texto com o valor 0.7rem. */
+  font-size: 0.7rem;
+  /* Configura font-weight com o valor 700. */
+  font-weight: 700;
+  /* Configura letter-spacing com o valor 0.12em. */
+  letter-spacing: 0.12em;
+  /* Configura text-transform com o valor uppercase. */
+  text-transform: uppercase;
+  /* Define o espaçamento externo com o valor 0 0 8px. */
+  margin: 0 0 8px;
+}
+/* Aplica os estilos ao seletor .memory-body h3 */
+.memory-body h3 {
+  /* Define o tamanho do texto com o valor 1.09rem. */
+  font-size: 1.09rem;
+  /* Configura line-height com o valor 1.4. */
+  line-height: 1.4;
+  /* Define o espaçamento externo com o valor 0 0 9px. */
+  margin: 0 0 9px;
+}
+/* Aplica os estilos ao seletor .memory-description */
+.memory-description {
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o tamanho do texto com o valor 0.84rem. */
+  font-size: 0.84rem;
+  /* Configura line-height com o valor 1.65. */
+  line-height: 1.65;
+  /* Define o espaçamento externo com o valor 0. */
+  margin: 0;
+}
+/* Aplica os estilos ao seletor .memories-controls */
+.memories-controls {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura justify-content com o valor space-between. */
+  justify-content: space-between;
+  /* Define a distância entre itens com o valor 16px. */
+  gap: 16px;
+  /* Configura margin-top com o valor 6px. */
+  margin-top: 6px;
+}
+/* Aplica os estilos ao seletor .memories-dots */
+.memories-dots {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Define a distância entre itens com o valor 7px. */
+  gap: 7px;
+  /* Configura flex-wrap com o valor wrap. */
+  flex-wrap: wrap;
+}
+/* Aplica os estilos ao seletor .memories-dot */
+.memories-dot {
+  /* Define a largura com o valor 10px. */
+  width: 10px;
+  /* Define a altura com o valor 10px. */
+  height: 10px;
+  /* Configura border-radius com o valor 50%. */
+  border-radius: 50%;
+  /* Define a borda com o valor 0. */
+  border: 0;
+  /* Define o fundo com o valor var(--border). */
+  background: var(--border);
+  /* Define o espaçamento interno com o valor 0. */
+  padding: 0;
+  /* Configura cursor com o valor pointer. */
+  cursor: pointer;
+}
+/* Aplica os estilos ao seletor .memories-dot[aria-current="true"] */
+.memories-dot[aria-current="true"] {
+  /* Define a largura com o valor 26px. */
+  width: 26px;
+  /* Configura border-radius com o valor 12px. */
+  border-radius: 12px;
+  /* Define o fundo com o valor var(--accent). */
+  background: var(--accent);
+}
+/* Aplica os estilos ao seletor .memories-buttons */
+.memories-buttons {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Define a distância entre itens com o valor 10px. */
+  gap: 10px;
+}
+/* Aplica os estilos ao seletor .memories-button,
+.memory-modal-close */
+.memories-button,
+.memory-modal-close {
+  /* Define o modelo de distribuição dos elementos com o valor grid. */
+  display: grid;
+  /* Configura place-items com o valor center. */
+  place-items: center;
+  /* Define a largura com o valor 42px. */
+  width: 42px;
+  /* Define a altura com o valor 42px. */
+  height: 42px;
+  /* Configura border-radius com o valor 12px. */
+  border-radius: 12px;
+  /* Define a borda com o valor 1px solid var(--border). */
+  border: 1px solid var(--border);
+  /* Define o fundo com o valor var(--surface). */
+  background: var(--surface);
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
+  /* Configura font com o valor inherit. */
+  font: inherit;
+  /* Define o tamanho do texto com o valor 1.3rem. */
+  font-size: 1.3rem;
+  /* Configura cursor com o valor pointer. */
+  cursor: pointer;
+  /* Configura a transição visual com o valor border-color 0.2s,
+    background 0.2s. */
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+/* Aplica os estilos ao seletor .memories-button:hover,
+.memory-modal-close:hover */
+.memories-button:hover,
+.memory-modal-close:hover {
+  /* Configura border-color com o valor var(--accent). */
+  border-color: var(--accent);
+  /* Define o fundo com o valor var(--surface-2). */
+  background: var(--surface-2);
+}
+/* Aplica os estilos ao seletor .memories-button:disabled */
+.memories-button:disabled {
+  /* Configura opacity com o valor 0.35. */
+  opacity: 0.35;
+  /* Configura cursor com o valor default. */
+  cursor: default;
+}
+/* Aplica os estilos ao seletor .memory-modal */
+.memory-modal {
+  /* Define a borda com o valor 0. */
+  border: 0;
+  /* Define o espaçamento interno com o valor 0. */
+  padding: 0;
+  /* Configura max-width com o valor min(920px, calc(100vw - 32px)). */
+  max-width: min(920px, calc(100vw - 32px));
+  /* Configura max-height com o valor calc(100vh - 32px). */
+  max-height: calc(100vh - 32px);
+  /* Define a largura com o valor 100%. */
+  width: 100%;
+  /* Configura border-radius com o valor 18px. */
+  border-radius: 18px;
+  /* Controla o conteúdo que ultrapassa o elemento com o valor auto. */
+  overflow: auto;
+  /* Define o fundo com o valor var(--surface). */
+  background: var(--surface);
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
+  /* Configura box-shadow com o valor 0 25px 90px #0009. */
+  box-shadow: 0 25px 90px #0009;
+}
+/* Aplica os estilos ao seletor .memory-modal::backdrop */
+.memory-modal::backdrop {
+  /* Define o fundo com o valor rgba(4, 5, 9, 0.83). */
+  background: rgba(4, 5, 9, 0.83);
+  /* Configura backdrop-filter com o valor blur(7px). */
+  backdrop-filter: blur(7px);
+}
+/* Aplica os estilos ao seletor .memory-modal-inner */
+.memory-modal-inner {
+  /* Define o modelo de distribuição dos elementos com o valor grid. */
+  display: grid;
+  /* Configura grid-template-columns com o valor minmax(0, 1.1fr) minmax(0, 0.9fr). */
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+/* Aplica os estilos ao seletor .memory-modal .memory-media */
+.memory-modal .memory-media {
+  /* Configura aspect-ratio com o valor 4/5. */
+  aspect-ratio: 4/5;
+  /* Configura min-height com o valor 360px. */
+  min-height: 360px;
+}
+/* Aplica os estilos ao seletor .memory-modal-text */
+.memory-modal-text {
+  /* Define o espaçamento interno com o valor 58px 30px 34px. */
+  padding: 58px 30px 34px;
+  /* Configura align-self com o valor center. */
+  align-self: center;
+}
+/* Aplica os estilos ao seletor .memory-modal-text h3 */
+.memory-modal-text h3 {
+  /* Define o tamanho do texto com o valor clamp(1.45rem, 2.8vw, 2rem). */
+  font-size: clamp(1.45rem, 2.8vw, 2rem);
+  /* Define o espaçamento externo com o valor 10px 0 14px. */
+  margin: 10px 0 14px;
+}
+/* Aplica os estilos ao seletor .memory-modal-text p:not(.memory-category) */
+.memory-modal-text p:not(.memory-category) {
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Configura line-height com o valor 1.7. */
+  line-height: 1.7;
+}
+/* Aplica os estilos ao seletor .memory-modal-close */
+.memory-modal-close {
+  /* Define como o elemento é posicionado com o valor fixed. */
+  position: fixed;
+  /* Configura top com o valor max(24px, calc((100vh - min(100vh - 32px, 700px)) / 2 + 10px)). */
+  top: max(24px, calc((100vh - min(100vh - 32px, 700px)) / 2 + 10px));
+  /* Configura right com o valor max(24px, calc((100vw - min(920px, 100vw - 32px)) / 2 + 10px)). */
+  right: max(24px, calc((100vw - min(920px, 100vw - 32px)) / 2 + 10px));
+  /* Define a ordem de sobreposição com o valor 3. */
+  z-index: 3;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .memories-section */
+html[data-theme="light"] .memories-section {
+  /* Define o fundo com o valor radial-gradient(circle at 88% 8%, rgba(230, 118, 34, 0.1), transparent 35%), var(--bg). */
+  background:
+    radial-gradient(circle at 88% 8%, rgba(230, 118, 34, 0.1), transparent 35%), var(--bg);
+}
+/* Condição de aplicação dos estilos: media (max-width: 980px) */
+@media (max-width: 980px) {
+  /* Aplica os estilos ao seletor .memory-card */
+  .memory-card {
+    /* Configura flex-basis com o valor calc((100% - 22px) / 2). */
+    flex-basis: calc((100% - 22px) / 2);
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-card */
+  .memory-card {
+    /* Configura flex-basis com o valor 85%. */
+    flex-basis: 85%;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memories-top */
+  .memories-top {
+    /* Configura align-items com o valor flex-start. */
+    align-items: flex-start;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal-inner */
+  .memory-modal-inner {
+    /* Configura grid-template-columns com o valor 1fr. */
+    grid-template-columns: 1fr;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal .memory-media */
+  .memory-modal .memory-media {
+    /* Configura aspect-ratio com o valor 16/11. */
+    aspect-ratio: 16/11;
+    /* Configura min-height com o valor 210px. */
+    min-height: 210px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal-text */
+  .memory-modal-text {
+    /* Define o espaçamento interno com o valor 26px 22px 30px. */
+    padding: 26px 22px 30px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal-close */
+  .memory-modal-close {
+    /* Configura top com o valor 20px. */
+    top: 20px;
+    /* Configura right com o valor 20px. */
+    right: 20px;
+  }
+}
+/* Condição de aplicação dos estilos: media (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  /* Aplica os estilos ao seletor .memories-track */
+  .memories-track {
+    /* Configura scroll-behavior com o valor auto. */
+    scroll-behavior: auto;
+  }
+}
+/* Condição de aplicação dos estilos: media (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  /* Aplica os estilos ao seletor .memory-card */
+  .memory-card {
+    /* Configura a transição visual com o valor none. */
+    transition: none;
+  }
+}
+/* Aplica os estilos ao seletor .memory-modal */
+.memory-modal {
+  /* Define como o elemento é posicionado com o valor fixed. */
+  position: fixed;
+  /* Configura inset com o valor 0. */
+  inset: 0;
+  /* Define o espaçamento externo com o valor auto. */
+  margin: auto;
+  /* Configura box-sizing com o valor border-box. */
+  box-sizing: border-box;
+  /* Define a largura com o valor min(960px, calc(100vw - 28px)). */
+  width: min(960px, calc(100vw - 28px));
+  /* Configura max-width com o valor calc(100vw - 28px). */
+  max-width: calc(100vw - 28px);
+  /* Configura max-height com o valor min(94vh, 94dvh). */
+  max-height: min(94vh, 94dvh);
+  /* Configura overflow-x com o valor hidden. */
+  overflow-x: hidden;
+  /* Configura overflow-y com o valor auto. */
+  overflow-y: auto;
+  /* Configura border-radius com o valor 18px. */
+  border-radius: 18px;
+}
+/* Aplica os estilos ao seletor .memory-modal-inner */
+.memory-modal-inner {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura flex-direction com o valor column. */
+  flex-direction: column;
+  /* Configura align-items com o valor stretch. */
+  align-items: stretch;
+  /* Define a largura com o valor 100%. */
+  width: 100%;
+  /* Configura min-width com o valor 0. */
+  min-width: 0;
+}
+/* Aplica os estilos ao seletor .memory-modal .memory-media */
+.memory-modal .memory-media {
+  /* Configura box-sizing com o valor border-box. */
+  box-sizing: border-box;
+  /* Define a largura com o valor 100%. */
+  width: 100%;
+  /* Configura min-height com o valor 0. */
+  min-height: 0;
+  /* Define a altura com o valor auto. */
+  height: auto;
+  /* Configura max-height com o valor min(68vh, 68dvh). */
+  max-height: min(68vh, 68dvh);
+  /* Configura aspect-ratio com o valor auto. */
+  aspect-ratio: auto;
+  /* Define o espaçamento interno com o valor 12px. */
+  padding: 12px;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Controla o conteúdo que ultrapassa o elemento com o valor hidden. */
+  overflow: hidden;
+  /* Define o fundo com o valor #11151b. */
+  background: #11151b;
+}
+/* Aplica os estilos ao seletor .memory-modal .memory-media::after */
+.memory-modal .memory-media::after {
+  /* Define o modelo de distribuição dos elementos com o valor none. */
+  display: none;
+}
+/* Aplica os estilos ao seletor .memory-modal .memory-media.has-image */
+.memory-modal .memory-media.has-image {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+}
+/* Aplica os estilos ao seletor .memory-modal .memory-media img,
+.memory-modal .memory-media.has-image img */
+.memory-modal .memory-media img,
+.memory-modal .memory-media.has-image img {
+  /* Define como o elemento é posicionado com o valor static. */
+  position: static;
+  /* Configura inset com o valor auto. */
+  inset: auto;
+  /* Define o modelo de distribuição dos elementos com o valor block. */
+  display: block;
+  /* Define a largura com o valor auto. */
+  width: auto;
+  /* Define a altura com o valor auto. */
+  height: auto;
+  /* Configura max-width com o valor 100%. */
+  max-width: 100%;
+  /* Configura max-height com o valor calc(min(68vh, 68dvh) - 24px). */
+  max-height: calc(min(68vh, 68dvh) - 24px);
+  /* Configura object-fit com o valor contain. */
+  object-fit: contain;
+  /* Configura object-position com o valor center center. */
+  object-position: center center;
+  /* Configura flex com o valor 0 1 auto. */
+  flex: 0 1 auto;
+}
+/* Aplica os estilos ao seletor .memory-modal-text */
+.memory-modal-text {
+  /* Define a largura com o valor 100%. */
+  width: 100%;
+  /* Configura box-sizing com o valor border-box. */
+  box-sizing: border-box;
+  /* Define o espaçamento interno com o valor 24px 30px 30px. */
+  padding: 24px 30px 30px;
+  /* Configura align-self com o valor stretch. */
+  align-self: stretch;
+  /* Configura text-align com o valor center. */
+  text-align: center;
+}
+/* Aplica os estilos ao seletor .memory-modal-text h3 */
+.memory-modal-text h3 {
+  /* Define o espaçamento externo com o valor 8px 0 12px. */
+  margin: 8px 0 12px;
+}
+/* Aplica os estilos ao seletor .memory-modal-close */
+.memory-modal-close {
+  /* Define como o elemento é posicionado com o valor sticky. */
+  position: sticky;
+  /* Configura top com o valor 12px. */
+  top: 12px;
+  /* Configura right com o valor auto. */
+  right: auto;
+  /* Define o espaçamento externo com o valor 12px 12px -54px auto. */
+  margin: 12px 12px -54px auto;
+  /* Define a ordem de sobreposição com o valor 5. */
+  z-index: 5;
+  /* Define o fundo com o valor var(--surface). */
+  background: var(--surface);
+  /* Configura box-shadow com o valor 0 3px 16px rgba(0, 0, 0, 0.4). */
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.4);
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal */
+  .memory-modal {
+    /* Define a largura com o valor calc(100vw - 16px). */
+    width: calc(100vw - 16px);
+    /* Configura max-width com o valor calc(100vw - 16px). */
+    max-width: calc(100vw - 16px);
+    /* Configura max-height com o valor min(96vh, 96dvh). */
+    max-height: min(96vh, 96dvh);
+    /* Configura border-radius com o valor 14px. */
+    border-radius: 14px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal .memory-media */
+  .memory-modal .memory-media {
+    /* Configura max-height com o valor min(70vh, 70dvh). */
+    max-height: min(70vh, 70dvh);
+    /* Define o espaçamento interno com o valor 8px. */
+    padding: 8px;
+    /* Configura min-height com o valor 0. */
+    min-height: 0;
+    /* Configura aspect-ratio com o valor auto. */
+    aspect-ratio: auto;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal .memory-media img,
+  .memory-modal .memory-media.has-image img */
+  .memory-modal .memory-media img,
+  .memory-modal .memory-media.has-image img {
+    /* Configura max-height com o valor calc(min(70vh, 70dvh) - 16px). */
+    max-height: calc(min(70vh, 70dvh) - 16px);
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal-text */
+  .memory-modal-text {
+    /* Define o espaçamento interno com o valor 18px 18px 26px. */
+    padding: 18px 18px 26px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .memory-modal-close */
+  .memory-modal-close {
+    /* Configura top com o valor 8px. */
+    top: 8px;
+    /* Configura right com o valor auto. */
+    right: auto;
+    /* Define o espaçamento externo com o valor 8px 8px -50px auto. */
+    margin: 8px 8px -50px auto;
+  }
+}
+/* Aplica os estilos ao seletor .projects-section */
 .projects-section {
-    background: #10131a;
+  /* Define o fundo com o valor #10131a. */
+  background: #10131a;
 }
-
+/* Aplica os estilos ao seletor .projects-grid */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 25px;
+  /* Define o modelo de distribuição dos elementos com o valor grid. */
+  display: grid;
+  /* Configura grid-template-columns com o valor repeat(2, minmax(0, 1fr)). */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Define a distância entre itens com o valor 25px. */
+  gap: 25px;
 }
-
+/* Aplica os estilos ao seletor .project-card */
 .project-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    overflow: hidden;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 17px;
-    transition: border-color .2s,transform .2s;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura flex-direction com o valor column. */
+  flex-direction: column;
+  /* Configura min-width com o valor 0. */
+  min-width: 0;
+  /* Controla o conteúdo que ultrapassa o elemento com o valor hidden. */
+  overflow: hidden;
+  /* Define o fundo com o valor var(--surface). */
+  background: var(--surface);
+  /* Define a borda com o valor 1px solid var(--border). */
+  border: 1px solid var(--border);
+  /* Configura border-radius com o valor 17px. */
+  border-radius: 17px;
+  /* Configura a transição visual com o valor border-color 0.2s,
+    transform 0.2s. */
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
 }
-
+/* Aplica os estilos ao seletor .project-card img */
 .project-card img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
+  /* Define a largura com o valor 100%. */
+  width: 100%;
+  /* Configura aspect-ratio com o valor 16/9. */
+  aspect-ratio: 16/9;
+  /* Configura object-fit com o valor cover. */
+  object-fit: cover;
 }
-
+/* Aplica os estilos ao seletor .project-body */
 .project-body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1;
-    gap: 11px;
-    padding: 26px;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura flex-direction com o valor column. */
+  flex-direction: column;
+  /* Configura align-items com o valor flex-start. */
+  align-items: flex-start;
+  /* Configura flex com o valor 1. */
+  flex: 1;
+  /* Define a distância entre itens com o valor 11px. */
+  gap: 11px;
+  /* Define o espaçamento interno com o valor 26px. */
+  padding: 26px;
 }
-
+/* Aplica os estilos ao seletor .project-category */
 .project-category {
-    font-size: .69rem;
-    color: var(--accent);
-    letter-spacing: .11em;
-    font-weight: 700;
+  /* Define o tamanho do texto com o valor 0.69rem. */
+  font-size: 0.69rem;
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+  /* Configura letter-spacing com o valor 0.11em. */
+  letter-spacing: 0.11em;
+  /* Configura font-weight com o valor 700. */
+  font-weight: 700;
 }
-
-.project-body>p:not(.project-category) {
-    color: var(--muted);
-    font-size: .89rem;
-    line-height: 1.7;
+/* Aplica os estilos ao seletor .project-body > p:not(.project-category) */
+.project-body > p:not(.project-category) {
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o tamanho do texto com o valor 0.89rem. */
+  font-size: 0.89rem;
+  /* Configura line-height com o valor 1.7. */
+  line-height: 1.7;
 }
-
+/* Aplica os estilos ao seletor .project-link */
 .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--accent);
-    font-size: .87rem;
-    font-weight: 600;
-    margin-top: auto;
-    padding-top: 14px;
+  /* Define o modelo de distribuição dos elementos com o valor inline-flex. */
+  display: inline-flex;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 12px. */
+  gap: 12px;
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+  /* Define o tamanho do texto com o valor 0.87rem. */
+  font-size: 0.87rem;
+  /* Configura font-weight com o valor 600. */
+  font-weight: 600;
+  /* Configura margin-top com o valor auto. */
+  margin-top: auto;
+  /* Configura padding-top com o valor 14px. */
+  padding-top: 14px;
 }
-
+/* Aplica os estilos ao seletor .project-link:hover */
 .project-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 5px;
+  /* Configura text-decoration com o valor underline. */
+  text-decoration: underline;
+  /* Configura text-underline-offset com o valor 5px. */
+  text-underline-offset: 5px;
 }
-
-/* 7. Formação e experiência: carrosséis e cards de vidro */
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .skills-grid,
+  .projects-grid,
+  .journey-grid */
+  .skills-grid,
+  .projects-grid,
+  .journey-grid {
+    /* Configura grid-template-columns com o valor 1fr. */
+    grid-template-columns: 1fr;
+  }
+}
+/* Aplica os estilos ao seletor #projetos .projects-carousel */
+#projetos .projects-carousel {
+  /* Configura --card-width com o valor 38%. */
+  --card-width: 38%;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura overflow-x com o valor auto. */
+  overflow-x: auto;
+  /* Define a distância entre itens com o valor 0.65rem. */
+  gap: 0.65rem;
+  /* Define o espaçamento interno com o valor 0.75rem 0 1rem. */
+  padding: 0.75rem 0 1rem;
+  /* Configura scroll-snap-type com o valor x mandatory. */
+  scroll-snap-type: x mandatory;
+  /* Configura scrollbar-color com o valor var(--border) transparent. */
+  scrollbar-color: var(--border) transparent;
+}
+/* Aplica os estilos ao seletor .projects-carousel .project-card */
+.projects-carousel .project-card {
+  /* Configura flex com o valor 0 0 var(--card-width). */
+  flex: 0 0 var(--card-width);
+  /* Configura scroll-snap-align com o valor start. */
+  scroll-snap-align: start;
+  /* Define o modelo de distribuição dos elementos com o valor grid. */
+  display: grid;
+  /* Configura align-items com o valor end. */
+  align-items: end;
+  /* Configura min-height com o valor 19rem. */
+  min-height: 19rem;
+  /* Define como o elemento é posicionado com o valor relative. */
+  position: relative;
+  /* Configura isolation com o valor isolate. */
+  isolation: isolate;
+  /* Configura border-radius com o valor 0.65rem. */
+  border-radius: 0.65rem;
+}
+/* Aplica os estilos ao seletor .projects-carousel .project-card img */
+.projects-carousel .project-card img {
+  /* Define como o elemento é posicionado com o valor absolute. */
+  position: absolute;
+  /* Configura inset com o valor 0. */
+  inset: 0;
+  /* Define a altura com o valor 100%. */
+  height: 100%;
+  /* Define a ordem de sobreposição com o valor -2. */
+  z-index: -2;
+}
+/* Aplica os estilos ao seletor .projects-carousel .project-card::before */
+.projects-carousel .project-card::before {
+  /* Configura content com o valor "". */
+  content: "";
+  /* Define como o elemento é posicionado com o valor absolute. */
+  position: absolute;
+  /* Configura inset com o valor 0. */
+  inset: 0;
+  /* Define a ordem de sobreposição com o valor -1. */
+  z-index: -1;
+  /* Define o fundo com o valor linear-gradient(180deg, transparent 5%, rgba(11, 13, 18, 0.84) 55%, #0b0d12 100%). */
+  background: linear-gradient(180deg, transparent 5%, rgba(11, 13, 18, 0.84) 55%, #0b0d12 100%);
+}
+/* Aplica os estilos ao seletor .projects-carousel .project-body */
+.projects-carousel .project-body {
+  /* Define a distância entre itens com o valor 0.45rem. */
+  gap: 0.45rem;
+  /* Define o espaçamento interno com o valor 1rem. */
+  padding: 1rem;
+}
+/* Aplica os estilos ao seletor .projects-carousel .project-link */
+.projects-carousel .project-link {
+  /* Configura padding-top com o valor 0.4rem. */
+  padding-top: 0.4rem;
+}
+/* Aplica os estilos ao seletor .projects-carousel .project-card:hover */
+.projects-carousel .project-card:hover {
+  /* Aplica uma transformação visual com o valor none. */
+  transform: none;
+}
+/* Aplica os estilos ao seletor .projects-carousel .project-card.is-current */
+.projects-carousel .project-card.is-current {
+  /* Configura border-color com o valor var(--accent). */
+  border-color: var(--accent);
+}
+/* Aplica os estilos ao seletor .projects-controls */
+.projects-controls {
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Define a distância entre itens com o valor 1rem. */
+  gap: 1rem;
+  /* Configura margin-top com o valor 1rem. */
+  margin-top: 1rem;
+}
+/* Aplica os estilos ao seletor .projects-controls[hidden] */
+.projects-controls[hidden] {
+  /* Define o modelo de distribuição dos elementos com o valor none. */
+  display: none;
+}
+/* Aplica os estilos ao seletor .projects-controls button */
+.projects-controls button {
+  /* Define o fundo com o valor transparent. */
+  background: transparent;
+}
+/* Aplica os estilos ao seletor .projects-controls button:disabled */
+.projects-controls button:disabled {
+  /* Configura opacity com o valor 0.4. */
+  opacity: 0.4;
+  /* Configura cursor com o valor default. */
+  cursor: default;
+}
+/* Aplica os estilos ao seletor .projects-position */
+.projects-position {
+  /* Configura min-width com o valor 4rem. */
+  min-width: 4rem;
+  /* Configura text-align com o valor center. */
+  text-align: center;
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+}
+/* Condição de aplicação dos estilos: media (max-width: 900px) */
+@media (max-width: 900px) {
+  /* Aplica os estilos ao seletor #projetos .projects-carousel */
+  #projetos .projects-carousel {
+    /* Configura --card-width com o valor 55%. */
+    --card-width: 55%;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Aplica os estilos ao seletor #projetos .projects-carousel */
+  #projetos .projects-carousel {
+    /* Configura --card-width com o valor 88%. */
+    --card-width: 88%;
+  }
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .projects-section */
+html[data-theme="light"] .projects-section {
+  /* Define o fundo com o valor #a8abaf. */
+  background: #a8abaf;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .project-card */
+html[data-theme="light"] .project-card {
+  /* Define o fundo com o valor var(--surface). */
+  background: var(--surface);
+  /* Configura border-color com o valor var(--border). */
+  border-color: var(--border);
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .projects-carousel .project-card */
+html[data-theme="light"] .projects-carousel .project-card {
+  /* Define a cor do texto com o valor #fff. */
+  color: #fff;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .projects-carousel .project-card .project-category,
+html[data-theme="light"] .projects-carousel .project-card .project-link */
+html[data-theme="light"] .projects-carousel .project-card .project-category,
+html[data-theme="light"] .projects-carousel .project-card .project-link {
+  /* Define a cor do texto com o valor #eca5f5. */
+  color: #eca5f5;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .projects-carousel .project-card .project-body > p:not(.project-category) */
+html[data-theme="light"] .projects-carousel .project-card .project-body > p:not(.project-category) {
+  /* Define a cor do texto com o valor #e0e4eb. */
+  color: #e0e4eb;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .projects-carousel .project-card.is-current */
+html[data-theme="light"] .projects-carousel .project-card.is-current {
+  /* Configura border-color com o valor #a040ae. */
+  border-color: #a040ae;
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .journey-carousel,
+html[data-theme="light"] .projects-carousel */
+html[data-theme="light"] .journey-carousel,
+html[data-theme="light"] .projects-carousel {
+  /* Configura scrollbar-color com o valor #aab1be transparent. */
+  scrollbar-color: #aab1be transparent;
+}
+/* Aplica os estilos ao seletor .journey-section */
 .journey-section {
-    padding-top: 70px;
+  /* Configura padding-top com o valor 70px. */
+  padding-top: 70px;
 }
-
+/* Aplica os estilos ao seletor .journey-group + .journey-group */
 .journey-group + .journey-group {
-    margin-top: 42px;
+  /* Configura margin-top com o valor 42px. */
+  margin-top: 42px;
 }
-
+/* Aplica os estilos ao seletor .journey-group > h3 */
 .journey-group > h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+  /* Define o tamanho do texto com o valor 1.5rem. */
+  font-size: 1.5rem;
+  /* Configura margin-bottom com o valor 12px. */
+  margin-bottom: 12px;
 }
-
-/* Mesmo padrão de rolagem dos projetos, com cards adaptados a textos */
+/* Aplica os estilos ao seletor .journey-carousel */
 .journey-carousel {
-    --card-width: 38%;
-    display: flex;
-    gap: .65rem;
-    overflow-x: auto;
-    padding: .75rem 0 1rem;
-    scroll-snap-type: x mandatory;
-    scrollbar-color: var(--border) transparent;
+  /* Configura --card-width com o valor 38%. */
+  --card-width: 38%;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Define a distância entre itens com o valor 0.65rem. */
+  gap: 0.65rem;
+  /* Configura overflow-x com o valor auto. */
+  overflow-x: auto;
+  /* Define o espaçamento interno com o valor 0.75rem 0 1rem. */
+  padding: 0.75rem 0 1rem;
+  /* Configura scroll-snap-type com o valor x mandatory. */
+  scroll-snap-type: x mandatory;
+  /* Configura scrollbar-color com o valor var(--border) transparent. */
+  scrollbar-color: var(--border) transparent;
 }
-
+/* Aplica os estilos ao seletor .journey-card */
 .journey-card {
-    box-sizing: border-box;
-    flex: 0 0 var(--card-width);
-    min-width: 0;
-    min-height: 19rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 12px;
-    scroll-snap-align: start;
+  /* Configura box-sizing com o valor border-box. */
+  box-sizing: border-box;
+  /* Configura flex com o valor 0 0 var(--card-width). */
+  flex: 0 0 var(--card-width);
+  /* Configura min-width com o valor 0. */
+  min-width: 0;
+  /* Configura min-height com o valor 19rem. */
+  min-height: 19rem;
+  /* Define o espaçamento interno com o valor 1rem. */
+  padding: 1rem;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura flex-direction com o valor column. */
+  flex-direction: column;
+  /* Configura align-items com o valor flex-start. */
+  align-items: flex-start;
+  /* Configura justify-content com o valor flex-start. */
+  justify-content: flex-start;
+  /* Define a distância entre itens com o valor 12px. */
+  gap: 12px;
+  /* Configura scroll-snap-align com o valor start. */
+  scroll-snap-align: start;
 
-    background: rgba(35, 40, 49, .62);
-    border: 1px solid rgba(255, 255, 255, .20);
-    border-radius: .65rem;
-    /* Card estático: só a borda do item atual recebe destaque. */
-    transition: border-color .2s;
+  /* Define o fundo com o valor rgba(35, 40, 49, 0.62). */
+
+  background: rgba(35, 40, 49, 0.62);
+  /* Define a borda com o valor 1px solid rgba(255, 255, 255, 0.2). */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Configura border-radius com o valor 0.65rem. */
+  border-radius: 0.65rem;
+  /* Configura a transição visual com o valor border-color 0.2s. */
+  transition: border-color 0.2s;
 }
-
+/* Aplica os estilos ao seletor .journey-carousel .journey-card:hover,
+.journey-carousel .journey-card:active */
 .journey-carousel .journey-card:hover,
 .journey-carousel .journey-card:active {
-    transform: none;
+  /* Aplica uma transformação visual com o valor none. */
+  transform: none;
 }
-
+/* Aplica os estilos ao seletor .journey-carousel .journey-card.is-current */
 .journey-carousel .journey-card.is-current {
-    border-color: var(--accent);
+  /* Configura border-color com o valor var(--accent). */
+  border-color: var(--accent);
 }
-
+/* Aplica os estilos ao seletor .journey-label */
 .journey-label {
-    color: var(--accent);
-    font-size: .7rem;
-    font-weight: 700;
-    letter-spacing: .1em;
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+  /* Define o tamanho do texto com o valor 0.7rem. */
+  font-size: 0.7rem;
+  /* Configura font-weight com o valor 700. */
+  font-weight: 700;
+  /* Configura letter-spacing com o valor 0.1em. */
+  letter-spacing: 0.1em;
 }
-
+/* Aplica os estilos ao seletor .journey-card h4 */
 .journey-card h4 {
-    margin: 0;
-    font-size: 1.14rem;
-    line-height: 1.4;
-    overflow-wrap: anywhere;
+  /* Define o espaçamento externo com o valor 0. */
+  margin: 0;
+  /* Define o tamanho do texto com o valor 1.14rem. */
+  font-size: 1.14rem;
+  /* Configura line-height com o valor 1.4. */
+  line-height: 1.4;
+  /* Configura overflow-wrap com o valor anywhere. */
+  overflow-wrap: anywhere;
 }
-
+/* Aplica os estilos ao seletor .journey-card p */
 .journey-card p {
-    color: var(--muted);
-    font-size: .87rem;
-    line-height: 1.6;
-    overflow-wrap: anywhere;
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o tamanho do texto com o valor 0.87rem. */
+  font-size: 0.87rem;
+  /* Configura line-height com o valor 1.6. */
+  line-height: 1.6;
+  /* Configura overflow-wrap com o valor anywhere. */
+  overflow-wrap: anywhere;
 }
-
+/* Aplica os estilos ao seletor .journey-card .journey-note */
 .journey-card .journey-note {
-    margin-top: auto;
-    padding-top: 12px;
-    color: var(--accent);
-    font-size: .78rem;
-    font-weight: 600;
+  /* Configura margin-top com o valor auto. */
+  margin-top: auto;
+  /* Configura padding-top com o valor 12px. */
+  padding-top: 12px;
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+  /* Define o tamanho do texto com o valor 0.78rem. */
+  font-size: 0.78rem;
+  /* Configura font-weight com o valor 600. */
+  font-weight: 600;
 }
-
-/* Cada carrossel tem botões e contador próprios */
+/* Aplica os estilos ao seletor .journey-controls */
 .journey-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 12px;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 1rem. */
+  gap: 1rem;
+  /* Configura margin-top com o valor 12px. */
+  margin-top: 12px;
 }
-
+/* Aplica os estilos ao seletor .journey-controls[hidden] */
 .journey-controls[hidden] {
-    display: none;
+  /* Define o modelo de distribuição dos elementos com o valor none. */
+  display: none;
 }
-
+/* Aplica os estilos ao seletor .journey-controls button */
 .journey-controls button {
-    background: transparent;
+  /* Define o fundo com o valor transparent. */
+  background: transparent;
 }
-
+/* Aplica os estilos ao seletor .journey-controls button:disabled */
 .journey-controls button:disabled {
-    opacity: .4;
-    cursor: default;
+  /* Configura opacity com o valor 0.4. */
+  opacity: 0.4;
+  /* Configura cursor com o valor default. */
+  cursor: default;
 }
-
+/* Aplica os estilos ao seletor .journey-position */
 .journey-position {
-    min-width: 4rem;
-    text-align: center;
-    color: var(--muted);
+  /* Configura min-width com o valor 4rem. */
+  min-width: 4rem;
+  /* Configura text-align com o valor center. */
+  text-align: center;
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
 }
-
+/* Condição de aplicação dos estilos: media (max-width: 900px) */
 @media (max-width: 900px) {
-    .journey-carousel {
-        --card-width: 55%;
-    }
+  /* Aplica os estilos ao seletor .journey-carousel */
+  .journey-carousel {
+    /* Configura --card-width com o valor 55%. */
+    --card-width: 55%;
+  }
 }
-
+/* Condição de aplicação dos estilos: media (max-width: 600px) */
 @media (max-width: 600px) {
-    .journey-carousel {
-        --card-width: 88%;
-    }
-
-    .journey-card {
-        min-height: 19rem;
-        padding: 1rem;
-    }
-
-    .journey-section {
-        padding-top: 55px;
-    }
+  /* Aplica os estilos ao seletor .journey-carousel */
+  .journey-carousel {
+    /* Configura --card-width com o valor 88%. */
+    --card-width: 88%;
+  }
 }
-
-@media (hover: none) {
-    .skill-card:hover {
-        transform: none;
-    }
+/* Condição de aplicação dos estilos: media (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Aplica os estilos ao seletor .journey-card */
+  .journey-card {
+    /* Configura min-height com o valor 19rem. */
+    min-height: 19rem;
+    /* Define o espaçamento interno com o valor 1rem. */
+    padding: 1rem;
+  }
 }
-
-/* 8. Contato e rodapé: Flexbox nos links */
+/* Condição de aplicação dos estilos: media (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Aplica os estilos ao seletor .journey-section */
+  .journey-section {
+    /* Configura padding-top com o valor 55px. */
+    padding-top: 55px;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 980px) */
+@media (max-width: 980px) {
+  /* Aplica os estilos ao seletor .journey-grid */
+  .journey-grid {
+    /* Configura grid-template-columns com o valor repeat(2, minmax(0, 1fr)). */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 380px) */
+@media (max-width: 380px) {
+  /* Aplica os estilos ao seletor .skill-card,
+  .journey-card */
+  .skill-card,
+  .journey-card {
+    /* Define o espaçamento interno com o valor 22px. */
+    padding: 22px;
+  }
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .skill-card,
+html[data-theme="light"] .journey-card */
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .journey-card {
+  /* Define o fundo com o valor rgba(255, 255, 255, 0.84). */
+  background: rgba(255, 255, 255, 0.84);
+  /* Configura border-color com o valor #c5ccd7. */
+  border-color: #c5ccd7;
+  /* Configura box-shadow com o valor 8px 14px 28px rgba(30, 45, 70, 0.09). */
+  box-shadow: 8px 14px 28px rgba(30, 45, 70, 0.09);
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .journey-card.is-current */
+html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .journey-card.is-current {
+  /* Configura border-color com o valor var(--accent). */
+  border-color: var(--accent);
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .journey-card .journey-note,
+html[data-theme="light"] .journey-label */
+html[data-theme="light"] .journey-card .journey-note,
+html[data-theme="light"] .journey-label {
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+}
+/* Aplica os estilos ao seletor .contact-section */
 .contact-section {
-    text-align: center;
-    background: radial-gradient(ellipse at center top,#251d1a,#0d1016 65%);
-    border-top: 1px solid #25252b;
+  /* Configura text-align com o valor center. */
+  text-align: center;
+  /* Define o fundo com o valor radial-gradient(ellipse at center top, #251d1a, #0d1016 65%). */
+  background: radial-gradient(ellipse at center top, #251d1a, #0d1016 65%);
+  /* Configura border-top com o valor 1px solid #25252b. */
+  border-top: 1px solid #25252b;
 }
-
-.contact-content>p:not(.section-kicker) {
-    max-width: 580px;
-    color: var(--muted);
-    margin: 20px auto 0;
+/* Aplica os estilos ao seletor .contact-content > p:not(.section-kicker) */
+.contact-content > p:not(.section-kicker) {
+  /* Configura max-width com o valor 580px. */
+  max-width: 580px;
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o espaçamento externo com o valor 20px auto 0. */
+  margin: 20px auto 0;
 }
-
+/* Aplica os estilos ao seletor .contact-links */
 .contact-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 34px;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura justify-content com o valor center. */
+  justify-content: center;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 14px. */
+  gap: 14px;
+  /* Configura flex-wrap com o valor wrap. */
+  flex-wrap: wrap;
+  /* Configura margin-top com o valor 34px. */
+  margin-top: 34px;
 }
-
+/* Aplica os estilos ao seletor .contact-content .contact-hint */
 .contact-content .contact-hint {
-    font-size: .75rem;
-    color: #ba9b83;
-    margin-top: 30px;
+  /* Define o tamanho do texto com o valor 0.75rem. */
+  font-size: 0.75rem;
+  /* Define a cor do texto com o valor #ba9b83. */
+  color: #ba9b83;
+  /* Configura margin-top com o valor 30px. */
+  margin-top: 30px;
 }
-
+/* Condição de aplicação dos estilos: media (max-width: 380px) */
+@media (max-width: 380px) {
+  /* Aplica os estilos ao seletor .contact-links */
+  .contact-links {
+    /* Configura flex-direction com o valor column. */
+    flex-direction: column;
+  }
+}
+/* Condição de aplicação dos estilos: media (max-width: 380px) */
+@media (max-width: 380px) {
+  /* Aplica os estilos ao seletor .contact-links .btn */
+  .contact-links .btn {
+    /* Define a largura com o valor 100%. */
+    width: 100%;
+  }
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .contact-section */
+html[data-theme="light"] .contact-section {
+  /* Define o fundo com o valor radial-gradient(ellipse at center top, #f9e9fc, #f6f7fa 68%). */
+  background: radial-gradient(ellipse at center top, #f9e9fc, #f6f7fa 68%);
+  /* Configura border-top-color com o valor var(--border). */
+  border-top-color: var(--border);
+}
+/* Aplica os estilos ao seletor .menu a,
+.footer-inner a */
+.menu a,
+.footer-inner a {
+  /* Define o tamanho do texto com o valor 0.86rem. */
+  font-size: 0.86rem;
+  /* Define a cor do texto com o valor #c8cbd2. */
+  color: #c8cbd2;
+  /* Configura a transição visual com o valor color 0.2s. */
+  transition: color 0.2s;
+}
+/* Aplica os estilos ao seletor .menu a:hover,
+.footer-inner a:hover */
+.menu a:hover,
+.footer-inner a:hover {
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+}
+/* Aplica os estilos ao seletor .site-footer */
 .site-footer {
-    border-top: 1px solid var(--border);
-    padding-block: 27px;
+  /* Configura border-top com o valor 1px solid var(--border). */
+  border-top: 1px solid var(--border);
+  /* Configura padding-block com o valor 27px. */
+  padding-block: 27px;
 }
-
+/* Aplica os estilos ao seletor .footer-inner */
 .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Configura justify-content com o valor space-between. */
+  justify-content: space-between;
+  /* Configura align-items com o valor center. */
+  align-items: center;
+  /* Define a distância entre itens com o valor 24px. */
+  gap: 24px;
 }
-
+/* Aplica os estilos ao seletor .footer-inner p */
 .footer-inner p {
-    color: var(--muted);
-    font-size: .8rem;
+  /* Define a cor do texto com o valor var(--muted). */
+  color: var(--muted);
+  /* Define o tamanho do texto com o valor 0.8rem. */
+  font-size: 0.8rem;
 }
-
+/* Aplica os estilos ao seletor .footer-inner nav */
 .footer-inner nav {
-    display: flex;
-    gap: 22px;
-    align-items: center;
+  /* Define o modelo de distribuição dos elementos com o valor flex. */
+  display: flex;
+  /* Define a distância entre itens com o valor 22px. */
+  gap: 22px;
+  /* Configura align-items com o valor center. */
+  align-items: center;
 }
-
-/* 9. Adaptação para tablets */
-@media(max-width:980px) {
-    .header-inner {
-        flex-direction: column;
-        padding-block: 20px;
-    }
-    .header-cta {
-        display: none;
-    }
-    .hero {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        min-height: 520px;
-    }
-    .skills-grid {
-        grid-template-columns: repeat(2,minmax(0,1fr));
-    }
-    .journey-grid {
-        grid-template-columns: repeat(2,minmax(0,1fr));
-    }
-    .about-layout {
-        gap: 36px;
-    }
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .footer-inner */
+  .footer-inner {
+    /* Configura flex-direction com o valor column. */
+    flex-direction: column;
+    /* Configura text-align com o valor center. */
+    text-align: center;
+  }
 }
-
-/* 10. Adaptação para celulares */
-@media(max-width:680px) {
-    html {
-        scroll-padding-top: 140px;
-    }
-    .container {
-        width: min(100% - 36px,1140px);
-    }
-    .header-inner {
-        gap: 10px;
-    }
-    .menu {
-        gap: 10px 17px;
-    }
-    .menu a {
-        font-size: .78rem;
-    }
-    .hero {
-        grid-template-columns: 1fr;
-        grid-template-areas: 'portrait' 'intro';
-        padding-block: 32px 67px;
-        gap: 26px;
-        text-align: center;
-    }
-    .hero-portrait img {
-        max-width: 300px;
-    }
-    .hero-content .eyebrow,.hero-actions,.hero-tags {
-        justify-content: center;
-    }
-    .hero-subtitle {
-        margin-inline: auto;
-    }
-    .hero-tags {
-        margin-top: 25px;
-    }
-    .section {
-        padding-block: 66px;
-    }
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    .section-heading {
-        flex-direction: column;
-        align-items: start;
-    }
-    .skills-grid,.projects-grid,.journey-grid {
-        grid-template-columns: 1fr;
-    }
-    .footer-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-inner nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .hero-actions .btn {
-        flex: 1;
-    }
-    .portrait-caption {
-        font-size: .55rem;
-    }
+/* Condição de aplicação dos estilos: media (max-width: 680px) */
+@media (max-width: 680px) {
+  /* Aplica os estilos ao seletor .footer-inner nav */
+  .footer-inner nav {
+    /* Configura flex-wrap com o valor wrap. */
+    flex-wrap: wrap;
+    /* Configura justify-content com o valor center. */
+    justify-content: center;
+  }
 }
-
-@media(max-width:380px) {
-    .menu {
-        gap: 7px 11px;
-    }
-    .menu a {
-        font-size: .72rem;
-    }
-    .hero-actions {
-        flex-direction: column;
-    }
-    .hero-actions .btn {
-        width: 100%;
-    }
-    .contact-links {
-        flex-direction: column;
-    }
-    .contact-links .btn {
-        width: 100%;
-    }
-    .skill-card,.journey-card {
-        padding: 22px;
-    }
+/* Aplica os estilos ao seletor html[data-theme="light"] .menu a,
+html[data-theme="light"] .footer-inner a */
+html[data-theme="light"] .menu a,
+html[data-theme="light"] .footer-inner a {
+  /* Define a cor do texto com o valor var(--text). */
+  color: var(--text);
 }
-
-/* 11. Reduz animações quando o usuário prefere */
-@media(prefers-reduced-motion:reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-    *,*::before,*::after {
-        animation-duration: .01ms!important;
-        transition-duration: .01ms!important;
-    }
+/* Aplica os estilos ao seletor html[data-theme="light"] .menu a:hover,
+html[data-theme="light"] .footer-inner a:hover */
+html[data-theme="light"] .menu a:hover,
+html[data-theme="light"] .footer-inner a:hover {
+  /* Define a cor do texto com o valor var(--accent). */
+  color: var(--accent);
+}
+/* Aplica os estilos ao seletor html[data-theme="light"] .site-footer */
+html[data-theme="light"] .site-footer {
+  /* Configura border-top-color com o valor var(--border). */
+  border-top-color: var(--border);
 }

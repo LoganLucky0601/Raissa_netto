@@ -1,253 +1,1227 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- Documento em português — lang=pt-BR. -->
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio pessoal de Raissa Netto: trajetória, projetos e conquistas.">
-  <meta name="theme-color" content="#0b0d12">
-  <title>Raissa netto | Portfólio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/projetos-carrossel.css">
-  <script defer src="js/projetos-carrossel.js"></script>
-  <link rel="stylesheet" href="css/tema.css">
-  <script defer src="js/tema.js"></script>
-  <script defer src="js/formacao-carrossel.js"></script>
-  <script defer src="js/voltar-topo.js"></script>
-  <script defer src="js/skills-interactions.js"></script>
-  <link rel="stylesheet" href="css/galeria.css">
-  <script defer src="js/galeria.js"></script>
-</head>
-<body>
-  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
-  <header class="site-header" id="inicio">
-    <div class="container header-inner">
-      <a href="#inicio" class="logo" aria-label="Raissa Netto, início">RAISSA<span>.</span></a>
-      <nav aria-label="Menu principal">
-        <ul class="menu">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#contato">Contato</a></li>
-<li><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ativar modo claro" aria-pressed="false" title="Ativar modo claro"><span class="theme-icon-light" aria-hidden="true">☀</span><span class="theme-icon-dark" aria-hidden="true">☾</span><span class="theme-label">Claro</span></button></li>
-        </ul>
-      </nav>
-      <a class="btn btn-outline header-cta" href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
+  <!-- Configurações e recursos da página. --><head>
+    <!-- Configuração do documento — charset=UTF-8. -->
+    <meta charset="UTF-8" />
+    <!-- Configuração do documento — name=viewport; content=width=device-width, initial-scale=1.0. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configuração do documento — name=description; content=Portfólio pessoal de Raissa Netto: trajetória, projetos e conquistas.. -->
+    <meta
+      name="description"
+      content="Portfólio pessoal de Raissa Netto: trajetória, projetos e conquistas."
+    />
+    <!-- Configuração do documento — name=theme-color; content=#0b0d12. -->
+    <meta name="theme-color" content="#0b0d12" />
+    <!-- Nome exibido na aba. -->
+    <title>Raissa netto | Portfólio<!-- Encerra o elemento title. --></title>
+    <!-- Carrega um recurso externo — rel=preconnect; href=https://fonts.googleapis.com. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Carrega um recurso externo — rel=preconnect; href=https://fonts.gstatic.com. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Carrega um recurso externo — href=https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap; rel=stylesheet. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <main id="conteudo">
-    <!-- Apresentação -->
-    <section class="hero container" aria-labelledby="titulo-principal">
-      <div class="hero-content">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> PORTFÓLIO PESSOAL</p>
-        <h1 id="titulo-principal">Olá, eu sou <br><span>Raissa Netto.</span></h1>
-        <p class="hero-subtitle">Estudante e entusiasta na <strong>área da saúde</strong>, com interesse em aprender, criar, desenvolver, e solucionar problemas e conectar pessoas a soluções inteligentes.</p>
-        <div class="hero-actions">
-          <a href="#projetos" class="btn btn-primary">Explorar projetos <span aria-hidden="true">↗</span></a>
-          <a href="#contato" class="btn btn-outline">Entrar em contato</a>
-        </div>
-        <div class="hero-tags" aria-label="Áreas de interesse"><span>Medicina</span><span>UFMG</span><span>ENEM</span></div>
+    <!-- Carrega um recurso externo — rel=stylesheet; href=css/style.css. -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Carrega as interações JavaScript — src=js/projetos-carrossel.js. -->
+    <script defer src="js/projetos-carrossel.js">
+      <!-- Encerra o elemento script. -->
+    </script>
+    <!-- Carrega as interações JavaScript — src=js/tema.js. -->
+    <script defer src="js/tema.js">
+      <!-- Encerra o elemento script. -->
+    </script>
+    <!-- Carrega as interações JavaScript — src=js/formacao-carrossel.js. -->
+    <script defer src="js/formacao-carrossel.js">
+      <!-- Encerra o elemento script. -->
+    </script>
+    <!-- Carrega as interações JavaScript — src=js/voltar-topo.js. -->
+    <script defer src="js/voltar-topo.js">
+      <!-- Encerra o elemento script. -->
+    </script>
+    <!-- Carrega as interações JavaScript — src=js/skills-interactions.js. -->
+    <script defer src="js/skills-interactions.js">
+      <!-- Encerra o elemento script. -->
+    </script>
+    <!-- Carrega as interações JavaScript — src=js/galeria.js. -->
+    <script defer src="js/galeria.js">
+      <!-- Encerra o elemento script. -->
+    </script>
+    <!-- Encerra o elemento head. -->
+  </head>
+  <!-- Conteúdo exibido no navegador. -->
+  <body>
+    <!-- Link de navegação — class=pular; href=#conteudo. --><a class="pular" href="#conteudo"
+      >Pular para o conteúdo<!-- Encerra o elemento a. --></a
+    >
+    <!-- Cabeçalho com identidade e navegação — class=site-header; id=inicio. -->
+    <header class="site-header" id="inicio">
+      <!-- Agrupa elementos para organizar o layout — class=container header-inner. -->
+      <div class="container header-inner">
+        <!-- Link de navegação — href=#inicio; class=logo; aria-label=Raissa Netto, início. --><a
+          href="#inicio"
+          class="logo"
+          aria-label="Raissa Netto, início"
+          >RAISSA<!-- Trecho de texto ou detalhe visual. --><span
+            >.<!-- Encerra o elemento span. --></span
+          ><!-- Encerra o elemento a. --></a
+        >
+        <!-- Navegação por links — aria-label=Menu principal. -->
+        <nav aria-label="Menu principal">
+          <!-- Lista de itens — class=menu. -->
+          <ul class="menu">
+            <!-- Item da lista. -->
+            <li>
+              <!-- Link de navegação — href=#sobre. --><a href="#sobre"
+                >Sobre<!-- Encerra o elemento a. --></a
+              ><!-- Encerra o elemento li. -->
+            </li>
+            <!-- Item da lista. -->
+            <li>
+              <!-- Link de navegação — href=#habilidades. --><a href="#habilidades"
+                >Habilidades<!-- Encerra o elemento a. --></a
+              ><!-- Encerra o elemento li. -->
+            </li>
+            <!-- Item da lista. -->
+            <li>
+              <!-- Link de navegação — href=#projetos. --><a href="#projetos"
+                >Projetos<!-- Encerra o elemento a. --></a
+              ><!-- Encerra o elemento li. -->
+            </li>
+            <!-- Item da lista. -->
+            <li>
+              <!-- Link de navegação — href=#formacao. --><a href="#formacao"
+                >Formação<!-- Encerra o elemento a. --></a
+              ><!-- Encerra o elemento li. -->
+            </li>
+            <!-- Item da lista. -->
+            <li>
+              <!-- Link de navegação — href=#contato. --><a href="#contato"
+                >Contato<!-- Encerra o elemento a. --></a
+              ><!-- Encerra o elemento li. -->
+            </li>
+            <!-- Item da lista. -->
+            <li>
+              <!-- Botão de interação — id=theme-toggle; class=theme-toggle; type=button; aria-label=Ativar modo claro; aria-pressed=false; title=Ativar modo claro. --><button
+                id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Ativar modo claro"
+                aria-pressed="false"
+                title="Ativar modo claro"
+              >
+                <!-- Trecho de texto ou detalhe visual — class=theme-icon-light; aria-hidden=true. --><span
+                  class="theme-icon-light"
+                  aria-hidden="true"
+                  >☀<!-- Encerra o elemento span. --></span
+                ><!-- Trecho de texto ou detalhe visual — class=theme-icon-dark; aria-hidden=true. --><span
+                  class="theme-icon-dark"
+                  aria-hidden="true"
+                  >☾<!-- Encerra o elemento span. --></span
+                ><!-- Trecho de texto ou detalhe visual — class=theme-label. --><span
+                  class="theme-label"
+                  >Claro<!-- Encerra o elemento span. --></span
+                >
+                <!-- Encerra o elemento button. -->
+              </button>
+              <!-- Encerra o elemento li. -->
+            </li>
+            <!-- Encerra o elemento ul. -->
+          </ul>
+          <!-- Encerra o elemento nav. -->
+        </nav>
+        <!-- Link de navegação — class=btn btn-outline header-cta; href=#contato. --><a
+          class="btn btn-outline header-cta"
+          href="#contato"
+          >Vamos conversar
+          <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span aria-hidden="true"
+            >↗<!-- Encerra o elemento span. --></span
+          ><!-- Encerra o elemento a. --></a
+        >
+        <!-- Encerra o elemento div. -->
       </div>
-      <div class="hero-portrait">
-        <div class="portrait-glow" aria-hidden="true"></div>
-        <img src="img/Eu.png" alt="Foto de perfil de Raissa Netto usando blazer preto" width="520" height="520">
-        <div class="portrait-caption"><span></span></div>
-      </div>
-    </section>
+      <!-- Encerra o elemento header. -->
+    </header>
 
-    <!-- Seção sobre -->
-
-    <section id="sobre" class="section about-section" aria-labelledby="titulo-sobre">
-      <div class="container about-layout">
-        <div><p class="section-kicker">SOBRE MIM</p><h2 id="titulo-sobre">Quem é <span>Raissa?</span></h2></div>
-        <div class="about-copy"><p>Sou Raissa, tenho 21 anos, sou estudante de Análise e Desenvolvimento de Sistemas no Senac Minas e, no Grupo Valor sou profissional SDR especializado em crédito estruturado e Consultor de negócios & Soluções financeiras.</p><p>Neste portfólio, reúno a minha evolução acadêmica e grandes projetos que refletem a minha paixão em tecnologia e em criar soluções que agregam valor.</p><p>E Conhecimentos que vão desde fundamentos da bolha tecnológica até inteligência em negócios</p><a class="text-link" href="#formacao">Conheça minha trajetória <span aria-hidden="true">→</span></a></div>
-      </div>
-    </section>
-
-        <!-- Seção Linha do tempo -->
-
-<!-- Seção hobbys -->
-
-    <section id="habilidades" class="section" aria-labelledby="titulo-habilidades">
-      <div class="container"><p class="section-kicker">O QUE GOSTO DE FAZER</p><div class="section-heading"><h2 id="titulo-habilidades">Meus <span>hobbys</span></h2><p></p></div>
-        <div class="skills-grid">
-          <article class="skill-card" tabindex="0" role="button" aria-pressed="false"><span class="skill-icon" aria-hidden="true">&lt;/&gt;</span><h3>Fé e Reflexões</h3><p>Amo aprender na palavra de Deus e fortalecer minha fé, refletir sobre a vida e buscar sabedoria e propósito.</p></article>
-          <article class="skill-card" tabindex="0" role="button" aria-pressed="false"><span class="skill-icon" aria-hidden="true">#</span><h3>Scrapbook</h3><p>Tipo de artesanato e técnica de personalização de álbuns usado para guardar memórias, fotografias e recordações de forma criativa.</p></article>
-          <article class="skill-card" tabindex="0" role="button" aria-pressed="false"><span class="skill-icon" aria-hidden="true">▦</span><h3>Estudar</h3><p>Gosto de expandir meus conhecimentos, descobrir novos assuntos, habilidades, conceitos, técnicas e compreender diferentes perspectivas.</p></article>
-          <article class="skill-card" tabindex="0" role="button" aria-pressed="false"><span class="skill-icon" aria-hidden="true">↔</span><h3>Caminhar</h3><p>Um momento para desacelerar, organizar os pensamentos e apreciar os pequenos detalhes da vida.</p></article>
-          <article class="skill-card" tabindex="0" role="button" aria-pressed="false"><span class="skill-icon" aria-hidden="true">JS</span><h3>Treinar</h3><p>Cuidar da saúde física, é cuidar da saúde mental ao mesmo tempo, superar meus próprios limites e desenvolver disciplina e constância.</p></article>
-          <article class="skill-card" tabindex="0" role="button" aria-pressed="false"><span class="skill-icon" aria-hidden="true">◎</span><h3>Cozinhar</h3><p>Gosto de criar e experimentar receitas, explorar sabores e transformar ingredientes em boas experiências individuais e coletivas.</p></article>
-        </div>
-      </div>
-    </section>
-
-<!-- Instantes congelados: galeria fotográfica em formato de carrossel. -->
-    <section id="instantes-congelados" class="section memories-section" aria-labelledby="titulo-instantes">
-      <div class="container">
-        <p class="section-kicker">REGISTROS DA MINHA TRAJETÓRIA</p>
-        <div class="section-heading"><h2 id="titulo-instantes">Instantes <span>congelados.</span></h2></div>
-        <div class="memories-top">
-          <p class="memories-intro">Pequenos fragmentos de tempo congelados.</p>
-          <span id="memories-count" class="memories-counter" aria-live="polite">01 / 03</span>
-        </div>
-        <div class="memories-viewport">
-          <div id="memories-track" class="memories-track" aria-label="Fotografias e memórias" tabindex="0">
-            <!-- Fotografia 1: edite o caminho, o título e os textos diretamente aqui. -->
-            <!-- Adicione a foto em img/instante-1.jpg e personalize os textos abaixo. -->
-<article class="memory-card">
-<button class="memory-open" type="button" aria-label="Ampliar registro 1">
-<div class="memory-media">
-<img src="img/instante-1.jpg" alt="Fotografia a adicionar ao registro 1" loading="lazy">
-<span class="memory-placeholder-symbol" aria-hidden="true">▧</span>
-<span class="memory-placeholder-label">Fotografia 1</span>
-</div>
-<div class="memory-body"><p class="memory-category">ESPAÇO PARA UMA RECORDAÇÃO</p><h3>Instante 01</h3><p class="memory-description">Um espaço para registrar momentos especiais.</p></div>
-</button>
-<p class="memory-detail" hidden>Personalize a fotografia e a legenda deste registro no HTML.</p>
-</article>
-<!-- Adicione a foto em img/instante-2.jpg e personalize os textos abaixo. -->
-<article class="memory-card">
-<button class="memory-open" type="button" aria-label="Ampliar registro 2">
-<div class="memory-media">
-<img src="img/instante-2.jpg" alt="Fotografia a adicionar ao registro 2" loading="lazy">
-<span class="memory-placeholder-symbol" aria-hidden="true">▧</span>
-<span class="memory-placeholder-label">Fotografia 2</span>
-</div>
-<div class="memory-body"><p class="memory-category">ESPAÇO PARA UMA RECORDAÇÃO</p><h3>Instante 02</h3><p class="memory-description">Um espaço para registrar momentos especiais.</p></div>
-</button>
-<p class="memory-detail" hidden>Personalize a fotografia e a legenda deste registro no HTML.</p>
-</article>
-<!-- Adicione a foto em img/instante-3.jpg e personalize os textos abaixo. -->
-<article class="memory-card">
-<button class="memory-open" type="button" aria-label="Ampliar registro 3">
-<div class="memory-media">
-<img src="img/instante-3.jpg" alt="Fotografia a adicionar ao registro 3" loading="lazy">
-<span class="memory-placeholder-symbol" aria-hidden="true">▧</span>
-<span class="memory-placeholder-label">Fotografia 3</span>
-</div>
-<div class="memory-body"><p class="memory-category">ESPAÇO PARA UMA RECORDAÇÃO</p><h3>Instante 03</h3><p class="memory-description">Um espaço para registrar momentos especiais.</p></div>
-</button>
-<p class="memory-detail" hidden>Personalize a fotografia e a legenda deste registro no HTML.</p>
-</article>
+    <!-- Conteúdo principal — id=conteudo. -->
+    <main id="conteudo">
+      <!-- Seção da página — class=hero container; aria-labelledby=titulo-principal. -->
+      <section class="hero container" aria-labelledby="titulo-principal">
+        <!-- Agrupa elementos para organizar o layout — class=hero-content. -->
+        <div class="hero-content">
+          <!-- Parágrafo de texto — class=eyebrow. -->
+          <p class="eyebrow">
+            <!-- Trecho de texto ou detalhe visual — class=status-dot; aria-hidden=true. --><span
+              class="status-dot"
+              aria-hidden="true"
+              ><!-- Encerra o elemento span. --></span
+            >
+            PORTFÓLIO PESSOAL
+            <!-- Encerra o elemento p. -->
+          </p>
+          <!-- Título principal — id=titulo-principal. -->
+          <h1 id="titulo-principal">
+            Olá, eu sou
+            <!-- Quebra de linha. --><br /><!-- Trecho de texto ou detalhe visual. --><span
+              >Raissa Netto.<!-- Encerra o elemento span. --></span
+            ><!-- Encerra o elemento h1. -->
+          </h1>
+          <!-- Parágrafo de texto — class=hero-subtitle. -->
+          <p class="hero-subtitle">
+            Estudante e entusiasta na
+            <!-- Destaque semântico no texto. --><strong
+              >área da saúde<!-- Encerra o elemento strong. --></strong
+            >, com interesse em aprender, criar, desenvolver, e solucionar problemas e conectar
+            pessoas a soluções inteligentes.
+            <!-- Encerra o elemento p. -->
+          </p>
+          <!-- Agrupa elementos para organizar o layout — class=hero-actions. -->
+          <div class="hero-actions">
+            <!-- Link de navegação — href=#projetos; class=btn btn-primary. --><a
+              href="#projetos"
+              class="btn btn-primary"
+              >Explorar projetos
+              <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span aria-hidden="true"
+                >↗<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento a. --></a
+            >
+            <!-- Link de navegação — href=#contato; class=btn btn-outline. --><a
+              href="#contato"
+              class="btn btn-outline"
+              >Entrar em contato<!-- Encerra o elemento a. --></a
+            >
+            <!-- Encerra o elemento div. -->
           </div>
-        </div>
-        <div class="memories-controls">
-          <div id="memories-dots" class="memories-dots" aria-label="Navegar entre os registros"></div>
-          <div class="memories-buttons">
-            <button type="button" id="memories-prev" class="memories-button" aria-label="Fotografia anterior">‹</button>
-            <button type="button" id="memories-next" class="memories-button" aria-label="Próxima fotografia">›</button>
+          <!-- Agrupa elementos para organizar o layout — class=hero-tags; aria-label=Áreas de interesse. -->
+          <div class="hero-tags" aria-label="Áreas de interesse">
+            <!-- Trecho de texto ou detalhe visual. --><span
+              >Medicina<!-- Encerra o elemento span. --></span
+            ><!-- Trecho de texto ou detalhe visual. --><span
+              >UFMG<!-- Encerra o elemento span. --></span
+            ><!-- Trecho de texto ou detalhe visual. --><span
+              >ENEM<!-- Encerra o elemento span. --></span
+            >
+            <!-- Encerra o elemento div. -->
           </div>
+          <!-- Encerra o elemento div. -->
         </div>
-      </div>
-    </section>
-    <dialog id="memory-modal" class="memory-modal" aria-labelledby="memory-modal-title">
-      <button type="button" class="memory-modal-close" aria-label="Fechar fotografia ampliada">×</button>
-      <div class="memory-modal-inner">
-        <div class="memory-media memory-modal-media"></div>
-        <div class="memory-modal-text">
-          <p class="memory-category memory-modal-category"></p>
-          <h3 id="memory-modal-title" class="memory-modal-title"></h3>
-          <p class="memory-modal-description"></p>
+        <!-- Agrupa elementos para organizar o layout — class=hero-portrait. -->
+        <div class="hero-portrait">
+          <!-- Agrupa elementos para organizar o layout — class=portrait-glow; aria-hidden=true. -->
+          <div class="portrait-glow" aria-hidden="true"><!-- Encerra o elemento div. --></div>
+
+          <!-- Imagem — src=img/Eu.png; alt=Foto de perfil de Raissa Netto usando blazer preto; width=520; height=520. --><img
+            src="img/Eu.png"
+            alt="Foto de perfil de Raissa Netto usando blazer preto"
+            width="520"
+            height="520"
+          />
+          <!-- Agrupa elementos para organizar o layout — class=portrait-caption. -->
+          <div class="portrait-caption">
+            <!-- Trecho de texto ou detalhe visual. --><span><!-- Encerra o elemento span. --></span
+            ><!-- Encerra o elemento div. -->
+          </div>
+          <!-- Encerra o elemento div. -->
         </div>
-      </div>
-    </dialog>
+        <!-- Encerra o elemento section. -->
+      </section>
 
-    <!-- Seção projetos -->
-
-    <section id="projetos" class="section projects-section" aria-labelledby="titulo-projetos">
-      <div class="container"><p class="section-kicker">DESTAQUES</p><div class="section-heading"><h2 id="titulo-projetos">Projetos e <span>conquistas</span></h2></div>
-        <div class="projects-grid projects-carousel" tabindex="0" role="region" aria-label="Carrossel de projetos">
-          <article class="project-card"><img src="img/Vozescast.png" alt="Prévia de portfólio pessoal em tema escuro com menu, apresentação e botão de projetos" width="960" height="600" loading="lazy"><div class="project-body"><p class="project-category">História · Motivação · Disciplina</p><h3>Vozescast</h3><p>A jornada para aprovação em medicina.</p><a href="https://youtu.be/TkdAw-wclTM?si=V2Zszc-Q7NWfwMHN" target="_blank" rel="noopener noreferrer" class="project-link">Ver vídeo <span aria-hidden="true">↗</span></a></div></article>
-          <article class="project-card"><img src="img/RedacaocomRai.png" alt="Prévia de organizador de tarefas com menu lateral e colunas de atividades" width="960" height="600" loading="lazy"><div class="project-body"><p class="project-category">Plataforma de redação</p><h3>Redação com Rai</h3><p>Para quem busca melhorar sua escrita e desenvolver habilidades de comunicação.</p><a href="https://loganlucky0601.github.io/Plataforma_redacao/index.html" target="_blank" rel="noopener noreferrer" class="project-link">Saiba mais <span aria-hidden="true">↗</span></a></div></article>
-          <article class="project-card"><img src="img/projeto-3.jpg" alt="Prévia de aplicativo de clima com temperatura, sol e previsão para quatro dias" width="960" height="600" loading="lazy"><div class="project-body"><p class="project-category">PROPOSTA ACADÊMICA</p><h3>Interface de clima</h3><p>Estudo de cards de previsão do tempo, hierarquia visual e adaptação para telas menores.</p><a href="mailto:seuemail@exemplo.com?subject=Projeto%20Interface%20de%20Clima" class="project-link">Solicitar informações <span aria-hidden="true">↗</span></a></div></article>
-          <article class="project-card"><img src="img/projeto-4.jpg" alt="Prévia de catálogo digital com quatro cards de produtos em uma grade" width="960" height="600" loading="lazy"><div class="project-body"><p class="project-category">PROPOSTA ACADÊMICA</p><h3>Catálogo digital</h3><p>Layout de vitrine com cards, filtros visuais e organização de produtos usando CSS Grid.</p><a href="mailto:seuemail@exemplo.com?subject=Projeto%20Cat%C3%A1logo%20Digital" class="project-link">Solicitar informações <span aria-hidden="true">↗</span></a></div></article>
+      <!-- Seção da página — id=sobre; class=section about-section; aria-labelledby=titulo-sobre. -->
+      <section id="sobre" class="section about-section" aria-labelledby="titulo-sobre">
+        <!-- Agrupa elementos para organizar o layout — class=container about-layout. -->
+        <div class="container about-layout">
+          <!-- Agrupa elementos para organizar o layout. -->
+          <div>
+            <!-- Parágrafo de texto — class=section-kicker. -->
+            <p class="section-kicker">SOBRE MIM<!-- Encerra o elemento p. --></p>
+            <!-- Título da seção — id=titulo-sobre. -->
+            <h2 id="titulo-sobre">
+              Quem é
+              <!-- Trecho de texto ou detalhe visual. --><span
+                >Raissa?<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento h2. -->
+            </h2>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=about-copy. -->
+          <div class="about-copy">
+            <!-- Parágrafo de texto. -->
+            <p>
+              Sou Raissa, tenho 21 anos, sou estudante de Análise e Desenvolvimento de Sistemas no
+              Senac Minas e, no Grupo Valor sou profissional SDR especializado em crédito
+              estruturado e Consultor de negócios & Soluções financeiras.
+              <!-- Encerra o elemento p. -->
+            </p>
+            <!-- Parágrafo de texto. -->
+            <p>
+              Neste portfólio, reúno a minha evolução acadêmica e grandes projetos que refletem a
+              minha paixão em tecnologia e em criar soluções que agregam valor.
+              <!-- Encerra o elemento p. -->
+            </p>
+            <!-- Parágrafo de texto. -->
+            <p>
+              E Conhecimentos que vão desde fundamentos da bolha tecnológica até inteligência em
+              negócios
+              <!-- Encerra o elemento p. -->
+            </p>
+            <!-- Link de navegação — class=text-link; href=#formacao. --><a
+              class="text-link"
+              href="#formacao"
+              >Conheça minha trajetória
+              <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span aria-hidden="true"
+                >→<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento a. --></a
+            >
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Encerra o elemento div. -->
         </div>
-        <div class="projects-controls" hidden>
-          <button class="btn btn-outline" type="button" data-step="-1" aria-label="Projeto anterior">←</button>
-          <span class="projects-position" role="status"></span>
-          <button class="btn btn-outline" type="button" data-step="1" aria-label="Próximo projeto">→</button>
+        <!-- Encerra o elemento section. -->
+      </section>
+
+      <!-- Seção da página — id=habilidades; class=section; aria-labelledby=titulo-habilidades. -->
+      <section id="habilidades" class="section" aria-labelledby="titulo-habilidades">
+        <!-- Agrupa elementos para organizar o layout — class=container. -->
+        <div class="container">
+          <!-- Parágrafo de texto — class=section-kicker. -->
+          <p class="section-kicker">O QUE GOSTO DE FAZER<!-- Encerra o elemento p. --></p>
+          <!-- Agrupa elementos para organizar o layout — class=section-heading. -->
+          <div class="section-heading">
+            <!-- Título da seção — id=titulo-habilidades. -->
+            <h2 id="titulo-habilidades">
+              Meus
+              <!-- Trecho de texto ou detalhe visual. --><span
+                >hobbys<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento h2. -->
+            </h2>
+            <!-- Parágrafo de texto. -->
+            <p><!-- Encerra o elemento p. --></p>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=skills-grid. -->
+          <div class="skills-grid">
+            <!-- Cartão independente — class=skill-card; tabindex=0; role=button; aria-pressed=false. -->
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+              <!-- Trecho de texto ou detalhe visual — class=skill-icon; aria-hidden=true. --><span
+                class="skill-icon"
+                aria-hidden="true"
+                >&lt;/&gt;<!-- Encerra o elemento span. --></span
+              >
+              <!-- Título do cartão ou grupo. -->
+              <h3>Fé e Reflexões<!-- Encerra o elemento h3. --></h3>
+              <!-- Parágrafo de texto. -->
+              <p>
+                Amo aprender na palavra de Deus e fortalecer minha fé, refletir sobre a vida e
+                buscar sabedoria e propósito.
+                <!-- Encerra o elemento p. -->
+              </p>
+              <!-- Encerra o elemento article. -->
+            </article>
+
+            <!-- Cartão independente — class=skill-card; tabindex=0; role=button; aria-pressed=false. -->
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+              <!-- Trecho de texto ou detalhe visual — class=skill-icon; aria-hidden=true. --><span
+                class="skill-icon"
+                aria-hidden="true"
+                >#<!-- Encerra o elemento span. --></span
+              >
+              <!-- Título do cartão ou grupo. -->
+              <h3>Scrapbook<!-- Encerra o elemento h3. --></h3>
+              <!-- Parágrafo de texto. -->
+              <p>
+                Tipo de artesanato e técnica de personalização de álbuns usado para guardar
+                memórias, fotografias e recordações de forma criativa.
+                <!-- Encerra o elemento p. -->
+              </p>
+              <!-- Encerra o elemento article. -->
+            </article>
+
+            <!-- Cartão independente — class=skill-card; tabindex=0; role=button; aria-pressed=false. -->
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+              <!-- Trecho de texto ou detalhe visual — class=skill-icon; aria-hidden=true. --><span
+                class="skill-icon"
+                aria-hidden="true"
+                >▦<!-- Encerra o elemento span. --></span
+              >
+              <!-- Título do cartão ou grupo. -->
+              <h3>Estudar<!-- Encerra o elemento h3. --></h3>
+              <!-- Parágrafo de texto. -->
+              <p>
+                Gosto de expandir meus conhecimentos, descobrir novos assuntos, habilidades,
+                conceitos, técnicas e compreender diferentes perspectivas.
+                <!-- Encerra o elemento p. -->
+              </p>
+              <!-- Encerra o elemento article. -->
+            </article>
+
+            <!-- Cartão independente — class=skill-card; tabindex=0; role=button; aria-pressed=false. -->
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+              <!-- Trecho de texto ou detalhe visual — class=skill-icon; aria-hidden=true. --><span
+                class="skill-icon"
+                aria-hidden="true"
+                >↔<!-- Encerra o elemento span. --></span
+              >
+              <!-- Título do cartão ou grupo. -->
+              <h3>Caminhar<!-- Encerra o elemento h3. --></h3>
+              <!-- Parágrafo de texto. -->
+              <p>
+                Um momento para desacelerar, organizar os pensamentos e apreciar os pequenos
+                detalhes da vida.
+                <!-- Encerra o elemento p. -->
+              </p>
+              <!-- Encerra o elemento article. -->
+            </article>
+
+            <!-- Cartão independente — class=skill-card; tabindex=0; role=button; aria-pressed=false. -->
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+              <!-- Trecho de texto ou detalhe visual — class=skill-icon; aria-hidden=true. --><span
+                class="skill-icon"
+                aria-hidden="true"
+                >JS<!-- Encerra o elemento span. --></span
+              >
+              <!-- Título do cartão ou grupo. -->
+              <h3>Treinar<!-- Encerra o elemento h3. --></h3>
+              <!-- Parágrafo de texto. -->
+              <p>
+                Cuidar da saúde física, é cuidar da saúde mental ao mesmo tempo, superar meus
+                próprios limites e desenvolver disciplina e constância.
+                <!-- Encerra o elemento p. -->
+              </p>
+              <!-- Encerra o elemento article. -->
+            </article>
+
+            <!-- Cartão independente — class=skill-card; tabindex=0; role=button; aria-pressed=false. -->
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+              <!-- Trecho de texto ou detalhe visual — class=skill-icon; aria-hidden=true. --><span
+                class="skill-icon"
+                aria-hidden="true"
+                >◎<!-- Encerra o elemento span. --></span
+              >
+              <!-- Título do cartão ou grupo. -->
+              <h3>Cozinhar<!-- Encerra o elemento h3. --></h3>
+              <!-- Parágrafo de texto. -->
+              <p>
+                Gosto de criar e experimentar receitas, explorar sabores e transformar ingredientes
+                em boas experiências individuais e coletivas.
+                <!-- Encerra o elemento p. -->
+              </p>
+              <!-- Encerra o elemento article. -->
+            </article>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Encerra o elemento div. -->
         </div>
+        <!-- Encerra o elemento section. -->
+      </section>
+
+      <!-- Seção da página — id=instantes-congelados; class=section memories-section; aria-labelledby=titulo-instantes. -->
+      <section
+        id="instantes-congelados"
+        class="section memories-section"
+        aria-labelledby="titulo-instantes"
+      >
+        <!-- Agrupa elementos para organizar o layout — class=container. -->
+        <div class="container">
+          <!-- Parágrafo de texto — class=section-kicker. -->
+          <p class="section-kicker">REGISTROS DA MINHA TRAJETÓRIA<!-- Encerra o elemento p. --></p>
+          <!-- Agrupa elementos para organizar o layout — class=section-heading. -->
+          <div class="section-heading">
+            <!-- Título da seção — id=titulo-instantes. -->
+            <h2 id="titulo-instantes">
+              Instantes
+              <!-- Trecho de texto ou detalhe visual. --><span
+                >congelados.<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento h2. -->
+            </h2>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=memories-top. -->
+          <div class="memories-top">
+            <!-- Parágrafo de texto — class=memories-intro. -->
+            <p class="memories-intro">
+              Pequenos fragmentos de tempo congelados.<!-- Encerra o elemento p. -->
+            </p>
+            <!-- Trecho de texto ou detalhe visual — id=memories-count; class=memories-counter; aria-live=polite. --><span
+              id="memories-count"
+              class="memories-counter"
+              aria-live="polite"
+              >01 / 03<!-- Encerra o elemento span. --></span
+            >
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=memories-viewport. -->
+          <div class="memories-viewport">
+            <!-- Agrupa elementos para organizar o layout — id=memories-track; class=memories-track; aria-label=Fotografias e memórias; tabindex=0. -->
+            <div
+              id="memories-track"
+              class="memories-track"
+              aria-label="Fotografias e memórias"
+              tabindex="0"
+            >
+              <!-- Cartão independente — class=memory-card. -->
+              <article class="memory-card">
+                <!-- Botão de interação — class=memory-open; type=button; aria-label=Ampliar registro 1. --><button
+                  class="memory-open"
+                  type="button"
+                  aria-label="Ampliar registro 1"
+                >
+                  <!-- Agrupa elementos para organizar o layout — class=memory-media. -->
+                  <div class="memory-media">
+                    <!-- Imagem — src=img/instante-1.jpg; alt=Fotografia a adicionar ao registro 1; loading=lazy. --><img
+                      src="img/instante-1.jpg"
+                      alt="Fotografia a adicionar ao registro 1"
+                      loading="lazy"
+                    />
+                    <!-- Trecho de texto ou detalhe visual — class=memory-placeholder-symbol; aria-hidden=true. --><span
+                      class="memory-placeholder-symbol"
+                      aria-hidden="true"
+                      >▧<!-- Encerra o elemento span. --></span
+                    >
+                    <!-- Trecho de texto ou detalhe visual — class=memory-placeholder-label. --><span
+                      class="memory-placeholder-label"
+                      >Fotografia 1<!-- Encerra o elemento span. --></span
+                    >
+                    <!-- Encerra o elemento div. -->
+                  </div>
+                  <!-- Agrupa elementos para organizar o layout — class=memory-body. -->
+                  <div class="memory-body">
+                    <!-- Parágrafo de texto — class=memory-category. -->
+                    <p class="memory-category">
+                      ESPAÇO PARA UMA RECORDAÇÃO<!-- Encerra o elemento p. -->
+                    </p>
+                    <!-- Título do cartão ou grupo. -->
+                    <h3>Instante 01<!-- Encerra o elemento h3. --></h3>
+                    <!-- Parágrafo de texto — class=memory-description. -->
+                    <p class="memory-description">
+                      Um espaço para registrar momentos especiais.<!-- Encerra o elemento p. -->
+                    </p>
+                    <!-- Encerra o elemento div. -->
+                  </div>
+                  <!-- Encerra o elemento button. -->
+                </button>
+                <!-- Parágrafo de texto — class=memory-detail. -->
+                <p class="memory-detail" hidden>
+                  Personalize a fotografia e a legenda deste registro no HTML.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Encerra o elemento article. -->
+              </article>
+
+              <!-- Cartão independente — class=memory-card. -->
+              <article class="memory-card">
+                <!-- Botão de interação — class=memory-open; type=button; aria-label=Ampliar registro 2. --><button
+                  class="memory-open"
+                  type="button"
+                  aria-label="Ampliar registro 2"
+                >
+                  <!-- Agrupa elementos para organizar o layout — class=memory-media. -->
+                  <div class="memory-media">
+                    <!-- Imagem — src=img/instante-2.jpg; alt=Fotografia a adicionar ao registro 2; loading=lazy. --><img
+                      src="img/instante-2.jpg"
+                      alt="Fotografia a adicionar ao registro 2"
+                      loading="lazy"
+                    />
+                    <!-- Trecho de texto ou detalhe visual — class=memory-placeholder-symbol; aria-hidden=true. --><span
+                      class="memory-placeholder-symbol"
+                      aria-hidden="true"
+                      >▧<!-- Encerra o elemento span. --></span
+                    >
+                    <!-- Trecho de texto ou detalhe visual — class=memory-placeholder-label. --><span
+                      class="memory-placeholder-label"
+                      >Fotografia 2<!-- Encerra o elemento span. --></span
+                    >
+                    <!-- Encerra o elemento div. -->
+                  </div>
+                  <!-- Agrupa elementos para organizar o layout — class=memory-body. -->
+                  <div class="memory-body">
+                    <!-- Parágrafo de texto — class=memory-category. -->
+                    <p class="memory-category">
+                      ESPAÇO PARA UMA RECORDAÇÃO<!-- Encerra o elemento p. -->
+                    </p>
+                    <!-- Título do cartão ou grupo. -->
+                    <h3>Instante 02<!-- Encerra o elemento h3. --></h3>
+                    <!-- Parágrafo de texto — class=memory-description. -->
+                    <p class="memory-description">
+                      Um espaço para registrar momentos especiais.<!-- Encerra o elemento p. -->
+                    </p>
+                    <!-- Encerra o elemento div. -->
+                  </div>
+                  <!-- Encerra o elemento button. -->
+                </button>
+                <!-- Parágrafo de texto — class=memory-detail. -->
+                <p class="memory-detail" hidden>
+                  Personalize a fotografia e a legenda deste registro no HTML.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Encerra o elemento article. -->
+              </article>
+
+              <!-- Cartão independente — class=memory-card. -->
+              <article class="memory-card">
+                <!-- Botão de interação — class=memory-open; type=button; aria-label=Ampliar registro 3. --><button
+                  class="memory-open"
+                  type="button"
+                  aria-label="Ampliar registro 3"
+                >
+                  <!-- Agrupa elementos para organizar o layout — class=memory-media. -->
+                  <div class="memory-media">
+                    <!-- Imagem — src=img/instante-3.jpg; alt=Fotografia a adicionar ao registro 3; loading=lazy. --><img
+                      src="img/instante-3.jpg"
+                      alt="Fotografia a adicionar ao registro 3"
+                      loading="lazy"
+                    />
+                    <!-- Trecho de texto ou detalhe visual — class=memory-placeholder-symbol; aria-hidden=true. --><span
+                      class="memory-placeholder-symbol"
+                      aria-hidden="true"
+                      >▧<!-- Encerra o elemento span. --></span
+                    >
+                    <!-- Trecho de texto ou detalhe visual — class=memory-placeholder-label. --><span
+                      class="memory-placeholder-label"
+                      >Fotografia 3<!-- Encerra o elemento span. --></span
+                    >
+                    <!-- Encerra o elemento div. -->
+                  </div>
+                  <!-- Agrupa elementos para organizar o layout — class=memory-body. -->
+                  <div class="memory-body">
+                    <!-- Parágrafo de texto — class=memory-category. -->
+                    <p class="memory-category">
+                      ESPAÇO PARA UMA RECORDAÇÃO<!-- Encerra o elemento p. -->
+                    </p>
+                    <!-- Título do cartão ou grupo. -->
+                    <h3>Instante 03<!-- Encerra o elemento h3. --></h3>
+                    <!-- Parágrafo de texto — class=memory-description. -->
+                    <p class="memory-description">
+                      Um espaço para registrar momentos especiais.<!-- Encerra o elemento p. -->
+                    </p>
+                    <!-- Encerra o elemento div. -->
+                  </div>
+                  <!-- Encerra o elemento button. -->
+                </button>
+                <!-- Parágrafo de texto — class=memory-detail. -->
+                <p class="memory-detail" hidden>
+                  Personalize a fotografia e a legenda deste registro no HTML.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Encerra o elemento div. -->
+            </div>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=memories-controls. -->
+          <div class="memories-controls">
+            <!-- Agrupa elementos para organizar o layout — id=memories-dots; class=memories-dots; aria-label=Navegar entre os registros. -->
+            <div id="memories-dots" class="memories-dots" aria-label="Navegar entre os registros">
+              <!-- Encerra o elemento div. -->
+            </div>
+            <!-- Agrupa elementos para organizar o layout — class=memories-buttons. -->
+            <div class="memories-buttons">
+              <!-- Botão de interação — type=button; id=memories-prev; class=memories-button; aria-label=Fotografia anterior. --><button
+                type="button"
+                id="memories-prev"
+                class="memories-button"
+                aria-label="Fotografia anterior"
+              >
+                ‹
+                <!-- Encerra o elemento button. -->
+              </button>
+              <!-- Botão de interação — type=button; id=memories-next; class=memories-button; aria-label=Próxima fotografia. --><button
+                type="button"
+                id="memories-next"
+                class="memories-button"
+                aria-label="Próxima fotografia"
+              >
+                ›
+                <!-- Encerra o elemento button. -->
+              </button>
+              <!-- Encerra o elemento div. -->
+            </div>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Encerra o elemento div. -->
+        </div>
+        <!-- Encerra o elemento section. -->
+      </section>
+      <!-- Janela de ampliação da fotografia — id=memory-modal; class=memory-modal; aria-labelledby=memory-modal-title. -->
+      <dialog id="memory-modal" class="memory-modal" aria-labelledby="memory-modal-title">
+        <!-- Botão de interação — type=button; class=memory-modal-close; aria-label=Fechar fotografia ampliada. --><button
+          type="button"
+          class="memory-modal-close"
+          aria-label="Fechar fotografia ampliada"
+        >
+          ×
+          <!-- Encerra o elemento button. -->
+        </button>
+        <!-- Agrupa elementos para organizar o layout — class=memory-modal-inner. -->
+        <div class="memory-modal-inner">
+          <!-- Agrupa elementos para organizar o layout — class=memory-media memory-modal-media. -->
+          <div class="memory-media memory-modal-media"><!-- Encerra o elemento div. --></div>
+          <!-- Agrupa elementos para organizar o layout — class=memory-modal-text. -->
+          <div class="memory-modal-text">
+            <!-- Parágrafo de texto — class=memory-category memory-modal-category. -->
+            <p class="memory-category memory-modal-category"><!-- Encerra o elemento p. --></p>
+            <!-- Título do cartão ou grupo — id=memory-modal-title; class=memory-modal-title. -->
+            <h3 id="memory-modal-title" class="memory-modal-title">
+              <!-- Encerra o elemento h3. -->
+            </h3>
+            <!-- Parágrafo de texto — class=memory-modal-description. -->
+            <p class="memory-modal-description"><!-- Encerra o elemento p. --></p>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Encerra o elemento div. -->
+        </div>
+        <!-- Encerra o elemento dialog. -->
+      </dialog>
+
+      <!-- Seção da página — id=projetos; class=section projects-section; aria-labelledby=titulo-projetos. -->
+      <section id="projetos" class="section projects-section" aria-labelledby="titulo-projetos">
+        <!-- Agrupa elementos para organizar o layout — class=container. -->
+        <div class="container">
+          <!-- Parágrafo de texto — class=section-kicker. -->
+          <p class="section-kicker">DESTAQUES<!-- Encerra o elemento p. --></p>
+          <!-- Agrupa elementos para organizar o layout — class=section-heading. -->
+          <div class="section-heading">
+            <!-- Título da seção — id=titulo-projetos. -->
+            <h2 id="titulo-projetos">
+              Projetos e
+              <!-- Trecho de texto ou detalhe visual. --><span
+                >conquistas<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento h2. -->
+            </h2>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=projects-grid projects-carousel; tabindex=0; role=region; aria-label=Carrossel de projetos. -->
+          <div
+            class="projects-grid projects-carousel"
+            tabindex="0"
+            role="region"
+            aria-label="Carrossel de projetos"
+          >
+            <!-- Cartão independente — class=project-card. -->
+            <article class="project-card">
+              <!-- Imagem — src=img/Vozescast.png; alt=Prévia de portfólio pessoal em tema escuro com menu, apresentação e botão de projetos; width=960; height=600; loading=lazy. --><img
+                src="img/Vozescast.png"
+                alt="Prévia de portfólio pessoal em tema escuro com menu, apresentação e botão de projetos"
+                width="960"
+                height="600"
+                loading="lazy"
+              />
+              <!-- Agrupa elementos para organizar o layout — class=project-body. -->
+              <div class="project-body">
+                <!-- Parágrafo de texto — class=project-category. -->
+                <p class="project-category">
+                  História · Motivação · Disciplina<!-- Encerra o elemento p. -->
+                </p>
+                <!-- Título do cartão ou grupo. -->
+                <h3>Vozescast<!-- Encerra o elemento h3. --></h3>
+                <!-- Parágrafo de texto. -->
+                <p>A jornada para aprovação em medicina.<!-- Encerra o elemento p. --></p>
+
+                <!-- Link de navegação — href=https://youtu.be/TkdAw-wclTM?si=V2Zszc-Q7NWfwMHN; target=_blank; rel=noopener noreferrer; class=project-link. --><a
+                  href="https://youtu.be/TkdAw-wclTM?si=V2Zszc-Q7NWfwMHN"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  >Ver vídeo
+                  <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span
+                    aria-hidden="true"
+                    >↗<!-- Encerra o elemento span. --></span
+                  ><!-- Encerra o elemento a. --></a
+                >
+                <!-- Encerra o elemento div. -->
+              </div>
+              <!-- Encerra o elemento article. -->
+            </article>
+
+            <!-- Cartão independente — class=project-card. -->
+            <article class="project-card">
+              <!-- Imagem — src=img/RedacaocomRai.png; alt=Prévia de organizador de tarefas com menu lateral e colunas de atividades; width=960; height=600; loading=lazy. --><img
+                src="img/RedacaocomRai.png"
+                alt="Prévia de organizador de tarefas com menu lateral e colunas de atividades"
+                width="960"
+                height="600"
+                loading="lazy"
+              />
+              <!-- Agrupa elementos para organizar o layout — class=project-body. -->
+              <div class="project-body">
+                <!-- Parágrafo de texto — class=project-category. -->
+                <p class="project-category">Plataforma de redação<!-- Encerra o elemento p. --></p>
+                <!-- Título do cartão ou grupo. -->
+                <h3>Redação com Rai<!-- Encerra o elemento h3. --></h3>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Para quem busca melhorar sua escrita e desenvolver habilidades de comunicação.
+                  <!-- Encerra o elemento p. -->
+                </p>
+
+                <!-- Link de navegação — href=https://loganlucky0601.github.io/Plataforma_redacao/index.html; target=_blank; rel=noopener noreferrer; class=project-link. --><a
+                  href="https://loganlucky0601.github.io/Plataforma_redacao/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  >Saiba mais
+                  <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span
+                    aria-hidden="true"
+                    >↗<!-- Encerra o elemento span. --></span
+                  ><!-- Encerra o elemento a. --></a
+                >
+                <!-- Encerra o elemento div. -->
+              </div>
+              <!-- Encerra o elemento article. -->
+            </article>
+
+            <!-- Cartão independente — class=project-card. -->
+            <article class="project-card">
+              <!-- Imagem — src=img/projeto-3.jpg; alt=Prévia de aplicativo de clima com temperatura, sol e previsão para quatro dias; width=960; height=600; loading=lazy. --><img
+                src="img/projeto-3.jpg"
+                alt="Prévia de aplicativo de clima com temperatura, sol e previsão para quatro dias"
+                width="960"
+                height="600"
+                loading="lazy"
+              />
+              <!-- Agrupa elementos para organizar o layout — class=project-body. -->
+              <div class="project-body">
+                <!-- Parágrafo de texto — class=project-category. -->
+                <p class="project-category">PROPOSTA ACADÊMICA<!-- Encerra o elemento p. --></p>
+                <!-- Título do cartão ou grupo. -->
+                <h3>Interface de clima<!-- Encerra o elemento h3. --></h3>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Estudo de cards de previsão do tempo, hierarquia visual e adaptação para telas
+                  menores.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Link de navegação — href=mailto:seuemail@exemplo.com?subject=Projeto%20Interface%20de%20Clima; class=project-link. --><a
+                  href="mailto:seuemail@exemplo.com?subject=Projeto%20Interface%20de%20Clima"
+                  class="project-link"
+                  >Solicitar informações
+                  <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span
+                    aria-hidden="true"
+                    >↗<!-- Encerra o elemento span. --></span
+                  ><!-- Encerra o elemento a. --></a
+                >
+                <!-- Encerra o elemento div. -->
+              </div>
+              <!-- Encerra o elemento article. -->
+            </article>
+
+            <!-- Cartão independente — class=project-card. -->
+            <article class="project-card">
+              <!-- Imagem — src=img/projeto-4.jpg; alt=Prévia de catálogo digital com quatro cards de produtos em uma grade; width=960; height=600; loading=lazy. --><img
+                src="img/projeto-4.jpg"
+                alt="Prévia de catálogo digital com quatro cards de produtos em uma grade"
+                width="960"
+                height="600"
+                loading="lazy"
+              />
+              <!-- Agrupa elementos para organizar o layout — class=project-body. -->
+              <div class="project-body">
+                <!-- Parágrafo de texto — class=project-category. -->
+                <p class="project-category">PROPOSTA ACADÊMICA<!-- Encerra o elemento p. --></p>
+                <!-- Título do cartão ou grupo. -->
+                <h3>Catálogo digital<!-- Encerra o elemento h3. --></h3>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Layout de vitrine com cards, filtros visuais e organização de produtos usando CSS
+                  Grid.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Link de navegação — href=mailto:seuemail@exemplo.com?subject=Projeto%20Cat%C3%A1logo%20Digital; class=project-link. --><a
+                  href="mailto:seuemail@exemplo.com?subject=Projeto%20Cat%C3%A1logo%20Digital"
+                  class="project-link"
+                  >Solicitar informações
+                  <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span
+                    aria-hidden="true"
+                    >↗<!-- Encerra o elemento span. --></span
+                  ><!-- Encerra o elemento a. --></a
+                >
+                <!-- Encerra o elemento div. -->
+              </div>
+              <!-- Encerra o elemento article. -->
+            </article>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=projects-controls. -->
+          <div class="projects-controls" hidden>
+            <!-- Botão de interação — class=btn btn-outline; type=button; data-step=-1; aria-label=Projeto anterior. --><button
+              class="btn btn-outline"
+              type="button"
+              data-step="-1"
+              aria-label="Projeto anterior"
+            >
+              ←
+              <!-- Encerra o elemento button. -->
+            </button>
+            <!-- Trecho de texto ou detalhe visual — class=projects-position; role=status. --><span
+              class="projects-position"
+              role="status"
+              ><!-- Encerra o elemento span. --></span
+            >
+            <!-- Botão de interação — class=btn btn-outline; type=button; data-step=1; aria-label=Próximo projeto. --><button
+              class="btn btn-outline"
+              type="button"
+              data-step="1"
+              aria-label="Próximo projeto"
+            >
+              →
+              <!-- Encerra o elemento button. -->
+            </button>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Encerra o elemento div. -->
+        </div>
+        <!-- Encerra o elemento section. -->
+      </section>
+
+      <!-- Seção da página — id=formacao; class=section; aria-labelledby=titulo-formacao. -->
+      <section id="formacao" class="section" aria-labelledby="titulo-formacao">
+        <!-- Agrupa elementos para organizar o layout — class=container. -->
+        <div class="container">
+          <!-- Parágrafo de texto — class=section-kicker. -->
+          <p class="section-kicker">JORNADA<!-- Encerra o elemento p. --></p>
+          <!-- Agrupa elementos para organizar o layout — class=section-heading. -->
+          <div class="section-heading">
+            <!-- Título da seção — id=titulo-formacao. -->
+            <h2 id="titulo-formacao">
+              Formação &
+              <!-- Trecho de texto ou detalhe visual. --><span
+                >experiência<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento h2. -->
+            </h2>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=journey-group. -->
+          <div class="journey-group">
+            <!-- Título do cartão ou grupo — id=grupo-jornada-0. -->
+            <h3 id="grupo-jornada-0">Formação e aprendizado<!-- Encerra o elemento h3. --></h3>
+            <!-- Agrupa elementos para organizar o layout — class=journey-carousel; tabindex=0; role=region; aria-labelledby=grupo-jornada-0. -->
+            <div
+              class="journey-carousel"
+              tabindex="0"
+              role="region"
+              aria-labelledby="grupo-jornada-0"
+            >
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >FORMAÇÃO ACADÊMICA<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>Técnico informática<!-- Encerra o elemento h4. --></h4>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Abrangência completa em hardware, redes locais, bancos de dados, algoritmos e
+                  desenvolvimento de aplicações para desktop e web.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">Senac minas | 2023 - 2025<!-- Encerra o elemento p. --></p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >FORMAÇÃO ACADÊMICA<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>ADS | Análise e Desenvolvimento de Sistemas<!-- Encerra o elemento h4. --></h4>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Graduação voltada para programação, desenvolvimento interfaces web, organização de
+                  projetos, redes, IA e inovação
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">
+                  Senac minas | 2026 - Em processo<!-- Encerra o elemento p. -->
+                </p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >FORMAÇÃO ACADÊMICA<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>Técnico Segurança no trabalho<!-- Encerra o elemento h4. --></h4>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Foco na gestão de políticas de saúde e segurança, avaliação e controlo de riscos
+                  ocupacionais, investigação de acidentes, primeiros socorros, planos de emergência
+                  e ações educativas no ambiente laboral.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">Senac minas | 2022 - 2023<!-- Encerra o elemento p. --></p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >FORMAÇÃO ACADÊMICA<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>Excel básico à Intermediário<!-- Encerra o elemento h4. --></h4>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Domínio de análise de dados, otimização de fluxos e estruturação de informações
+                  para suporte à decisão
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">Senac minas | 2025<!-- Encerra o elemento p. --></p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >EXPERIÊNCIA ACADÊMICA<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>Academic Adventure<!-- Encerra o elemento h4. --></h4>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Eu juntamente de minha turma TI, desenvolvemos um jogo em python, inspirado em
+                  Pokemon, mas que se passa no próprio SenacMinas.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">Senac minas | 2024 - 2025<!-- Encerra o elemento p. --></p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >APRENDIZADO CONTÍNUO<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>
+                  Desenvolvimento Full-Stack & Ferramentas Modernas<!-- Encerra o elemento h4. -->
+                </h4>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Aprofundamento contínuo em Python, automação de processos, controlo de versão com
+                  Git e estruturação de ambientes de desenvolvimento eficientes no VS Code.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">Conhecimentos<!-- Encerra o elemento p. --></p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >APRENDIZADO CONTÍNUO<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>Análise de Dados & Excel<!-- Encerra o elemento h4. --></h4>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Elaboração e estruturação de planilhas eletrônicas e relatórios gráficos básicos
+                  para otimização de fluxos analíticos.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">Conhecimentos<!-- Encerra o elemento p. --></p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Encerra o elemento div. -->
+            </div>
+            <!-- Agrupa elementos para organizar o layout — class=journey-controls. -->
+            <div class="journey-controls" hidden>
+              <!-- Botão de interação — type=button; class=btn btn-outline; data-step=-1; aria-label=Anterior em Formação e aprendizado. --><button
+                type="button"
+                class="btn btn-outline"
+                data-step="-1"
+                aria-label="Anterior em Formação e aprendizado"
+              >
+                ←
+                <!-- Encerra o elemento button. -->
+              </button>
+              <!-- Trecho de texto ou detalhe visual — class=journey-position; role=status. --><span
+                class="journey-position"
+                role="status"
+                ><!-- Encerra o elemento span. --></span
+              >
+              <!-- Botão de interação — type=button; class=btn btn-outline; data-step=1; aria-label=Próximo em Formação e aprendizado. --><button
+                type="button"
+                class="btn btn-outline"
+                data-step="1"
+                aria-label="Próximo em Formação e aprendizado"
+              >
+                →
+                <!-- Encerra o elemento button. -->
+              </button>
+              <!-- Encerra o elemento div. -->
+            </div>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Agrupa elementos para organizar o layout — class=journey-group. -->
+          <div class="journey-group">
+            <!-- Título do cartão ou grupo — id=grupo-jornada-1. -->
+            <h3 id="grupo-jornada-1">Experiência profissional<!-- Encerra o elemento h3. --></h3>
+            <!-- Agrupa elementos para organizar o layout — class=journey-carousel; tabindex=0; role=region; aria-labelledby=grupo-jornada-1. -->
+            <div
+              class="journey-carousel"
+              tabindex="0"
+              role="region"
+              aria-labelledby="grupo-jornada-1"
+            >
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >EXPERIÊNCIA PROFISSIONAL<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>Professora de Redação<!-- Encerra o elemento h4. --></h4>
+                <!-- Parágrafo de texto. -->
+                <p>Autônoma<!-- Encerra o elemento p. --></p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">03/11/2026 — Em andamento<!-- Encerra o elemento p. --></p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Cartão independente — class=journey-card. -->
+              <article class="journey-card">
+                <!-- Trecho de texto ou detalhe visual — class=journey-label. --><span
+                  class="journey-label"
+                  >EXPERIÊNCIA PROFISSIONAL<!-- Encerra o elemento span. --></span
+                >
+                <!-- Título do registro. -->
+                <h4>Soluções de Crédito & Negócios<!-- Encerra o elemento h4. --></h4>
+                <!-- Parágrafo de texto. -->
+                <p>
+                  Consultoria negócios focada em consórcios, estruturação de crédito, estratégias de
+                  expansão de parcerias e soluções corporativas no setor financeiro.
+                  <!-- Encerra o elemento p. -->
+                </p>
+                <!-- Parágrafo de texto — class=journey-note. -->
+                <p class="journey-note">Atual<!-- Encerra o elemento p. --></p>
+                <!-- Encerra o elemento article. -->
+              </article>
+              <!-- Encerra o elemento div. -->
+            </div>
+            <!-- Agrupa elementos para organizar o layout — class=journey-controls. -->
+            <div class="journey-controls" hidden>
+              <!-- Botão de interação — type=button; class=btn btn-outline; data-step=-1; aria-label=Anterior em Experiência profissional. --><button
+                type="button"
+                class="btn btn-outline"
+                data-step="-1"
+                aria-label="Anterior em Experiência profissional"
+              >
+                ←
+                <!-- Encerra o elemento button. -->
+              </button>
+              <!-- Trecho de texto ou detalhe visual — class=journey-position; role=status. --><span
+                class="journey-position"
+                role="status"
+                ><!-- Encerra o elemento span. --></span
+              >
+              <!-- Botão de interação — type=button; class=btn btn-outline; data-step=1; aria-label=Próximo em Experiência profissional. --><button
+                type="button"
+                class="btn btn-outline"
+                data-step="1"
+                aria-label="Próximo em Experiência profissional"
+              >
+                →
+                <!-- Encerra o elemento button. -->
+              </button>
+              <!-- Encerra o elemento div. -->
+            </div>
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Encerra o elemento div. -->
+        </div>
+        <!-- Encerra o elemento section. -->
+      </section>
+
+      <!-- Seção da página — id=contato; class=section contact-section; aria-labelledby=titulo-contato. -->
+      <section id="contato" class="section contact-section" aria-labelledby="titulo-contato">
+        <!-- Agrupa elementos para organizar o layout — class=container contact-content. -->
+        <div class="container contact-content">
+          <!-- Parágrafo de texto — class=section-kicker. -->
+          <p class="section-kicker">CONTATO<!-- Encerra o elemento p. --></p>
+          <!-- Título da seção — id=titulo-contato. -->
+          <h2 id="titulo-contato">
+            Faça
+            <!-- Trecho de texto ou detalhe visual. --><span
+              >Contato!<!-- Encerra o elemento span. --></span
+            ><!-- Encerra o elemento h2. -->
+          </h2>
+          <!-- Parágrafo de texto. -->
+          <p>Investir em conhecimento é investir em você mesmo!<!-- Encerra o elemento p. --></p>
+          <!-- Agrupa elementos para organizar o layout — class=contact-links. -->
+          <div class="contact-links">
+            <!-- Link de navegação — class=btn btn-primary; href=https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raissanetto%40gmail.com; target=_blank; rel=noopener noreferrer. --><a
+              class="btn btn-primary"
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raissanetto%40gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Enviar e-mail
+              <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span aria-hidden="true"
+                >↗<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento a. --></a
+            >
+            <!-- Link de navegação — class=btn btn-outline; href=https://wa.me/5531983378428?text=Oii%20Raissa!%20tudo%20bem%3F%20Vim%20at%C3%A9%20voc%C3%AA%20atrav%C3%A9s%20do%20Portf%C3%B3lio.; target=_blank; rel=noopener noreferrer. --><a
+              class="btn btn-outline"
+              href="https://wa.me/5531983378428?text=Oii%20Raissa!%20tudo%20bem%3F%20Vim%20at%C3%A9%20voc%C3%AA%20atrav%C3%A9s%20do%20Portf%C3%B3lio."
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp
+              <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span aria-hidden="true"
+                >↗<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento a. --></a
+            >
+            <!-- Link de navegação — class=btn btn-outline; href=https://www.instagram.com/raissafnetto/; target=_blank; rel=noopener noreferrer; aria-label=Instagram — substitua pelo link do seu perfil. --><a
+              class="btn btn-outline"
+              href="https://www.instagram.com/raissafnetto/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram — substitua pelo link do seu perfil"
+              >Instagram
+              <!-- Trecho de texto ou detalhe visual — aria-hidden=true. --><span aria-hidden="true"
+                >↗<!-- Encerra o elemento span. --></span
+              ><!-- Encerra o elemento a. --></a
+            >
+            <!-- Encerra o elemento div. -->
+          </div>
+          <!-- Encerra o elemento div. -->
+        </div>
+        <!-- Encerra o elemento section. -->
+      </section>
+      <!-- Encerra o elemento main. -->
+    </main>
+    <!-- Rodapé — class=site-footer. -->
+    <footer class="site-footer">
+      <!-- Agrupa elementos para organizar o layout — class=container footer-inner. -->
+      <div class="container footer-inner">
+        <!-- Parágrafo de texto. -->
+        <p>© 2026 Raissa netto. Todos os direitos reservados.<!-- Encerra o elemento p. --></p>
+        <!-- Navegação por links — aria-label=Links rápidos do rodapé. -->
+        <nav aria-label="Links rápidos do rodapé">
+          <!-- Link de navegação — href=#inicio. --><a href="#inicio"
+            >Início<!-- Encerra o elemento a. --></a
+          ><!-- Link de navegação — href=#projetos. --><a href="#projetos"
+            >Projetos<!-- Encerra o elemento a. --></a
+          ><!-- Link de navegação — href=#. --><a href="#">Contato<!-- Encerra o elemento a. --></a>
+          <!-- Encerra o elemento nav. -->
+        </nav>
+        <!-- Encerra o elemento div. -->
       </div>
-    </section>
-
-    <!-- Seção formacao -->
-
-    <section id="formacao" class="section" aria-labelledby="titulo-formacao">
-      <div class="container"><p class="section-kicker">JORNADA</p><div class="section-heading"><h2 id="titulo-formacao">Formação & <span>experiência</span></h2></div>
-        <div class="journey-group">
-<h3 id="grupo-jornada-0">Formação e aprendizado</h3>
-<div class="journey-carousel" tabindex="0" role="region" aria-labelledby="grupo-jornada-0">
-<article class="journey-card"><span class="journey-label">FORMAÇÃO ACADÊMICA</span>
-            <h4>Técnico informática</h4>
-            <p>Abrangência completa em hardware, redes locais, bancos de dados, algoritmos e desenvolvimento de aplicações para desktop e web.</p>
-            <p class="journey-note">Senac minas | 2023 - 2025</p>
-          </article>
-<article class="journey-card"><span class="journey-label">FORMAÇÃO ACADÊMICA</span>
-            <h4>ADS | Análise e Desenvolvimento de Sistemas</h4>
-            <p>Graduação voltada para programação, desenvolvimento interfaces web, organização de projetos, redes, IA e inovação</p>
-            <p class="journey-note">Senac minas | 2026 - Em processo</p>
-          </article>
-<article class="journey-card"><span class="journey-label">FORMAÇÃO ACADÊMICA</span>
-            <h4>Técnico Segurança no trabalho</h4>
-            <p>Foco na gestão de políticas de saúde e segurança, avaliação e controlo de riscos ocupacionais, investigação de acidentes, primeiros socorros, planos de emergência e ações educativas no ambiente laboral.</p>
-            <p class="journey-note">Senac minas | 2022 - 2023</p>
-          </article>
-<article class="journey-card"><span class="journey-label">FORMAÇÃO ACADÊMICA</span>
-            <h4>Excel básico à Intermediário</h4>
-            <p>Domínio de análise de dados, otimização de fluxos e estruturação de informações para suporte à decisão</p>
-            <p class="journey-note">Senac minas | 2025</p>
-          </article>
-<article class="journey-card"><span class="journey-label">EXPERIÊNCIA ACADÊMICA</span>
-            <h4>Academic Adventure</h4>
-            <p>Eu juntamente de minha turma TI, desenvolvemos um jogo em python, inspirado em Pokemon, mas que se passa no próprio SenacMinas.</p>
-            <p class="journey-note">Senac minas | 2024 - 2025</p>
-          </article>
-<article class="journey-card"><span class="journey-label">APRENDIZADO CONTÍNUO</span>
-            <h4>Desenvolvimento Full-Stack & Ferramentas Modernas</h4>
-            <p>Aprofundamento contínuo em Python, automação de processos, controlo de versão com Git e estruturação de ambientes de desenvolvimento eficientes no VS Code.</p>
-            <p class="journey-note">Conhecimentos</p>
-          </article>
-<article class="journey-card"><span class="journey-label">APRENDIZADO CONTÍNUO</span>
-            <h4>Análise de Dados & Excel</h4>
-            <p>Elaboração e estruturação de planilhas eletrônicas e relatórios gráficos básicos para otimização de fluxos analíticos.</p>
-            <p class="journey-note">Conhecimentos</p>
-          </article>
-</div>
-<div class="journey-controls" hidden>
-<button type="button" class="btn btn-outline" data-step="-1" aria-label="Anterior em Formação e aprendizado">←</button>
-<span class="journey-position" role="status"></span>
-<button type="button" class="btn btn-outline" data-step="1" aria-label="Próximo em Formação e aprendizado">→</button>
-</div></div>
-<div class="journey-group">
-<h3 id="grupo-jornada-1">Experiência profissional</h3>
-<div class="journey-carousel" tabindex="0" role="region" aria-labelledby="grupo-jornada-1">
-<article class="journey-card"><span class="journey-label">EXPERIÊNCIA PROFISSIONAL</span><h4>Professora de Redação</h4><p>Autônoma</p><p class="journey-note">03/11/2026 — Em andamento</p></article>
-<article class="journey-card"><span class="journey-label">EXPERIÊNCIA PROFISSIONAL</span>
-            <h4>Soluções de Crédito & Negócios</h4>
-            <p>Consultoria negócios focada em consórcios, estruturação de crédito, estratégias de expansão de parcerias e soluções corporativas no setor financeiro.</p>
-            <p class="journey-note">Atual</p>
-          </article>
-</div>
-<div class="journey-controls" hidden>
-<button type="button" class="btn btn-outline" data-step="-1" aria-label="Anterior em Experiência profissional">←</button>
-<span class="journey-position" role="status"></span>
-<button type="button" class="btn btn-outline" data-step="1" aria-label="Próximo em Experiência profissional">→</button>
-</div></div>
-</div>
-    </section>
-
-    <!-- Seção contato -->
-
-    <section id="contato" class="section contact-section" aria-labelledby="titulo-contato">
-      <div class="container contact-content"><p class="section-kicker">CONTATO</p><h2 id="titulo-contato">Faça <span>Contato!</span></h2><p>Investir em conhecimento é investir em você mesmo!</p>
-        <div class="contact-links"><a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raissanetto%40gmail.com" target="_blank" rel="noopener noreferrer">Enviar e-mail <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="https://wa.me/5531983378428?text=Oii%20Raissa!%20tudo%20bem%3F%20Vim%20at%C3%A9%20voc%C3%AA%20atrav%C3%A9s%20do%20Portf%C3%B3lio." target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="https://www.instagram.com/raissafnetto/" target="_blank" rel="noopener noreferrer" aria-label="Instagram — substitua pelo link do seu perfil">Instagram <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 Raissa netto. Todos os direitos reservados.</p><nav aria-label="Links rápidos do rodapé"><a href="#inicio">Início</a><a href="#projetos">Projetos</a><a href="#">Contato</a></nav></div></footer>
-</body>
+      <!-- Encerra o elemento footer. -->
+    </footer>
+    <!-- Encerra o elemento body. -->
+  </body>
+  <!-- Encerra o elemento html. -->
 </html>
