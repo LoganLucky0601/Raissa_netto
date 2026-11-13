@@ -1,5 +1,7 @@
 /* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
 :root {
+  --efeito-transparente: #00000000; /* Transparência da borda animada e das camadas sobre as fotografias. */
+  --habilidade-sombra-hover: #be8dda5e; /* Sombra externa do cartão de habilidade ao passar o mouse. */
   /* Projetos — degradê sobre a imagem e barra de rolagem. */
   --projeto-degrade-topo: #0b0d1200; /* Início transparente para mostrar a imagem. */
   --projeto-degrade-meio: #0b0d12d6; /* Escurecimento atrás da descrição do projeto. */
@@ -131,12 +133,12 @@
 .skill-card::before {
   background: conic-gradient(
     from var(--skill-angle, 0deg),
-    var(--cor-10) 0%,
+    var(--efeito-transparente) 0%,
     var(--habilidade-degrade-inicio) 18%,
     var(--habilidade-degrade-meio) 40%,
     var(--habilidade-degrade-destaque) 48%,
     var(--habilidade-degrade-meio) 55%,
-    var(--cor-10) 78%
+    var(--efeito-transparente) 78%
   ); /* Degradê da borda animada dos cartões de habilidades. */
 } /* Estilos de .skill-card:hover,
 .skill-card:focus-visible,
@@ -145,7 +147,7 @@
 .skill-card:focus-visible,
 .skill-card.is-selected {
   box-shadow:
-    12px 17px 51px var(--cor-26),
+    12px 17px 51px var(--habilidade-sombra-hover),
     0 0 22px color-mix(in srgb, var(--skill-glow) 24%, transparent);
 } /* Estilos de .skill-icon */
 .skill-icon {
@@ -173,7 +175,7 @@
   box-shadow: 0 0 22px var(--cor-33); /* Configura box-shadow com o valor 0 0 22px rgba(236, 165, 245, 0.22). */
 } /* Estilos de .memory-open */
 .memory-open {
-  background: var(--cor-10); /* Define o fundo com o valor transparent. */
+  background: var(--efeito-transparente); /* Define o fundo com o valor transparent. */
 } /* Estilos de .memory-media */
 .memory-media {
   background: linear-gradient(
@@ -188,7 +190,7 @@
   background: linear-gradient(
     0deg,
     var(--cor-37),
-    var(--cor-10) 35%
+    var(--efeito-transparente) 35%
   ); /* Define o fundo com o valor linear-gradient(0deg, rgba(0, 0, 0, 0.34), transparent 35%). */
 } /* Estilos de .memory-placeholder-symbol */
 .memory-placeholder-symbol {

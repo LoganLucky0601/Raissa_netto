@@ -1,5 +1,7 @@
 /* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
 html[data-theme="light"] {
+  --efeito-transparente: #00000000; /* Transparência da borda animada e das camadas sobre as fotografias. */
+  --habilidade-sombra-hover: #9f57b463; /* Sombra externa do cartão de habilidade ao passar o mouse. */
   /* Projetos — degradê sobre a imagem e barra de rolagem. */
   --projeto-degrade-topo: #0b0d1200; /* Início transparente para mostrar a imagem. */
   --projeto-degrade-meio: #0b0d12d6; /* Escurecimento atrás da descrição do projeto. */
@@ -144,7 +146,14 @@ html[data-theme="light"] .journey-card.is-current */
 html[data-theme="light"] .skill-card:hover,
 html[data-theme="light"] .journey-card.is-current {
   border-color: var(--accent); /* Configura border-color com o valor var(--accent). */
-} /* Estilos de html[data-theme="light"] .journey-card .journey-note,
+}
+/* Mantém o brilho do cartão no tema claro, inclusive durante navegação pelo teclado. */
+html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .skill-card:focus-visible,
+html[data-theme="light"] .skill-card.is-selected {
+  box-shadow: 12px 17px 51px var(--habilidade-sombra-hover), 0 0 22px color-mix(in srgb, var(--skill-glow) 24%, transparent); /* Sombra e brilho do cartão em destaque. */
+}
+ /* Estilos de html[data-theme="light"] .journey-card .journey-note,
 html[data-theme="light"] .journey-label */
 html[data-theme="light"] .journey-card .journey-note,
 html[data-theme="light"] .journey-label {
