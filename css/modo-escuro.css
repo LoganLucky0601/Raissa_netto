@@ -13,14 +13,14 @@
   --cor-11: #16110e;  /* texto de botão principal. */
   --cor-12: #525762;  /* borda de botão com contorno. */
   --cor-13: rgba(11, 13, 18, 0.94);  /* fundo de cabeçalho. */
-  --cor-14: #242832;  /* border-bottom de cabeçalho. */
+  --cor-14: #242832;  /* Borda inferior do cabeçalho. */
   --cor-15: #e9ebed;  /* texto de subtítulo da apresentação. */
   --cor-16: #c1c5cb;  /* texto de etiquetas da apresentação. */
   --cor-17: rgba(228, 109, 13, 0.34);  /* degradê do fundo de retrato da apresentação. */
   --cor-18: rgba(236, 165, 245, 0.582);  /* sombra externa de retrato da apresentação. */
   --cor-19: #b2b3b8;  /* texto de retrato da apresentação. */
   --cor-20: #11151c;  /* fundo de seção Sobre mim. */
-  --cor-21: #20242d;  /* border-block de seção Sobre mim. */
+  --cor-21: #20242d;  /* Bordas superior e inferior da seção Sobre mim. */
   --cor-22: rgba(255, 255, 255, 0.2);  /* borda de cartão de hobby; borda de cartão de formação ou experiência. */
   --cor-23: rgba(35, 40, 49, 0.62);  /* fundo de cartão de hobby; fundo de cartão de formação ou experiência. */
   --cor-24: rgba(0, 0, 0, 0.22);  /* sombra externa de cartão de hobby. */
@@ -48,9 +48,9 @@
   --cor-46: rgba(11, 13, 18, 0.84);  /* degradê do fundo de cartão de projeto. */
   --cor-47: #251d1a;  /* degradê do fundo de seção Contato. */
   --cor-48: #0d1016;  /* degradê do fundo de seção Contato. */
-  --cor-49: #25252b;  /* border-top de seção Contato. */
-  --cor-50: #ba9b83;  /* texto de .contact-content .contact-hint. */
-  --cor-51: #c8cbd2 /* Cor utilizada pelo tema. */;
+  --cor-49: #25252b;  /* Borda superior da seção Contato. */
+  --cor-50: #ba9b83;  /* Texto de orientação na seção Contato. */
+  --cor-51: #c8cbd2;  /* Texto dos links do menu superior e do rodapé. */
 } /* Estilos de :root */
 :root {
   --bg: var(--cor-01); /* Configura --bg com o valor #0b0d12. */

@@ -20,14 +20,14 @@ html[data-theme="light"] {
   --cor-18: rgba(230, 118, 34, 0.1);  /* degradê do fundo de seção Instantes congelados. */
   --cor-19: transparent;  /* degradê do fundo de seção Instantes congelados; barra de rolagem de carrossel de projetos. */
   --cor-20: #a8abaf;  /* fundo de seção de projetos. */
-  --cor-21: #eca5f5;  /* texto de categoria do projeto. */
-  --cor-22: #e0e4eb;  /* texto de categoria do projeto. */
+  --cor-21: #eca5f5;  /* Texto da categoria e dos links dos projetos. */
+  --cor-22: #e0e4eb;  /* Texto da descrição dos projetos. */
   --cor-23: #a040ae;  /* borda de cartão de projeto em destaque ou interação. */
-  --cor-24: #aab1be;  /* barra de rolagem de carrossel de projetos. */
-  --cor-25: rgba(255, 255, 255, 0.84);  /* fundo de cartão de formação ou experiência. */
-  --cor-26: #c5ccd7;  /* borda de cartão de formação ou experiência. */
-  --cor-27: rgba(30, 45, 70, 0.09);  /* sombra externa de cartão de formação ou experiência. */
-  --cor-28: #f9e9fc /* Cor utilizada pelo tema. */;
+  --cor-24: #aab1be;  /* Barra de rolagem dos carrosséis de projetos e trajetória. */
+  --cor-25: rgba(255, 255, 255, 0.84);  /* Fundo dos cartões de hobbies, formação e experiência. */
+  --cor-26: #c5ccd7;  /* Borda dos cartões de hobbies, formação e experiência. */
+  --cor-27: rgba(30, 45, 70, 0.09);  /* Sombra dos cartões de hobbies, formação e experiência. */
+  --cor-28: #f9e9fc;  /* Tom rosa no início do degradê de fundo da seção Contato. */
 } /* Estilos de html[data-theme="light"] */
 html[data-theme="light"] {
   color-scheme: light; /* Configura color-scheme com o valor light. */
