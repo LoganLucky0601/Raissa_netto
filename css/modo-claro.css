@@ -1,5 +1,16 @@
 /* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
 html[data-theme="light"] {
+  /* Projetos — degradê sobre a imagem e barra de rolagem. */
+  --projeto-degrade-topo: #0b0d1200; /* Início transparente para mostrar a imagem. */
+  --projeto-degrade-meio: #0b0d12d6; /* Escurecimento atrás da descrição do projeto. */
+  --projeto-degrade-base: #0b0d12; /* Fundo escuro atrás do link do projeto. */
+  --projetos-barra: #ad5ab8; /* Cor do puxador da barra de rolagem dos projetos. */
+  --projetos-trilho: #dec3e5; /* Cor do trilho da barra de rolagem dos projetos. */
+  /* Habilidades — degradê da borda animada, independente do brilho. */
+  --habilidade-degrade-inicio: #cd88f01f; /* Cor suave no início da borda animada. */
+  --habilidade-degrade-meio: #cd88f0f2; /* Cor principal no meio da borda animada. */
+  --habilidade-degrade-destaque: #ffffff; /* Ponto luminoso da borda animada. */
+
   --skill-glow: #cd88f0; /* Cor do brilho da borda e do ícone dos cartões de habilidades ao passar o mouse. */
   --cor-01: #f9eafa;  /* fundo principal da página; degradê do fundo de seção Contato. */
   --cor-02: #ffffff;  /* fundo dos cartões. */
@@ -119,8 +130,7 @@ html[data-theme="light"] .projects-carousel .project-card.is-current {
   border-color: var(--cor-23); /* Configura border-color com o valor #a040ae. */
 } /* Estilos de html[data-theme="light"] .journey-carousel,
 html[data-theme="light"] .projects-carousel */
-html[data-theme="light"] .journey-carousel,
-html[data-theme="light"] .projects-carousel {
+html[data-theme="light"] .journey-carousel {
   scrollbar-color: var(--cor-24) var(--cor-19); /* Configura scrollbar-color com o valor #aab1be transparent. */
 } /* Estilos de html[data-theme="light"] .skill-card,
 html[data-theme="light"] .journey-card */

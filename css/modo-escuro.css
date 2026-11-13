@@ -1,5 +1,16 @@
 /* PALETA DE CORES — edite os valores abaixo para personalizar este tema. */
 :root {
+  /* Projetos — degradê sobre a imagem e barra de rolagem. */
+  --projeto-degrade-topo: #0b0d1200; /* Início transparente para mostrar a imagem. */
+  --projeto-degrade-meio: #0b0d12d6; /* Escurecimento atrás da descrição do projeto. */
+  --projeto-degrade-base: #0b0d12; /* Fundo escuro atrás do link do projeto. */
+  --projetos-barra: #ce7ece; /* Cor do puxador da barra de rolagem dos projetos. */
+  --projetos-trilho: #242832; /* Cor do trilho da barra de rolagem dos projetos. */
+  /* Habilidades — degradê da borda animada, independente do brilho. */
+  --habilidade-degrade-inicio: #ce7ece1f; /* Cor suave no início da borda animada. */
+  --habilidade-degrade-meio: #ce7ecef2; /* Cor principal no meio da borda animada. */
+  --habilidade-degrade-destaque: #ffffff; /* Ponto luminoso da borda animada. */
+
   --skill-glow: #ce7ece; /* Cor do brilho da borda e do ícone dos cartões de habilidades ao passar o mouse. */
   --cor-01: #0b0d12;  /* fundo principal da página; degradê do fundo de cartão de projeto. */
   --cor-02: #141820;  /* fundo dos cartões. */
@@ -121,13 +132,12 @@
   background: conic-gradient(
     from var(--skill-angle, 0deg),
     var(--cor-10) 0%,
-    color-mix(in srgb, var(--skill-glow) 12%, transparent) 18%,
-    color-mix(in srgb, var(--skill-glow) 95%, transparent) 40%,
-    var(--cor-25) 48%,
-    color-mix(in srgb, var(--skill-glow) 95%, transparent) 55%,
+    var(--habilidade-degrade-inicio) 18%,
+    var(--habilidade-degrade-meio) 40%,
+    var(--habilidade-degrade-destaque) 48%,
+    var(--habilidade-degrade-meio) 55%,
     var(--cor-10) 78%
-  ); /* Configura -webkit-mask com o valor linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0). */
+  ); /* Degradê da borda animada dos cartões de habilidades. */
 } /* Estilos de .skill-card:hover,
 .skill-card:focus-visible,
 .skill-card.is-selected */
@@ -205,15 +215,28 @@
 } /* Estilos de #projetos .projects-carousel */
 #projetos .projects-carousel {
   --card-width: 38%; /* Configura --card-width com o valor 38%. */
-  scrollbar-color: var(--border) var(--cor-10); /* Configura scrollbar-color com o valor var(--border) transparent. */
-} /* Estilos de .projects-carousel .project-card::before */
+  scrollbar-color: var(--projetos-barra) var(--projetos-trilho); /* Cores do puxador e do trilho dos projetos. */
+}
+/* Barra de rolagem dos projetos — cores definidas na paleta de cada tema. */
+#projetos .projects-carousel::-webkit-scrollbar {
+  height: 8px; /* Espessura da barra horizontal. */
+}
+#projetos .projects-carousel::-webkit-scrollbar-track {
+  background: var(--projetos-trilho); /* Fundo do trilho. */
+  border-radius: 999px; /* Arredonda o trilho. */
+}
+#projetos .projects-carousel::-webkit-scrollbar-thumb {
+  background: var(--projetos-barra); /* Cor do puxador. */
+  border-radius: 999px; /* Arredonda o puxador. */
+}
+/* Estilos de .projects-carousel .project-card::before */
 .projects-carousel .project-card::before {
   background: linear-gradient(
     180deg,
-    var(--cor-10) 5%,
-    var(--cor-46) 55%,
-    var(--cor-01) 100%
-  ); /* Define o fundo com o valor linear-gradient(180deg, transparent 5%, rgba(11, 13, 18, 0.84) 55%, #0b0d12 100%). */
+    var(--projeto-degrade-topo) 5%,
+    var(--projeto-degrade-meio) 55%,
+    var(--projeto-degrade-base) 100%
+  ); /* Escurece a imagem gradualmente para manter o texto legível nos dois temas. */
 } /* Estilos de .projects-controls button */
 .projects-controls button {
   background: var(--cor-10); /* Define o fundo com o valor transparent. */
